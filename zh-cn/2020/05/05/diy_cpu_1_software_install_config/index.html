@@ -206,7 +206,7 @@ var _hmt = _hmt || [];
 <p><img src="http://media.myyerrol.io/images/cpu/software_install_config/modelsim/modelsim_7.png" alt="modelsim_7"></p>
 <p>点击文本编辑器工具栏【File】下的【Save As】选项。</p>
 <p><img src="http://media.myyerrol.io/images/cpu/software_install_config/modelsim/modelsim_8.png" alt="modelsim_8"></p>
-<p>在弹出的文本保存窗口中，手动将文件名称修改为【license.dat】，并选择文件编码格式为【Unicode(UTF-8)】，最后点击【Save】按钮即可将生成的许可证文件保存到系统本地（推荐放到【~/Documents/license/modelsim】目录下）。</p>
+<p>在弹出的文本保存窗口中，手动将文件名称修改为【license.dat】，并选择文件编码格式为【Unicode(UTF-8)】，最后点击【Save】按钮即可将生成的许可证文件保存到系统本地（推荐放到【~/Documents/License/modelsim】目录下）。</p>
 <p>最后，将破解补丁文件拷贝到ModelSim的安装目录下，并在赋予755可执行权限之后，使用管理员权限调用patch_calibre2011_linux脚本文件执行破解。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> /opt/modelsim</span><br><span class="line">$&gt; sudo cp ~/Softwares/modelsim_se_10.2c/.../patch_calibre2011_linux ./</span><br><span class="line">$&gt; sudo cp ~/Softwares/modelsim_se_10.2c/.../sfk ./</span><br><span class="line">$&gt; sudo chmod 755 patch_calibre2011_linux sfk</span><br><span class="line">$&gt; sudo ./patch_calibre2011_linux</span><br></pre></td></tr></table></figure>
 <p>如果终端里只出现类似下面的错误，则表明破解补丁已经成功被打入到软件中。</p>
@@ -214,7 +214,7 @@ var _hmt = _hmt || [];
 <p>如果终端中出现多于1个错误（出现概率比较小），则很可能是因为wine或之前其他不恰当的操作导致ModelSim安装目录下的某些文件被损坏，此时只需重装ModelSim软件并再次执行上述打补丁命令即可。</p>
 </li>
 <li><h4 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h4><p>使用文本编辑器打开【~/.bashrc】或【~/.zshrc】，并在文件末尾添加以下几行内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Modelsim</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/modelsim/modeltech/linux:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/license/modelsim/license.dat</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Modelsim</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/modelsim/modeltech/linux:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/License/modelsim/license.dat</span><br></pre></td></tr></table></figure>
 <p><strong>备注：在锦大神的教程中，ModelSim可执行程序的环境变量设置的是64位目录（即【/opt/modelsim/modeltech/linux_x86_64 】），但是我设置成这个后，终端总是提示无法读取许可证文件，使用【lmutil lmdiag】命令也显示正常，最后我修改为上述的32位目录就好了，至于原因目前还不清楚。</strong></p>
 </li>
 <li><h4 id="修改网卡名称"><a href="#修改网卡名称" class="headerlink" title="修改网卡名称"></a>修改网卡名称</h4><p><strong>注意：这一步是破解ModelSim的关键，因为Ubuntu系统从16.04开始网卡名称的命名出现了较大的变化（如有线网卡从【eth0】变为了【enp2s0】），所以为了让ModelSim和下面将会讲到Quartus II软件能够正确读取系统的NIC ID，需要用户手动修改网卡名称，具体步骤如下：</strong></p>
@@ -278,7 +278,7 @@ var _hmt = _hmt || [];
 <p>窗口出现以上内容，则表明软件破解成功。</p>
 </li>
 <li><h4 id="设置环境变量-1"><a href="#设置环境变量-1" class="headerlink" title="设置环境变量"></a>设置环境变量</h4><p>使用文本编辑器打开【~/.bashrc】或【~/.zshrc】，并在文件末尾添加以下几行内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Quartus II</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/altera/13.0sp1/quartus/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/license/quartus/license.dat:<span class="variable">$LM_LICENSE_FILE</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Quartus II</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/altera/13.0sp1/quartus/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/License/quartus/license.dat:<span class="variable">$LM_LICENSE_FILE</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><h4 id="启动软件程序-1"><a href="#启动软件程序-1" class="headerlink" title="启动软件程序"></a>启动软件程序</h4><p>启动32位Quartus II。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; quartus</span><br></pre></td></tr></table></figure>
