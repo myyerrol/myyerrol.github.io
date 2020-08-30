@@ -5,17 +5,17 @@
 // it under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation; either version 2.1 of the
 // License, or (at your option) any later version.
-// 
+//
 // This library is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // Lesser General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU Lesser General Public
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 // 02110-1301 USA
-// 
+//
 
 'use strict';
 
@@ -263,7 +263,10 @@ var _renderHTML = function _renderHTML(params) {
 var CompareDate = function CompareDate(a, b) {
     var d1 = a['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
     var d2 = b['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
-    return new Date(d1) < new Date(d2);
+    var date1 = new Date(d1);
+    var date2 = new Date(d2);
+
+    return (date2 - date1);
 };
 
 var _getRecentIssues = function _getRecentIssues(params, callback) {
