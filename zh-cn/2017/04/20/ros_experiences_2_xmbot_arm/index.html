@@ -552,9 +552,14 @@ var _hmt = _hmt || [];
 <section id="comment">
   <h2 class="title">留言</h2>
   
-    <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    <div id="vcomment" class="vcomment"></div>
+    <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      var valineConfig = {"enable":true,"appId":"QMYiREeDi9SFmzTzPKVuVDTc-gzGzoHsz","appKey":"HwMiVpt4CBq1GURHowK8u6JC","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      valineConfig.el = "#vcomment";
+      new Valine(valineConfig);
+    </script>
   
 </section>
 
