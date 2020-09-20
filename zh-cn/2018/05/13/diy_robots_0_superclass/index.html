@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>自制机器人系列（零）：总纲 | myyerrol的个人博客</title>
+  <title>自制机器人系列（零）：总纲 | myyerrol的个人网站</title>
   <meta name="author" content="myyerrol">
   
     <meta name="description" content="本篇文章介绍《自制机器人系列》的总纲。">
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="自制机器人系列（零）：总纲"/>
-  <meta property="og:site_name" content="myyerrol的个人博客"/>
+  <meta property="og:site_name" content="myyerrol的个人网站"/>
 
   
     <meta property="og:image" content=""/>
@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">myyerrol的个人博客</a>
+    <a class="navbar-brand" href="/">myyerrol的个人网站</a>
     <div class="collapse navbar-collapse nav-menu">
       <ul class="nav navbar-nav">
         
@@ -208,25 +208,9 @@ var _hmt = _hmt || [];
 <section id="comment">
   <h2 class="title">留言</h2>
   
-     <div id="comment-thread"></div>
-     <div id="loading-spin"></div>
-     <script type="text/javascript">
-       getComments({
-         type: "github" ? "github" : "github",
-         user: "myyerrol",
-         repo: "myyerrol_website_comment",
-         client_id: "95098d084621006b4f69",
-         client_secret: "72389de7182c8b4ecf69363b316da57baf407432",
-         no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
-         go_to_comment: "去留言",
-         no_issue: "no_issue",
-         issue_title: "自制机器人系列（零）：总纲",
-         issue_id: "",
-         btn_class: "btn btn-primary",
-         comments_target: "#comment-thread",
-         loading_target: "#loading_spin"
-         });
-     </script>
+    <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
   
 </section>
 
@@ -288,6 +272,17 @@ var _hmt = _hmt || [];
   
 
 </div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'myyerrol';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 
