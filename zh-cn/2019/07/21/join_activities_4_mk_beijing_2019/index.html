@@ -303,6 +303,7 @@ var _hmt = _hmt || [];
 
 </div><!-- row -->
 
+
 <script type="text/javascript">
 var disqus_shortname = 'myyerrol';
 (function(){
@@ -312,6 +313,25 @@ var disqus_shortname = 'myyerrol';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
+</script>
+
+
+
+<script type="text/javascript">
+    var imageLabel = "true";
+    var images = document.getElementsByTagName("img");
+    (function() {
+        for (var i = 0; i < images.length; i++) {
+            var image = images[i];
+            var label = image.alt;
+            var domPara = image.parentNode;
+            var domLabel = document.createElement("span");
+            domLabel.setAttribute("style",
+                                  "display:block; text-align:center; color:gray");
+            domLabel.innerText = label;
+            domPara.appendChild(domLabel);
+        }
+    }());
 </script>
 
 
