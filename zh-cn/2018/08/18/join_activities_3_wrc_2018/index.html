@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -46,6 +47,20 @@
     <script src="/js/highlight.min.js"></script>
   <script src="/js/spin.min.js"></script>
   
+
+  <script>
+    $(document).ready(function() {
+      $('[data-spy="affix"]').each(function () {
+        var $spy = $(this)
+        , data = $spy.data()
+        data.offset = data.offset || {}
+        data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+        data.offsetTop && (data.offset.top = data.offsetTop)
+        $spy.affix(data)
+      });
+    });
+  </script>
+
   <!-- analytics -->
   
 <script>
@@ -340,7 +355,7 @@ var _hmt = _hmt || [];
 
 
 <!-- toc -->
-<div class="meta-widget">
+<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
   
     <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
     <div id="toc" class="toc collapse in">
@@ -417,7 +432,8 @@ var disqus_shortname = 'myyerrol';
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/search.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<script src="/js/fadetoc.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </script>
 
 
