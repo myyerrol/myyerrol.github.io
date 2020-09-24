@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,7 +161,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">2,525</span>字
+  <span class="post-count">2,476</span>字
 
   &nbsp
 
@@ -649,9 +650,46 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，最基本的Hexo博客网站就已经搭建好了，后续就是使用Markdown语法来写文章，最后部署就行了。当然，以上只是Hexo配置和使用的最基本流程，如果你想拥有个性化的博客网站界面以及一些增强功能的话，我会在接下来的文章中详细地介绍Hexo主题的配置方法，它肯定可以让你的博客变得更加酷炫的。</p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="Hexo博客教程系列（一）：Hexo的安装和配置">https://myyerrol.io/zh-cn/2017/03/31/hexo_tutorials_1_install_config/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -692,9 +730,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -791,7 +829,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 

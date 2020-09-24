@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,7 +161,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">5,089</span>字
+  <span class="post-count">5,040</span>字
 
   &nbsp
 
@@ -264,9 +265,46 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本次世界机器人大会我觉得自己最大的收获就是能够参加大会论坛，并近距离聆听了国内外顶尖机器人研究学者所作的演讲报告，虽然时间只有半天（因为下午要去看博览会，所以就没再参加了），但是却让我亲身体会到了科研工作者们为探索机器人前沿技术所做出的不懈努力，机器人产业的整体进步离不开很多具有前沿性质的理论研究的支撑，我相信如果有更多的国内高校或科研院所能够真正踏下心来去做研究，并将其成果转化成可以落地的产品的话，那么中国的<strong>机器人强国梦</strong>就不再是一种奢望了！</p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="参与活动系列（三）：2018世界机器人大会">https://myyerrol.io/zh-cn/2018/08/18/join_activities_3_wrc_2018/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -307,9 +345,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -406,7 +444,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 

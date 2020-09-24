@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,7 +161,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">3,217</span>字
+  <span class="post-count">3,168</span>字
 
   &nbsp
 
@@ -238,9 +239,46 @@ var _hmt = _hmt || [];
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Breeze微型四轴飞行器既是我们MicroDynamics团队的第一个项目，也是我本科毕业设计研究的主要内容，虽然它是我们根据国内外开源四轴项目（Crazyflie和Crazepony）模仿制作而来，但是通过亲自动手完成整个四轴飞行器的开发工作，我从其中学到了很多东西，它让我从一个不会用Altium Designer做复杂PCB设计、不懂Linux环境下STM32嵌入式开发以及常用飞控算法原理的普通大四学生真正成长为一名具备基本开发能力的四轴飞行器爱好者。</p>
 <p>如果你也是一个喜欢DIY四轴飞行器的大学生或爱好者，但却像当初的我一样没有任何知识基础的话，我希望该Breeze微型四轴系列文章能够让你理解开发四轴飞行器背后所需要的基本知识，并从中受益匪浅。</p>
 <p>最后，我要阐明一下我的观点：<strong>虽然我们是站在巨人肩膀上的一代，但这并不意味着重复造轮子就没有意义，因为在这个过程中你能够掌握到绝大多数人都不会去学的知识，而这些知识最终将会成为你之后开发之路上最为宝贵的财富！</strong></p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="Breeze微型四轴系列（零）：总纲">https://myyerrol.io/zh-cn/2017/10/06/breeze_quadcopter_0_superclass/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -281,9 +319,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -380,7 +418,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 

@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,7 +161,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">4,785</span>字
+  <span class="post-count">4,736</span>字
 
   &nbsp
 
@@ -252,9 +253,46 @@ var _hmt = _hmt || [];
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个简单轮式机器人是大一那会儿我对自己课外所学知识的一个应用。虽然现在回过头再来看自己当初做的项目，感觉技术原理非常简单，远没有我之后研究的<a href="http://www.ros.org/" target="_blank" rel="noopener">ROS</a>和<a href="http://moveit.ros.org/" target="_blank" rel="noopener">MoveIt!</a>那么复杂，但是通过整个制作过程，我学会了如何根据项目需求去网上购买相关的材料，如何将主控等硬件设备安装在机器人机械结构最合理的位置上，如何使用IDE编写Arduino程序，如何在Raspberry Pi上使用Python语言来读取硬件数据并控制硬件，如何实现简单的串口通信等等。我一直认为兴趣是最好的老师，当你开始接触一个全新的领域时，兴趣可以成为你克服各种困难并鼓舞你前进的强大动力。当然，除了兴趣，更重要的是<strong>亲自动手实践</strong>，书上的东西讲得再好也是别人的，不是你的，就算重复造轮子也有着其无法替代的重要意义，<strong>因为并不是每个人都能造得出轮子</strong>，通过学习并实践前人所学习过的知识，你会收获别人不会有的宝贵经验！</p>
 <p>最后，个人认为智能小车对于广大刚开始接触机器人的初学者来说确实是一个非常好的练手项目，你可以根据自己的喜好和技术水平的高低来定制属于你自己的智能小车，实现你想要的各种功能。总之，对于我来说，通过本次项目我开始真正喜欢上了嵌入式开发并逐渐走上了专业化的道路，每个人都应该有自己的梦想，那这个简单轮式机器人就是我梦想的起点，激励着我不断向前！当然，也希望大家能在制作机器人的道路上玩得开心并有所收获！</p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="自制机器人系列（一）：简单轮式机器人">https://myyerrol.io/zh-cn/2018/05/15/diy_robots_1_simple_wheeled_robot/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -295,9 +333,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -394,7 +432,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 

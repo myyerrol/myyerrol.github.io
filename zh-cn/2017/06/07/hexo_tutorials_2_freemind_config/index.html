@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,12 +161,12 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">3,386</span>字
+  <span class="post-count">3,281</span>字
 
   &nbsp
 
   <i class="fa fa-clock-o"></i>&nbsp阅读时长
-  <span class="post-count">15</span>分钟
+  <span class="post-count">14</span>分钟
 
   <p></p>
 
@@ -263,7 +264,7 @@ var _hmt = _hmt || [];
 <p>而不需要</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; hexo new freemind <span class="string">"article"</span></span><br></pre></td></tr></table></figure>
 <h4 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h4><p>因为Freemind主题在Hexo的基础之上，额外提供了一些新的front-matter选项，所以我创建了这个freemind布局（<code>scaffolds/freemind.md</code>）来更好地装饰整篇文章。以下是其中的具体内容：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">description:</span><br><span class="line">feature: false</span><br><span class="line">toc: true</span><br><span class="line">comments: true</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&#123;% alert info %&#125;</span><br><span class="line">本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</span><br><span class="line">&#123;% endalert %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">description:</span><br><span class="line">feature: false</span><br><span class="line">toc: true</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><strong>title:</strong><br>文章的标题，由创建文章命令中的title自动写入，可以手动修改。</p>
 </li>
@@ -358,9 +359,46 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是Freemind主题的基本配置方法，概括来说就是对Hexo根目录和Freemind目录下的两个_config.yaml文件进行配置。Hexo提供的主题有很多，大家可以去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a>网站选择适合自己的主题来进行配置。最后，在下一篇文章中，我会介绍关于Freemind主题优化方面的配置。</p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="Hexo博客教程系列（二）：Freemind主题的配置">https://myyerrol.io/zh-cn/2017/06/07/hexo_tutorials_2_freemind_config/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -401,9 +439,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -500,7 +538,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 

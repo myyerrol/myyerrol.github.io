@@ -1,0 +1,13 @@
+.copyright {
+    margin: 2.8em auto 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid red;
+    background-color: rgb(238, 238, 238);
+    word-break: break-all;
+}
+.copyright p {
+    margin: 0px;
+}
+.copyright a {
+    color: gray;
+}

@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/article.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/copyright.css" media="screen" type="text/css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -160,7 +161,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">3,529</span>字
+  <span class="post-count">3,480</span>字
 
   &nbsp
 
@@ -261,9 +262,46 @@ var _hmt = _hmt || [];
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>首先我要说的是目前国内高校的STM32嵌入式教育基本上被KEIL+IAR所垄断了，虽然这些商业化的软件把代码编辑、编译和调试等功能集成在一个带有界面的程序当中，这对于很多刚开始接触STM32开发的新手来说是非常方便的，但是其缺点也非常明显：<strong>它们阻碍了初学者对交叉编译工具链以及整个编译过程的理解</strong>。而且相比于开发X86或X64架构的桌面程序，我个人认为编写嵌入式程序的开发者更需要理解编译器的相关知识，因为往往硬件的ROM、RAM或FLASH空间是非常有限的，你只有通过学习才能知道如何通过设置编译器的命令参数来优化.bin或.elf生成文件的大小。除此之外，你还能通过配置链接脚本中TEXT段、DATA段、BSS段以及堆、栈的起始地址和空间容量等参数来获得定制STM32程序运行时的能力。因此，对于那些刚开始学习STM32并打算精通其开发的同学来说，我推荐一开始就放弃<strong>Windows+KEIL MDK</strong>的固有学习模式，而直接使用<strong>GNU/Linux+ARM GCC+OpenOCD</strong>搭建开发环境来进行学习。虽然大家在刚开始学的过程中会出现很多问题，也会觉得很不适应，但是我相信过一段时间之后你就会明白这套开源工具链的强大之处了。</p>
 <p>最后通过以上的介绍，我想大家对开发工具链以及其整个配置流程都有了一个比较清晰的认识，接下来我会通过介绍项目仓库中Makefile的设计思想和参数配置来详细讲解在GNU/Linux下是如何像KEIL MDK那样对STM32工程进行组织的，以及ARM-GCC和OpenOCD这两个软件的具体使用方法。当然，这里我要特别感谢HandsFree OpenRE库的创建者（马学长和陈学长）和相关维护人员，让我可以非常方便地学习到GNU/Linux下STM32嵌入式开发的相关知识。除此之外，我也非常感谢以上文章中所介绍过的开发工具的缔造者们，是他们让我真正体会到了什么是嵌入式开发应有的效率和乐趣！</p>
-<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>本博客所有文章除特别声明外，均采用CC BY-NC-SA 3.0许可协议。获得许可后，要求转载时注明文章出处和网站链接，谢谢！</p>
-</div>
 
+
+    
+      <div class="copyright">
+        <p>
+          <span>文章作者：</span>
+          <a href="/" title="myyerrol的个人网站">myyerrol</a>
+        </p>
+        <p>
+          <span>最后更新：</span>
+          <span id="date"></span>
+          <script type="text/javascript">
+              function addDatePrefix(num) {
+                return num < 10 ? "0" + num : num
+              }
+              var dateStand = "Thu Sep 24 2020 21:52:24 GMT+0800";
+              var dateTemp  = new Date(dateStand);
+              var date = dateTemp.getFullYear() + '年' +
+                         addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
+                         addDatePrefix(dateTemp.getDate()) + "日 " +
+                         addDatePrefix(dateTemp.getHours()) + ":" +
+                         addDatePrefix(dateTemp.getMinutes()) + ":" +
+                         addDatePrefix(dateTemp.getSeconds());
+              console.log(date);
+              $("#date").text(date);
+          </script>
+        </p>
+        <p>
+          <span>原始链接：</span>
+          <a href="./" title="Breeze微型四轴系列（二）：STM32嵌入式开发-开发环境搭建">https://myyerrol.io/zh-cn/2017/11/07/breeze_quadcopter_2_stm32_development/</a>
+        </p>
+        <p>
+          <span>版权说明：</span>
+          本博客所有文章除特别声明外，均采用
+          <i class="fa fa-creative-commons"></i>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议">BY-NC-SA 4.0许可协议</a>
+          。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+        </p>
+      </div>
+    
   </div>
 
   <div>
@@ -304,9 +342,9 @@ var _hmt = _hmt || [];
     <script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-      var valineConfig = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
-      valineConfig.el = "#vcomment";
-      new Valine(valineConfig);
+      var config = {"enable":true,"appId":"fyCQYW3B7odgRYQc2oReUMk9-MdYXbMMI","appKey":"rt5YjKx2qGlWLU7jwIUHQ7JL","placeholder":"提交评论时请留下邮箱，收到回复后将自动通知","avatar":"robohash","page":15,"enableQQ":true,"requiredFields":["nick","mail"]};
+      config.el = "#vcomment";
+      new Valine(config);
     </script>
   
 </section>
@@ -403,7 +441,7 @@ var disqus_shortname = 'myyerrol';
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章总字数
-  <span class="post-count">148.0k</span>字
+  <span class="post-count">146.7k</span>字
 
   <br>
 
