@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/04/20/ros_experiences_2_xmbot_arm/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/12/30/breeze_quadcopter_4_stm32_code_guide/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/04/15/ros_experiences_0_superclass/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/03/31/hexo_tutorials_1_install_config/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/04/18/ros_experiences_1_xmbot_system/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/07/01/robocup_competitions_0_superclass/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/06/07/hexo_tutorials_2_freemind_config/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/07/21/robocup_competitions_2_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/07/11/robocup_competitions_1_luoyang/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/07/31/robocup_competitions_3_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/08/11/robocup_competitions_4_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/08/31/robocup_competitions_6_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/09/11/robocup_competitions_7_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/09/21/robocup_competitions_8_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/08/21/robocup_competitions_5_hefei/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/10/06/breeze_quadcopter_0_superclass/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/10/01/robocup_competitions_9_guiyang/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/11/07/breeze_quadcopter_2_stm32_development/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/10/21/breeze_quadcopter_1_hardware_design/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/11/18/breeze_quadcopter_3_stm32_makefile/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/01/15/breeze_quadcopter_5_stm32_flight_control/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/05/13/diy_robots_0_superclass/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/02/01/breeze_quadcopter_6_software_summary/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/05/15/diy_robots_1_simple_wheeled_robot/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/05/21/diy_robots_2_hexapod_bionic_robot/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/06/13/diy_robots_3_self_balancing_robot/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/07/28/join_activities_1_mf_beijing_2017/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/08/18/join_activities_3_wrc_2018/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2019/07/21/join_activities_4_mk_beijing_2019/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2018/08/06/join_activities_2_wrc_2017/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2019/12/07/life_essays_1_eop/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2020/05/05/diy_cpu_1_software_install_config/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2017/03/31/hexo_tutorials_0_superclass/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/zh-cn/2020/09/23/travel_notes_2019_kansai_preparation/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/about/index.html</loc>
+    
+    <lastmod>2020-05-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/index.html</loc>
+    
+    <lastmod>2020-03-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/index.html</loc>
+    
+    <lastmod>2020-03-07</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://myyerrol.io/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Hexo/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Blog/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/ROS/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/RoboCup/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/RoboCup-Home/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Micro-Quadcopter/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/STM32/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/GNU-Linux/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/GNU-Make/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Makefile/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/ARM-GCC/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/OpenOCD/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Altium-Designer/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/PID/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/DIY/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Robot/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/GCS/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Qt/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E6%B4%BB%E5%8A%A8/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Maker/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/WRC/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E6%BC%94%E5%94%B1%E4%BC%9A/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Mai-Kuraki/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E9%9F%B3%E4%B9%90/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E9%92%A2%E7%90%B4/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/EOP/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/CPU/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/ModelSim/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Quartus-II/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E6%97%A5%E6%9C%AC/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E8%87%AA%E7%94%B1%E8%A1%8C/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/%E6%97%85%E8%A1%8C%E6%94%BB%E7%95%A5/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/MoveIt/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/tags/Gazebo/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://myyerrol.io/categories/Hexo%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/ROS%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/RoboCup%E6%AF%94%E8%B5%9B%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/Breeze%E5%BE%AE%E5%9E%8B%E5%9B%9B%E8%BD%B4%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/%E8%87%AA%E5%88%B6%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/%E5%8F%82%E4%B8%8E%E6%B4%BB%E5%8A%A8%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/%E8%87%AA%E5%88%B6CPU%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.io/categories/%E6%97%85%E8%A1%8C%E6%B8%B8%E8%AE%B0%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
