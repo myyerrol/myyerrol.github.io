@@ -1,1 +1,66 @@
-!function(h){h(".content").each(function(a){h(this).find("img").each(function(){var t;h(this).hasClass("nofancybox")||((t=this.alt)?h(this).wrap('<a href="'+this.src+'" title="'+t+'" class="fancybox" rel="gallery'+a+'" />'):h(this).wrap('<a href="'+this.src+'" class="fancybox" rel="gallery'+a+'" />'))})});function o(i,t,e){var c=i.width();t.imagesLoaded(function(){var t=this[0],a=t.naturalWidth,n=t.naturalHeight;e(),this.animate({opacity:1},500),i.animate({height:c*n/a},500)})}h(".gallery").each(function(){var a=h(this),n=0,i=a.children(".photoset").children(),e=i.length,c=!0;o(a,i.eq(0),function(){c=!1}),a.on("click",".prev",function(){var t;c||(t=(n-1)%e,c=!0,o(a,i.eq(t),function(){i.eq(n).animate({opacity:0},500),c=!1,n=t}))}).on("click",".next",function(){var t;c||(t=(n+1)%e,c=!0,o(a,i.eq(t),function(){i.eq(n).animate({opacity:0},500),c=!1,n=t}))})})}(jQuery);
+(function($){
+  // Caption
+  $('.content').each(function(i){
+    $(this).find('img').each(function(){
+      if (!$(this).hasClass('nofancybox')){
+        var alt = this.alt;
+        if (alt){
+          $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery' + i + '" />');
+        } else {
+          $(this).wrap('<a href="' + this.src + '" class="fancybox" rel="gallery' + i + '" />');
+      }
+      }
+    });
+  });
+
+  // Gallery
+  var play = function(parent, item, callback){
+    var width = parent.width();
+
+    item.imagesLoaded(function(){
+      var _this = this[0],
+        nWidth = _this.naturalWidth,
+        nHeight = _this.naturalHeight;
+
+      callback();
+      this.animate({opacity: 1}, 500);
+      parent.animate({height: width * nHeight / nWidth}, 500);
+    });
+  };
+
+  $('.gallery').each(function(){
+    var $this = $(this),
+      current = 0,
+      photoset = $this.children('.photoset').children(),
+      all = photoset.length,
+      loading = true;
+
+    play($this, photoset.eq(0), function(){
+      loading = false;
+    });
+
+    $this.on('click', '.prev', function(){
+      if (!loading){
+        var next = (current - 1) % all;
+        loading = true;
+
+        play($this, photoset.eq(next), function(){
+          photoset.eq(current).animate({opacity: 0}, 500);
+          loading = false;
+          current = next;
+        });
+      }
+    }).on('click', '.next', function(){
+      if (!loading){
+        var next = (current + 1) % all;
+        loading = true;
+
+        play($this, photoset.eq(next), function(){
+          photoset.eq(current).animate({opacity: 0}, 500);
+          loading = false;
+          current = next;
+        });
+      }
+    });
+  });
+})(jQuery);
