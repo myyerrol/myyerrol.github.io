@@ -466,6 +466,13 @@
   </url>
   
   <url>
+    <loc>https://myyerrol.io/tags/PID/</loc>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://myyerrol.io/tags/%E6%97%A5%E6%9C%AC/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
@@ -481,13 +488,6 @@
   
   <url>
     <loc>https://myyerrol.io/tags/%E6%97%85%E8%A1%8C%E6%94%BB%E7%95%A5/</loc>
-    <lastmod>2020-09-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.io/tags/PID/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
