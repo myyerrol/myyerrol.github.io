@@ -438,6 +438,13 @@
   </url>
   
   <url>
+    <loc>https://myyerrol.io/tags/Altium-Designer/</loc>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://myyerrol.io/tags/CPU/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
@@ -453,13 +460,6 @@
   
   <url>
     <loc>https://myyerrol.io/tags/Quartus-II/</loc>
-    <lastmod>2020-09-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.io/tags/Altium-Designer/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
