@@ -393,12 +393,21 @@ var _hmt = _hmt || [];
 
 
 <!-- toc -->
-<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="300">
+<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
   
     <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
     <div id="toc" class="toc collapse in">
       <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#前言"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#搭建"><span class="toc-article-text">搭建</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#开发工具"><span class="toc-article-text">开发工具</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#GNU-Make"><span class="toc-article-text">GNU/Make</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#ARM-GCC"><span class="toc-article-text">ARM-GCC</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#OpenOCD"><span class="toc-article-text">OpenOCD</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Atom"><span class="toc-article-text">Atom</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#配置流程"><span class="toc-article-text">配置流程</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#安装基础环境"><span class="toc-article-text">安装基础环境</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#安装ARM-GCC"><span class="toc-article-text">安装ARM-GCC</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#安装OpenOCD"><span class="toc-article-text">安装OpenOCD</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#安装Atom"><span class="toc-article-text">安装Atom</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#下载并编译源码"><span class="toc-article-text">下载并编译源码</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#烧写或调试程序"><span class="toc-article-text">烧写或调试程序</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#总结"><span class="toc-article-text">总结</span></a></li></ol>
     </div>
+    <script type="text/javascript">
+      var tocHeight = $("#toc").height();
+      if (tocHeight >= 500) {
+        $("#toc").css({
+          "height": "500px",
+          "overflow": "scroll"
+        });
+      }
+    </script>
   
 </div>
 

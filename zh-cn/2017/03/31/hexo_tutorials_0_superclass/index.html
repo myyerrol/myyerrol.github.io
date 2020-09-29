@@ -329,12 +329,21 @@ var _hmt = _hmt || [];
 
 
 <!-- toc -->
-<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="300">
+<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
   
     <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
     <div id="toc" class="toc collapse in">
       <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#前言"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#简介"><span class="toc-article-text">简介</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#定义"><span class="toc-article-text">定义</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#特点"><span class="toc-article-text">特点</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#免费"><span class="toc-article-text">免费</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#简单"><span class="toc-article-text">简单</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#稳定"><span class="toc-article-text">稳定</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#快速"><span class="toc-article-text">快速</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#强大"><span class="toc-article-text">强大</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#总纲"><span class="toc-article-text">总纲</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#总结"><span class="toc-article-text">总结</span></a></li></ol>
     </div>
+    <script type="text/javascript">
+      var tocHeight = $("#toc").height();
+      if (tocHeight >= 500) {
+        $("#toc").css({
+          "height": "500px",
+          "overflow": "scroll"
+        });
+      }
+    </script>
   
 </div>
 

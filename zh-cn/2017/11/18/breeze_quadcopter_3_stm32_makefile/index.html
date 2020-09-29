@@ -565,12 +565,21 @@ var _hmt = _hmt || [];
 
 
 <!-- toc -->
-<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="300">
+<div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
   
     <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
     <div id="toc" class="toc collapse in">
       <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#前言"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#内容"><span class="toc-article-text">内容</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#系统架构"><span class="toc-article-text">系统架构</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#硬件设备层"><span class="toc-article-text">硬件设备层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#官方开发库层"><span class="toc-article-text">官方开发库层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#底层驱动层"><span class="toc-article-text">底层驱动层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#外设模块层"><span class="toc-article-text">外设模块层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#飞控算法层"><span class="toc-article-text">飞控算法层</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#目录结构"><span class="toc-article-text">目录结构</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Algorithm"><span class="toc-article-text">目录Algorithm</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Drivers"><span class="toc-article-text">目录Drivers</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Libraries"><span class="toc-article-text">目录Libraries</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Modules"><span class="toc-article-text">目录Modules</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Project"><span class="toc-article-text">目录Project</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录Tools"><span class="toc-article-text">目录Tools</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#目录User"><span class="toc-article-text">目录User</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Makefile详解"><span class="toc-article-text">Makefile详解</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#编译选项"><span class="toc-article-text">编译选项</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#编译命令"><span class="toc-article-text">编译命令</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#调试器命令"><span class="toc-article-text">调试器命令</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#清理命令"><span class="toc-article-text">清理命令</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#总结"><span class="toc-article-text">总结</span></a></li></ol>
     </div>
+    <script type="text/javascript">
+      var tocHeight = $("#toc").height();
+      if (tocHeight >= 500) {
+        $("#toc").css({
+          "height": "500px",
+          "overflow": "scroll"
+        });
+      }
+    </script>
   
 </div>
 
