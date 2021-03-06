@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>自制机器人系列（二）：小型六足仿生机器人 | myyerrol的个人网站</title>
+  <title>自制机器人系列（二）：六足仿生机器人 | myyerrol的个人网站</title>
   <meta name="author" content="myyerrol">
   
-    <meta name="description" content="本篇文章介绍自制小型六足仿生机器人的相关内容。">
+    <meta name="description" content="本篇文章介绍自制六足仿生机器人的相关内容。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="自制机器人系列（二）：小型六足仿生机器人">
+  <meta property="og:title" content="自制机器人系列（二）：六足仿生机器人">
   <meta property="og:site_name" content="myyerrol的个人网站">
 
   
@@ -142,7 +142,7 @@ var _hmt = _hmt || [];
 
   
     <div class="page-header page-header-inverse ">
-      <h1 class="title title-inverse "> 自制机器人系列（二）：小型六足仿生机器人</h1>
+      <h1 class="title title-inverse "> 自制机器人系列（二）：六足仿生机器人</h1>
     </div>
   
 
@@ -165,7 +165,7 @@ var _hmt = _hmt || [];
   </span>
 
   <i class="fa fa-file-word-o"></i>&nbsp文章字数
-  <span class="post-count">6,190</span>字
+  <span class="post-count">6,180</span>字
 
   &nbsp
 
@@ -178,16 +178,16 @@ var _hmt = _hmt || [];
   <div class="mypage">
     
       <div class="alert alert-success description">
-        <i class="fa fa-info-circle"></i> <p>本篇文章介绍自制小型六足仿生机器人的相关内容。</p>
+        <i class="fa fa-info-circle"></i> <p>本篇文章介绍自制六足仿生机器人的相关内容。</p>
 
       </div> <!-- alert -->
     
 
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个小型六足机器人是我在大四做的，是我大学本科生涯的最后一个个人项目。至于为什么我要做六足机器人，还要从高考完之后说起：当时刚考完的我一直想做一些有意思的事情，直到有一天我发现了一个叫<a href="http://www.diy-bot.net/?project=pvcbot" rel="external nofollow noopener noreferrer" target="_blank">PVCBOT</a>的网站，里面记录了很多如何使用PVC材料来制作简单机器人的教程，其中有一款叫做<strong>PVC六足机器昆虫（见下图）</strong>的机器人彻底震撼了我，当时看完教程之后我就下定决心也要做一个类似的六足机器人，于是我便从<a href="http://hellorobot.blog.163.com/" rel="external nofollow noopener noreferrer" target="_blank">懒猫侠</a>前辈那里购买了六足机器人套件（目前应该已经绝版了），并打算按照提供的教程完成自己的六足机器人，但无奈当时的我所掌握的知识太少，什么单片机、串口通信、舵机PWM、电源管理、传感器、舵机控制板等都不懂，特别是机械结构方面我更是一窍不通，所以大一那会儿我还闹出了笑话：用硬纸板做六足机器人的肢体，在安装好舵机并通电测试后，眼睁睁地看着自己的“纸板六足”在舵机的震动下不断地解体。。。</p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个六足机器人是我在大四做的，是我大学本科生涯的最后一个个人项目。至于为什么我要做六足机器人，还要从高考完之后说起：当时刚考完的我一直想做一些有意思的事情，直到有一天我发现了一个叫<a href="http://www.diy-bot.net/?project=pvcbot" rel="external nofollow noopener noreferrer" target="_blank">PVCBOT</a>的网站，里面记录了很多如何使用PVC材料来制作简单机器人的教程，其中有一款叫做<strong>PVC六足机器昆虫（见下图）</strong>的机器人彻底震撼了我，当时看完教程之后我就下定决心也要做一个类似的六足机器人，于是我便从<a href="http://hellorobot.blog.163.com/" rel="external nofollow noopener noreferrer" target="_blank">懒猫侠</a>前辈那里购买了六足机器人套件（目前应该已经绝版了），并打算按照提供的教程完成自己的六足机器人，但无奈当时的我所掌握的知识太少，什么单片机、串口通信、舵机PWM、电源管理、传感器、舵机控制板等都不懂，特别是机械结构方面我更是一窍不通，所以大一那会儿我还闹出了笑话：用硬纸板做六足机器人的肢体，在安装好舵机并通电测试后，眼睁睁地看着自己的“纸板六足”在舵机的震动下不断地解体。。。</p>
 <a id="more"></a>
 <p><img src="https://media.myyerrol.io/images/diy_robots/2_hexapod_bionic_robot/pvcbot_hexapod.jpg" alt="pvcbot_hexapod"></p>
-<p>经过大一那次失败之后，我决定暂时停止该项目的开发，转而先去学习那些有关嵌入式开发的基础知识，等以后有能力的时候再去独立完成这个六足机器人。很幸运的是在我大学本科即将结束的时候，我已掌握了足够的知识来完成那个曾经困扰我已久的机器人项目，于是我花了几周的时间完成了这个小型六足机器人，算是了却了自己的一个心愿吧。</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>小型六足仿生机器人是一个拥有十八个关节自由度的迷你多足机器人，它可以实现红外遥控、超声波避障等基本功能。机器人的硬件核心为Arduino Nano，并采用串口通信的方式与24路舵机控制板进行数据交互，从而间接完成对所有舵机旋转角度的精确控制，最终使机器人能够以各种不同的步态进行移动。当然，这个机器人项目的软件依旧开源，具体代码可以从我的GitHub<a href="https://github.com/myyerrol/hexapod_bionic_robot" rel="external nofollow noopener noreferrer" target="_blank">仓库</a>上获得。</p>
+<p>经过大一那次失败之后，我决定暂时停止该项目的开发，转而先去学习那些有关嵌入式开发的基础知识，等以后有能力的时候再去独立完成这个六足机器人。很幸运的是在我大学本科即将结束的时候，我已掌握了足够的知识来完成那个曾经困扰我已久的机器人项目，于是我花了几周的时间完成了这个六足机器人，算是了却了自己的一个心愿吧。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>六足仿生机器人是一个拥有十八个关节自由度的迷你多足机器人，它可以实现红外遥控、超声波避障等基本功能。机器人的硬件核心为Arduino Nano，并采用串口通信的方式与24路舵机控制板进行数据交互，从而间接完成对所有舵机旋转角度的精确控制，最终使机器人能够以各种不同的步态进行移动。当然，这个机器人项目的软件依旧开源，具体代码可以从我的GitHub<a href="https://github.com/myyerrol/hexapod_bionic_robot" rel="external nofollow noopener noreferrer" target="_blank">仓库</a>上获得。</p>
 <p><img src="https://media.myyerrol.io/images/diy_robots/2_hexapod_bionic_robot/hexapod_bionic_robot_1.jpg" alt="hexapod_bionic_robot_1"></p>
 <h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>六足机器人的整个制作过程主要分为机械和电子两部分，其中机械部分我是根据懒猫侠在其博客上发布的<a href="http://hellorobot.blog.163.com/blog/static/185444129201373023256527/" rel="external nofollow noopener noreferrer" target="_blank">第五版六足肢体装配</a>教程来完成所有拼装的，由于教程中每一步的图片都非常清楚，所以机械这部分没花费我太多的时间和精力。而电子部分则全部是我自己设计的，虽然原理难度不大，但是要根据机器人的机械结构来选择洞洞板的摆放位置并且要完成其上电子元件的布局和焊接工作确实也比较费功夫，而且有的时候如果处理的不好还要返工，不过所幸自己在焊电路前就已经规划好了，所以电路部分的制作也还算顺利。</p>
 <p>在接下来的篇幅中，我会尽可能详细地讲解机器人制作过程中的一些具体步骤和细节，如果你对机器人的原理和最后的效果更感兴趣的话，可以跳过本小节直接阅读<strong>原理</strong>和<strong>效果</strong>章节。</p>
@@ -237,7 +237,7 @@ var _hmt = _hmt || [];
 <p><img src="https://media.myyerrol.io/images/diy_robots/2_hexapod_bionic_robot/hexapod_bionic_robot_electronics_6.jpg" alt="hexapod_bionic_robot_electronics_6"></p>
 </li>
 </ul>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>以下是该小型仿生六足机器人的硬件系统连接图：</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>以下是该仿生六足机器人的硬件系统连接图：</p>
 <p><img src="https://media.myyerrol.io/images/diy_robots/2_hexapod_bionic_robot/hexapod_bionic_robot_fritzing.png" alt="hexapod_bionic_robot_fritzing"></p>
 <p>由上图可知，六足机器人的硬件系统主要由舵机控制、电源管理、核心主控、数据感知和数据通信共五部分组成，接下来进行详细的介绍：</p>
 <ul>
@@ -289,7 +289,7 @@ var _hmt = _hmt || [];
   </iframe>
 </div>
 
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>回想起当初，自己就是看了<a href="https://www.guokr.com/article/5075/" rel="external nofollow noopener noreferrer" target="_blank">六足机器昆虫-你的下一个足式移动机器人</a>这篇教程才开始迷上六足机器人的，没想到大四快毕业的时候自己能有机会完成这个属于自己的小型六足仿生机器人，说实话当看到六足机器人第一次从团身状态下依靠自己的力量站立起来时，我的内心是无比激动的，尽管由于舵机的力矩偏小导致机器人的足体在支撑地面时会有轻微吱吱的抖动，但是得益于十八个关节自由度，六足机器人可以做出很多机器人都无法做出的复杂动作，我想这也许就是多足机器人的魅力所在吧！</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>回想起当初，自己就是看了<a href="https://www.guokr.com/article/5075/" rel="external nofollow noopener noreferrer" target="_blank">六足机器昆虫-你的下一个足式移动机器人</a>这篇教程才开始迷上六足机器人的，没想到大四快毕业的时候自己能有机会完成这个属于自己的六足仿生机器人，说实话当看到六足机器人第一次从团身状态下依靠自己的力量站立起来时，我的内心是无比激动的，尽管由于舵机的力矩偏小导致机器人的足体在支撑地面时会有轻微吱吱的抖动，但是得益于十八个关节自由度，六足机器人可以做出很多机器人都无法做出的复杂动作，我想这也许就是多足机器人的魅力所在吧！</p>
 <p>不过话说回来，对于机器人初学者来说，制作一个六足机器人的难度相较于轮式机器人还是非常大的，而且投入的时间和资金成本也比较多。如果你的动手能力和技术水平足够强，且跟我一样认为六足机器人非常酷的话，你也可以尝试去做一台属于自己的六足机器人并为它扩展更多有意思的功能（比如我加入了MPU6050和HMC5883L模块来做机器人运动感知与矫正，可惜因时间有限没能实现）。最后我总结一下能成功自制六足机器人所需要的三个关键因素：<strong>1、从始至终发自内心的热爱</strong>；2、拥有机械、电子和软件方面的专业知识；3、为实现最终目标而坚持不懈的努力！</p>
 
 
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
               function addDatePrefix(num) {
                 return num < 10 ? "0" + num : num
               }
-              var dateStand = "Wed Oct 28 2020 20:26:38 GMT+0800";
+              var dateStand = "Sat Mar 06 2021 10:23:44 GMT+0800";
               var dateTemp  = new Date(dateStand);
               var date = dateTemp.getFullYear() + '年' +
                          addDatePrefix((dateTemp.getMonth() + 1)) + '月' +
@@ -319,7 +319,7 @@ var _hmt = _hmt || [];
         </p>
         <p>
           <span>原始链接：</span>
-          <a href="./" title="自制机器人系列（二）：小型六足仿生机器人">https://myyerrol.io/zh-cn/2018/05/21/diy_robots_2_hexapod_bionic_robot/</a>
+          <a href="./" title="自制机器人系列（二）：六足仿生机器人">https://myyerrol.io/zh-cn/2018/05/21/diy_robots_2_hexapod_bionic_robot/</a>
         </p>
         <p>
           <span>版权说明：</span>
@@ -338,7 +338,7 @@ var _hmt = _hmt || [];
 <ul class="pagination">
   
     
-      <li class="prev"><a href="/zh-cn/2018/06/13/diy_robots_3_self_balancing_robot/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+      <li class="prev"><a href="/zh-cn/2018/06/13/diy_robots_3_2wd_balancing_robot/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
     
 
     <li><a href="/archives/"><i class="fa fa-archive"></i>归档</a></li>
