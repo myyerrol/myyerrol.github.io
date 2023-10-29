@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>团队处理器系列（四）：木心开发环境-重新出发 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="本篇文章介绍《木心开发环境-重新出发》的相关内容。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="团队处理器系列（四）：木心开发环境-重新出发">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 团队处理器系列（四）：木心开发环境-重新出发</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">2k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">6</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+            <div class="alert alert-success description">
+                <i class="fa fa-info-circle"></i> <p>本篇文章介绍《木心开发环境-重新出发》的相关内容。</p>
+
+            </div>
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>事实再次证明那句至理名言：<strong>只要一件事你现在不去做，以后大概率也不会去做。</strong>去年6月份我们团队携木心处理器项目在第一届RISC-V中国峰会上与大家见面，当时有很多志同道合的朋友对我们的开源项目感兴趣，但是由于下半年我们团队受到公司加班和学校毕业等诸多因素的影响，<strong>木心开发环境第一版</strong>并没有如期发布，不过好在我的队友<code>maksyuki</code>以<strong>国科大第三期“一生一芯”项目</strong>为契机，成功编写出了<strong>木心处理器核第一版（代号TC-L1）</strong>并通过了前端仿真与验证，得到了一次极其宝贵的流片机会，这可以算是2021年木心项目为数不多的高光时刻。转眼间来到2022年，项目开发依旧处于半停滞的状态，为此我和队友深入地探讨了一番，终于搞明白了问题出在哪里并制订了详细的解决方案。接下来我会以为本项目为例，简要分享一下我们对开源项目的可持续发展的一些见解，如有表述不对之处，欢迎大家批评指正。</p>
+<span id="more"></span>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p><strong>开发项目的决心依然不够坚定</strong></p>
+<p>决心是做成一件事情最重要的因素，如果不抱着破釜沉舟般的决心，就算是掌握了事半功倍的方法，在遇到各种诱惑或艰难险阻时，也大概率会败下阵来。以我本人为例，去年在第一届RISC-V中国峰会落幕之后，由于自己开发项目的决心发生了些许的动摇，被压制在骨子深处的惰性便轻而易举地占据了上风，使得自己本就不富裕的业余时间被各种娱乐活动消磨殆尽，而且再加上本人手头上还有几个跟机器人有关的开源项目要做，顾此失彼，从而导致木心项目被一拖再拖。现在回头想想如果当初我能将全部的时间和精力投入到木心项目中去，也许维持决心也不是一件那么难的事情。</p>
+</li>
+<li><p><strong>缺少简单强大的项目管理工具</strong></p>
+<p>古人曾经说过：<strong>工欲善其事，必先利其器。</strong>在拥有了坚定的决心之后，方法就显得尤为重要了，因为它不仅可以提高开发项目的效率，而且还能让我们逐步积累成就感，更好地促进项目不断向前发展，从而形成一个良性的正反馈闭环。还是以我们木心团队为例，在日常开会或开发的过程中，我们会统一使用印象笔记的共享笔记功能来记录<strong>项目文档</strong>，如果在网上发现比较好的资料也会用印象笔记进行裁剪收藏。此外，印象笔记还允许用户以Markdown格式编写文档，这对于经常写个人博客的程序员来说非常友好，但是它的缺点也很明显，<strong>第一就是富文本编辑模式下跨平台的字体和格式无法做到统一</strong>，比如经常会发生队友写的文章在我浏览器端显示错位的问题。<strong>第二就是文件目录树的层级只有两级</strong>，这肯定无法满足后期展示项目复杂层级结构的需求。</p>
+</li>
+</ul>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>经过一段时间的搜索以及比较后，我们决定使用<strong>我来（wolai）笔记</strong>来构建属于我们团队自己的知识体系，它最吸引我的特点是其引入了不同于传统云笔记（如印象笔记、有道云笔记）的<strong>块系统</strong>，可通过嵌套任意个块的方式搭建出复杂的多层级知识结构，此外得益于块的<strong>双向链接</strong>功能，文档中的信息不再是一座座没有联系的孤岛，而是依靠彼此之间的链接形成了一个庞大的网状结构，这相比传统线性知识管理更有助于我们思考和梳理项目内部各个模块间的关系，并可由此打造出一套属于每个团队自己的高效协作新模式，所以这里推荐给大家使用。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/wolai_doc.png" alt="项目文档首页图"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/wolai_progress.png" alt="项目开发进度图"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/wolai_log_1.png" alt="项目开发日志图1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/wolai_log_2.png" alt="项目开发日志图2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/wolai_log_3.png" alt="项目开发日志图3"></p>
+<p>除了构建全新的项目文档体系之外，我们团队还对已有的组织代码仓库进行了优化，添加了木心项目的介绍文档并根据其他开源项目的模板重新编写了每个代码仓库的README，与此同时我们也规范化了代码仓库的协作开发流程，即每位开发人员仅在自己负责的模块分支上进行开发，所有变动只有在提交时才会依次合并到开发分支和主分支上（合并前须从远程仓库拉取最新的提交），这使得多人协作开发一个大型工程项目不再是个棘手的问题，极大地提高了项目开发的效率。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/github_repo_1.png" alt="项目代码仓库图1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/github_repo_2.png" alt="项目代码仓库图2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/git_branch.png" alt="项目代码分支图"></p>
+<p>在Docusaurus开源项目的帮助下，我们在很短的时间内便将木心网站的基础框架搭建了出来，虽然很多页面还没来得及设计和优化，但是木心项目终于有了属于自己的主页，算是基本凑齐了一个标准开源项目所需的所有元素。未来我们会对项目网站进行不断地改进，拟采用全新的方式来呈现项目的教程、新闻、社区等内容，届时我们希望木心网站能够成为启发并激励爱好者学习处理器知识的在线乐园。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/4_treecore_ide_restart/website.png" alt="项目开源网站图"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在前一篇文章中我介绍了我们木心团队目前是由两位<strong>非微电子专业</strong>的爱好者所组成的，论专业知识和开发经验我们确实不如很多具有学术背景的领域内人士，所以目前我们是处于边学习边探索的阶段，肯定会在开发项目的过程中遇到各种各样的问题，希望大家能够给予一定的理解。Vue创始人尤雨溪在码云的一篇报道中曾经讲到自己开发了三年多时间才发布Vue 1.0版本，因此我们也决定开发和维护木心项目至少三年时间，到时候欢迎新老朋友们回来看看，<strong>也许那时木心项目也能成为开源世界天空中一颗闪耀的明星！</strong></p>
+<p>前几天在知乎上看到一篇文章，里面有一段话让我感触很深：<strong>我国是全球唯一拥有联合国全部工业门类的国家，但高端数控机床、工业设计软件、智能制造等领域的基础设备却严重依赖进口。</strong>对于半导体行业来说，工业设计软件几乎全部被欧美几大巨头所垄断，涉及处理器前端设计和后端制造的整个生命周期，如果未来有朝一日欧美像制裁华为一样不再允许中国使用这些工业软件，那我们的核心产业该如何生存下去？个人认为我们可以先从开源工业软件做起，经过一段时间的版本迭代与知识积累之后，再适当地进行商业化运作，以保证软件的稳定性不会受到开源框架碎片化问题的影响，当然最关键的还是<strong>要有人愿意去开发这些难度高且收益低的底层工业软件</strong>，期待不久的将来能有更多的团队去做这方面的研究，为处理器自主可控贡献自己的一份力量。</p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun Oct 29 2023 21:56:48 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="团队处理器系列（四）：木心开发环境-重新出发">https://myyerrol.xyz/zh-cn/2022/06/19/team_cpu_4_treecore_ide_restart/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev disabled">
+                    <a>
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2021/09/05/team_cpu_3_treecore_ide_design/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2022-06-19
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/团队处理器系列/">团队处理器系列<span>4</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/CPU/">CPU<span>4</span></a></li> <li><a href="/tags/RISC-V/">RISC-V<span>4</span></a></li> <li><a href="/tags/TreeCore/">TreeCore<span>3</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-article-text">问题</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-article-text">解决</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+<script type="text/javascript">
+    var imageLabel = "true";
+    var images = document.getElementsByTagName("img");
+    (function() {
+        for (var i = 0; i < images.length; i++) {
+            var image = images[i];
+            var label = image.alt;
+            var dom = image.parentNode;
+            var domLabel = document.createElement("span");
+            domLabel.setAttribute(
+                "style",
+                "display:block; text-align:center; color:gray");
+            domLabel.innerText = label;
+            dom.appendChild(domLabel);
+        }
+    }());
+</script>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">170.7k</span>字
+
+    <br>
+
+    
+        &copy; 2023 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>

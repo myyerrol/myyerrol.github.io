@@ -1,0 +1,600 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>团队处理器系列（一）：软件安装与配置 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="本篇文章介绍《软件安装与配置》的相关内容。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="团队处理器系列（一）：软件安装与配置">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 团队处理器系列（一）：软件安装与配置</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">3.4k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">13</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+            <div class="alert alert-success description">
+                <i class="fa fa-info-circle"></i> <p>本篇文章介绍《软件安装与配置》的相关内容。</p>
+
+            </div>
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我记得自己大三在上《计算机体系结构》课程的时候，曾经独自完成过一个基于MISP指令集的多周期CPU，虽然当时它只能执行大概50多条基本指令且没法像流水线CPU那样可以并行工作，但是当看到自己编写的Verilog模块代码能够通过Modelsim仿真得到正确的波形时，那种成就感是编写普通的软件程序所无法比拟的。也许正是得益于此次经历，让我后来萌发了想要DIY一个完整CPU的想法，不过由于学业和工作上的种种原因，这个想法就被暂时搁置了。</p>
+<p>随着近几年RISC-V开源指令集逐渐在学术和工业界得到认可，个人设计CPU已经不再是遥不可及的事情，再加上自己最近被胡振波老师的<strong>《手把手教你设计CPU——RISC-V处理器篇》</strong>这本书中的内容所深深吸引，于是我决定重启<strong>自制CPU项目</strong>。当然，因为我目前只能算是一个初学者，所以如果接下来的文章中有哪些内容写得有误，欢迎各位大佬指正！</p>
+<span id="more"></span>
+<p>好了言归正传，作为整个《团队处理器系列》专栏的开篇，本篇文章主要介绍如何在Ubuntu系统上安装ModelSim和Quartus II这两款CPU开发利器。<strong>注意：文章中所涉及的软件安装与配置仅在64位的Ubuntu 16.04系统上测试通过，如果你使用的Ubuntu版本大于16.04或者使用的是其他GNU/Linux发行版，则以下部分步骤可能并不适用。</strong></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="ModelSim"><a href="#ModelSim" class="headerlink" title="ModelSim"></a>ModelSim</h3><blockquote>
+<p>Mentor公司的ModelSim是业界最优秀的HDL语言仿真软件，它能提供友好的仿真环境，是业界唯一的单内核支持VHDL和Verilog混合仿真的仿真器。它采用直接优化的编译技术、Tcl/Tk技术、和单一内核仿真技术，编译仿真速度快，编译的代码与平台无关，便于保护IP核，个性化的图形界面和用户接口，为用户加快调错提供强有力的手段，是FPGA/ASIC设计的首选仿真软件。</p>
+</blockquote>
+<ul>
+<li><h4 id="安装Java运行环境"><a href="#安装Java运行环境" class="headerlink" title="安装Java运行环境"></a>安装Java运行环境</h4><p>如果已经手动配置过Java运行环境，则请忽略下面的安装命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo apt update</span><br><span class="line">$&gt; sudo apt install default-jre</span><br><span class="line">$&gt; sudo apt install default-jdk</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="安装32位依赖库"><a href="#安装32位依赖库" class="headerlink" title="安装32位依赖库"></a>安装32位依赖库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo dpkg --add-architecture i386</span><br><span class="line">$&gt; sudo apt install libxext6:i386 libxtst6:i386 libxi6:i386 libstdc++5:i386</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="安装程序文件"><a href="#安装程序文件" class="headerlink" title="安装程序文件"></a>安装程序文件</h4><p>将安装脚本赋予755可执行权限，然后以管理员权限运行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$&gt; mkdir ~/Softwares</span><br><span class="line">$&gt; cp -r ~/Downloads/modelsim_se_10.2c ~/Softwares</span><br><span class="line">$&gt; <span class="built_in">cd</span> ~/Softwares/modelsim_se_10.2c</span><br><span class="line">$&gt; sudo chmod 755 install.linux</span><br><span class="line">$&gt; sudo ./install.linux</span><br></pre></td></tr></table></figure>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_1.png" alt="modelsim_1"></p>
+<p>点击窗口中的【Install Products】选项。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_2.png" alt="modelsim_2"></p>
+<p>选择安装目录为【/opt/modelsim】，并点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_3.png" alt="modelsim_3"></p>
+<p>勾选【10.2c】目录前面的多选框以安装全部内容，并点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_4.png" alt="modelsim_4"></p>
+<p>点击【Agree】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_5.png" alt="modelsim_5"></p>
+<p>点击【Install】按钮进行安装。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_6.png" alt="modelsim_6"></p>
+<p>点击【Done】按钮关闭安装程序。</p>
+</li>
+<li><h4 id="破解程序文件"><a href="#破解程序文件" class="headerlink" title="破解程序文件"></a>破解程序文件</h4><blockquote>
+<p>注意：将Windows下破解ModelSim时所生成的【license.txt】文件复制到GNU/Linux系统的相应目录下或先将  其重命名为【license.dat】后再作为ModelSim软件的许可证文件，经过测试都是不可以的；此外，不同版本的许可  证文件也可能⽆法通⽤，⽤这些存在问题的许可证文件运⾏vsim时，基本都会提⽰当前软件⽆显⽰图形界⾯权限。</p>
+</blockquote>
+<p>以上内容大意来源于简书作者<strong>锦穗</strong>的《Quartus/Modelsim Linux搭建笔记v0.1》这篇文章。关于锦大神提到  的在Windows下生成的ModelSim许可证文件在GNU/Linux系统下无效的问题，这个本人没有实际测试过，不过既然作  者如此坚持，为保险起见，我最终也采用了作者提出的曲线救国方法，即先在Ubuntu下安装Wine，然后再用其调用破  解工具直接生成许可证文件。Wine官方推荐的安装步骤如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$&gt; wget -nc https://dl.winehq.org/wine-builds/winehq.key</span><br><span class="line">$&gt; sudo apt-key add winehq.key</span><br><span class="line">$&gt; sudo apt-add-repository <span class="string">&#x27;deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main&#x27;</span></span><br><span class="line">$&gt; sudo apt install --install-recommends winehq-stable</span><br></pre></td></tr></table></figure>
+<p>在成功安装Wine之后，需要在第一次使用之前使用下面的命令初始化wine配置文件，并将其添加到root用户组里，以便接下来我们能够以管理员权限运行ModelSim的破解工具。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; winecfg</span><br><span class="line">$&gt; sudo chown root:root -R ~/.wine</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：在运行下述的wine命令时，不要在电脑usb口上插外置的usb网卡，如果是笔记本电脑，最好把外设都给拔掉。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> /opt/modelsim/modeltech/linux_x86_64/</span><br><span class="line">$&gt; sudo cp ~/Softwares/modelsim_se_10.2c/.../MentorKG.exe ./</span><br><span class="line">$&gt; sudo wine MentorKG.exe -patch .</span><br></pre></td></tr></table></figure>
+<p>如果终端没有报错的话，系统会弹出下图所示的文本编辑器窗口。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_7.png" alt="modelsim_7"></p>
+<p>点击文本编辑器工具栏【File】下的【Save As】选项。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_8.png" alt="modelsim_8"></p>
+<p>在弹出的文本保存窗口中，手动将文件名称修改为【license.dat】，并选择文件编码格式为【Unicode(UTF-8)】，最后点击【Save】按钮即可将生成的许可证文件保存到系统本地（推荐放到【~/Documents/License/modelsim】目录下）。</p>
+<p>最后，将破解补丁文件拷贝到ModelSim的安装目录下，并在赋予755可执行权限之后，使用管理员权限调用patch_calibre2011_linux脚本文件执行破解。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> /opt/modelsim</span><br><span class="line">$&gt; sudo cp ~/Softwares/modelsim_se_10.2c/.../patch_calibre2011_linux ./</span><br><span class="line">$&gt; sudo cp ~/Softwares/modelsim_se_10.2c/.../sfk ./</span><br><span class="line">$&gt; sudo chmod 755 patch_calibre2011_linux sfk</span><br><span class="line">$&gt; sudo ./patch_calibre2011_linux</span><br></pre></td></tr></table></figure>
+<p>如果终端里只出现类似下面的错误，则表明破解补丁已经成功被打入到软件中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; error: failed to <span class="built_in">read</span>+write: sfk - skipping</span><br></pre></td></tr></table></figure>
+<p>如果终端中出现多于1个错误（出现概率比较小），则很可能是因为wine或之前其他不恰当的操作导致ModelSim安装目录下的某些文件被损坏，此时只需重装ModelSim软件并再次执行上述打补丁命令即可。</p>
+</li>
+<li><h4 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h4><p>使用文本编辑器打开【~/.bashrc】或【~/.zshrc】，并在文件末尾添加以下几行内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Modelsim</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/modelsim/modeltech/linux:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/License/modelsim/license.dat</span><br></pre></td></tr></table></figure>
+<p><strong>备注：在锦大神的教程中，ModelSim可执行程序的环境变量设置的是64位目录（即【/opt/modelsim/modeltech/linux_x86_64 】），但是我设置成这个后，终端总是提示无法读取许可证文件，使用【lmutil lmdiag】命令也显示正常，最后我修改为上述的32位目录就好了，至于原因目前还不清楚。</strong></p>
+</li>
+<li><h4 id="修改网卡名称"><a href="#修改网卡名称" class="headerlink" title="修改网卡名称"></a>修改网卡名称</h4><p><strong>注意：这一步是破解ModelSim的关键，因为Ubuntu系统从16.04开始网卡名称的命名出现了较大的变化（如有线网卡从【eth0】变为了【enp2s0】），所以为了让ModelSim和下面将会讲到Quartus II软件能够正确读取系统的NIC ID，需要用户手动修改网卡名称，具体步骤如下：</strong></p>
+<p>首先备份【/etc/default/grub】文件，然后以管理员权限打开它。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo cp /etc/default/grub /etc/default/grub.bak</span><br><span class="line">$&gt; sudo vim /etc/default/grub</span><br></pre></td></tr></table></figure>
+<p>在文件中找到【GRUB_CMDLINE_LINUX】配置项，并将其修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">GRUB_CMDLINE_LINUX=&quot;net.ifnames=0 biosdevname=0&quot;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>最后执行命令更新grub引导文件，并重启系统即可完成所有的破解工作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">$&gt; sudo reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="启动软件程序"><a href="#启动软件程序" class="headerlink" title="启动软件程序"></a>启动软件程序</h4><p>在终端中输入以下命令即可正常启动ModelSim。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; vsim</span><br></pre></td></tr></table></figure>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/modelsim/modelsim_9.png" alt="modelsim_9"></p>
+</li>
+</ul>
+<h3 id="Quartus-II"><a href="#Quartus-II" class="headerlink" title="Quartus II"></a>Quartus II</h3><blockquote>
+<p>Quartus II 是Altera公司的综合性CPLD/FPGA开发软件，原理图、VHDL、VerilogHDL以及AHDL（Altera Hardware 支持Description Language）等多种设计输入形式，内嵌自有的综合器以及仿真器，可以完成从设计输入到硬件配置的完整PLD设计流程。Quartus II可以在Windows、Linux以及Unix上使用，除了可以使用Tcl脚本完成设计流程外，提供了完善的用户图形界面设计方式。具有运行速度快，界面统一，功能集中，易学易用等特点。</p>
+</blockquote>
+<ul>
+<li><h4 id="安装程序文件-1"><a href="#安装程序文件-1" class="headerlink" title="安装程序文件"></a>安装程序文件</h4><p>在终端中挂载Quartus的镜像安装文件，然后以管理员权限执行安装脚本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> ~/Downloads</span><br><span class="line">$&gt; sudo mkdir /media/quartus</span><br><span class="line">$&gt; sudo mount -o loop Quartus-13.0.1.232-linux.iso /media/quartus</span><br><span class="line">$&gt; sudo /media/quartus/setup.sh</span><br></pre></td></tr></table></figure>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_1.png" alt="quartusii_1"></p>
+<p>点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_2.png" alt="quartusii_2"></p>
+<p>选择【I accept the agreement】选项，然后点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_3.png" alt="quartusii_3"></p>
+<p>选择安装目录为【/opt/altera/13.0sp1】，并点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_4.png" alt="quartusii_4"></p>
+<p>使用默认的选项即可，点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_5.png" alt="quartusii_5"></p>
+<p>使用默认的选项即可，点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_6.png" alt="quartusii_6"></p>
+<p>点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_7.png" alt="quartusii_7"></p>
+<p>如下图所示，安装程序会自动在桌面生成64位软件的快捷方式，至此Quartus II的主程序文件就全部安装完毕了。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_8.png" alt="quartusii_8"></p>
+</li>
+<li><h4 id="安装设备文件"><a href="#安装设备文件" class="headerlink" title="安装设备文件"></a>安装设备文件</h4><p>同理，在终端中挂载Quartus的镜像设备文件，然后以管理员权限执行安装脚本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> ~/Downloads</span><br><span class="line">$&gt; sudo mount -o loop Quartus-13.0.1.232-devices-1.iso /media/quartus</span><br><span class="line">$&gt; sudo /media/quartus/components/DeviceInstall-13.0.1.232.run</span><br></pre></td></tr></table></figure>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_9.png" alt="quartusii_9"></p>
+<p>点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_10.png" alt="quartusii_10"></p>
+<p>选择安装目录为【/opt/altera/13.0sp1】，并点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_11.png" alt="quartusii_11"></p>
+<p>选择自己开发所需的设备，然后点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_12.png" alt="quartusii_12"></p>
+<p>点击【Next】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_13.png" alt="quartusii_13"></p>
+<p>点击【Finish】按钮关闭安装程序。</p>
+</li>
+<li><h4 id="破解程序文件-1"><a href="#破解程序文件-1" class="headerlink" title="破解程序文件"></a>破解程序文件</h4><p>将压缩包内的破解补丁替换到软件安装目录下的两个同名文件夹中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> ~/Softwares/Crack_QII_13.0_SP1_Linux</span><br><span class="line">$&gt; sudo cp linux/libsys_cpt.so /opt/altera/13.0sp1/quartus/linux</span><br><span class="line">$&gt; sudo cp linux64/libsys_cpt.so /opt/altera/13.0sp1/quartus/linux64</span><br></pre></td></tr></table></figure>
+<p>使用Wine执行Windows下的破解工具（忽略开始阶段需要选择破解补丁这一步），并将生成的【license.dat】文件保存到系统本地，最后将文件中的【XXXXXXXXXXXX】用自己电脑的有线网卡号替换即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> ~/Softwares/Crack_QII_13.0_SP1_Windows</span><br><span class="line">$&gt; sudo wine Quartus_13.0_SP1_x64破解器.exe</span><br></pre></td></tr></table></figure>
+<p>双击桌面的Quartus II图标启动软件，此时软件会弹出许可证提醒窗口。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_14.png" alt="quartusii_14"></p>
+<p>点击【OK】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_15.png" alt="quartusii_15"></p>
+<p>选择之前修改过的【license.dat】文件，点击【Open】按钮。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_16.png" alt="quartusii_16"></p>
+<p>窗口出现以上内容，则表明软件破解成功。</p>
+</li>
+<li><h4 id="设置环境变量-1"><a href="#设置环境变量-1" class="headerlink" title="设置环境变量"></a>设置环境变量</h4><p>使用文本编辑器打开【~/.bashrc】或【~/.zshrc】，并在文件末尾添加以下几行内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Quartus II</span></span><br><span class="line"><span class="built_in">export</span> PATH=/opt/altera/13.0sp1/quartus/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=<span class="variable">$HOME</span>/Documents/License/quartus/license.dat:<span class="variable">$LM_LICENSE_FILE</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="启动软件程序-1"><a href="#启动软件程序-1" class="headerlink" title="启动软件程序"></a>启动软件程序</h4><p>启动32位Quartus II。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; quartus</span><br></pre></td></tr></table></figure>
+<p>启动64位Quartus II。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; quartus --64bit</span><br></pre></td></tr></table></figure>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_cpu/1_software_install_config/quartusii/quartusii_17.png" alt="quartusii_17"></p>
+<p><strong>备注：一般情况下，双击快捷方式图标就能正常启动Quartus II，可是我每次这样启动时，软件总是提示我要重新选择许可证文件，而使用上述从终端启动的方法就没有问题，至于原因目前还不清楚。</strong></p>
+</li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li><h4 id="USB-Blaster"><a href="#USB-Blaster" class="headerlink" title="USB Blaster"></a>USB Blaster</h4><p>首先将UBS Blaster下载器插到电脑上，然后在终端中输入【lsusb】，此时终端中返回的内容应该包含以下类似信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bus 001 Device 051: ID 09fb:6001 Altera Blaster</span><br></pre></td></tr></table></figure>
+<p>然后切换到设备目录下并创建一个规则文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; <span class="built_in">cd</span> /etc/udev/rules.d</span><br><span class="line">$&gt; sudo vim 80-usbblaster.rules</span><br></pre></td></tr></table></figure>
+<p>在上述新建的规则文件中写入以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ATTRS&#123;idVendor&#125;==&quot;09fb&quot;, ATTRS&#123;idProduct&#125;==&quot;6001&quot;, MODE=&quot;666&quot;</span><br></pre></td></tr></table></figure>
+<p>最后重新插线并在终端中输入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下面命令中的【001】和【051】分别对应于上述返回信息中的【Bus 001 Device 051】</span></span><br><span class="line">$&gt; ls -l /dev/bus/usb/001/051</span><br></pre></td></tr></table></figure>
+<p>如果系统返回的目录权限为【crw-rw-rw-】，则表明USB Blaster设置成功。</p>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.jianshu.com/p/ad131936a6c4">Quartus/Modelsim Linux搭建笔记v0.1</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://bbs.eeworld.com.cn/thread-475336-1-1.html">64位ubuntu15.04安装quartus ii 15.0 - FPGA/CPLD - 电子工程世界-论坛</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.csdn.net/xforce_zuoxiang/article/details/24530329">ubuntu14.04 64bit 安装 &amp;&amp; 破解quartus13.0 记录</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cnblogs.com/tracyone/p/3604090.html">ubuntu 14.04 安装 Quartus II 13.1 过程</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.csdn.net/wenwenxiong/article/details/52937539">ubuntu16.04修改网卡名称enp2s0为eth0_运维_wenwenxiong的专栏-CSDN博客</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实在我动手开始安装和配置ModelSim和Quartus II软件之前，就曾在网上搜索过一些类似的教程，不过其中大部分讲的都是如何在Windows下实现软件的完美安装，而有关GNU/Linux的则寥寥无几，就算是有，其教程内容也都比较老旧，如果不经过修改是无法使用的，所以为了满足嵌入式方向的研究者或爱好者们能够在GNU/Linux系统下顺利地安装和使用ModelSim和Quartus II这两款软件，我把自己安装和配置软件的方法总结下来，希望大家喜欢。</p>
+<p>最后借着这个《团队处理器系列》开篇的机会，我决定给自己的<strong>自制CPU项目</strong>设定几个需要达成的目标，一方面是想以此来鞭策自己，确保这个项目不会烂尾（毕竟像设计CPU这种涉及底层且难度较大的任务，没有Push可能坚持不下来），另一方面也算是实现自己的人生价值吧。目标具体如下：<strong>首先通过学习RISC-V的指令架构和编译语法，独自完成一个简单的RISC-V软核IP；其次是将学习和开发过程中所遇到的问题和经验都总结下来以供其他人参考使用；最后是想设计一套完全由中国人主导的开源RISC指令集，并努力让它能够像其前辈RISC-V一样得到全世界学术界和工业界的认可！</strong></p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun Oct 29 2023 21:56:48 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="团队处理器系列（一）：软件安装与配置">https://myyerrol.xyz/zh-cn/2020/05/05/team_cpu_1_software_install_config/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2020/09/23/travel_notes_1_kansai_2019_preparation/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2019/12/07/life_essays_1_eop_keyboard_piano/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2020-05-05
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/团队处理器系列/">团队处理器系列<span>4</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/CPU/">CPU<span>4</span></a></li> <li><a href="/tags/ModelSim/">ModelSim<span>1</span></a></li> <li><a href="/tags/Quartus-II/">Quartus II<span>1</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-article-text">安装</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#ModelSim"><span class="toc-article-text">ModelSim</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%85Java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-article-text">安装Java运行环境</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%8532%E4%BD%8D%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="toc-article-text">安装32位依赖库</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6"><span class="toc-article-text">安装程序文件</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%A0%B4%E8%A7%A3%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6"><span class="toc-article-text">破解程序文件</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-article-text">设置环境变量</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E4%BF%AE%E6%94%B9%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0"><span class="toc-article-text">修改网卡名称</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6%E7%A8%8B%E5%BA%8F"><span class="toc-article-text">启动软件程序</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Quartus-II"><span class="toc-article-text">Quartus II</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6-1"><span class="toc-article-text">安装程序文件</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%89%E8%A3%85%E8%AE%BE%E5%A4%87%E6%96%87%E4%BB%B6"><span class="toc-article-text">安装设备文件</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%A0%B4%E8%A7%A3%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6-1"><span class="toc-article-text">破解程序文件</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="toc-article-text">设置环境变量</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6%E7%A8%8B%E5%BA%8F-1"><span class="toc-article-text">启动软件程序</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-article-text">配置</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#USB-Blaster"><span class="toc-article-text">USB Blaster</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%8F%82%E8%80%83"><span class="toc-article-text">参考</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">170.7k</span>字
+
+    <br>
+
+    
+        &copy; 2023 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>

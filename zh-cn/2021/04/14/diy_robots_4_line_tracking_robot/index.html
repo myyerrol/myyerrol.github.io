@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>自制机器人系列（四）：巡线解迷宫机器人 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="本篇文章介绍《巡线解迷宫机器人》的相关内容。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="自制机器人系列（四）：巡线解迷宫机器人">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 自制机器人系列（四）：巡线解迷宫机器人</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">5.6k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">20</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+            <div class="alert alert-success description">
+                <i class="fa fa-info-circle"></i> <p>本篇文章介绍《巡线解迷宫机器人》的相关内容。</p>
+
+            </div>
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间自己趁着开发<strong>木心软核处理器</strong>的间隙，有幸参加了<strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nucleisys.com/index.php">芯来科技</a></strong>举办的《RISC-V处理器嵌入式开发》在线课程，该课程基于全球首颗RISC-V架构的通用量产微控制器GD32VF103，采用理论学习与动手实践相结合的方式，详细介绍了RISC-V嵌入式处理器的<strong>基础知识</strong>与<strong>实战开发</strong>等内容。作为本土最早一批的RISC-V拓荒者，我觉得芯来此次以直播课的形式来推广国产RISC-V处理器应用生态的做法是非常值得称赞的，希望后期能够有更多有益于国产处理器生态建设的活动推出。</p>
+<p>好了言归正传，本次芯来在线课程的最后有一个终极考核，需要各位学员基于<strong>RV-STAR开发板</strong>（或其他采用GD32VF103处理器的开发板）做一个面向嵌入式应用方面的小项目，题材与形式均不限。<span id="more"></span>考虑到自己是第一次使用国产处理器来做实际的项目，在上手开发的过程中可能会遇到一些阻力（比如环境配置、代码封装等方面的），所以这次我打算先做一个简单点的项目来练练手，想来想去觉得自己下半年计划要做的巡线解迷宫机器人最为合适，不过由于时间有限的缘故，我决定先把这个机器人的原理验证机先搭建出来，等硬件和软件都经过验证没有问题后，我再实现一款像<strong>稚晖君</strong>所做的Qbot那样的小型且高度集成的巡线机器人。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>巡线解迷宫机器人是一款能够通过红外反射传感器实现自主巡线以及解迷宫等功能的小型三轮机器人，该机器人的硬件核心采用的是芯来基于GD32VF103处理器所自主设计的RV-STAR开发板，它主要负责处理红外反射传感器采所集到的模拟数据，并将处理后的数据后向下发送给电机驱动模块来精确控制两个直流电机的转向和转速。由于该机器人为原理验证机且为了提高项目整体的开发速度，机器人的所有元器件均采用TB上的现有模块，并使用洞洞板直接焊接的方式来构建其机械结构和电气连接。</p>
+<p>在软件层面上，该机器人内部集成有经典的PID闭环控制算法，可根据模拟输入数据自动调整整个系统的动态平衡，使得机器人最终能够快速且平滑地沿着黑线移动。除此之外，该项目最大的亮点是我根据GD32VF103处理器的库函数手册等相关资料为RV-STAR开发板封装了一个类Arduino语法的静态链接库，取名为<strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/myyerrol/RVStarArduino">RVStarArduino</a></strong>，这样不仅我可以将自己之前基于Arduino所做的机器人项目中的一些代码无缝地移植过来，从而大大提高了项目的开发效率，还使得一些刚接触GD32嵌入式开发的小白用户能够快速上手实践，打消他们对传统嵌入式应用开发的畏难心理，毕竟不是所有人都喜欢研究底层技术嘛。</p>
+<p>最后，该项目的代码可以从我<strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/myyerrol/line-tracking-robot">GitHub仓库</a></strong>上获得，感兴趣的朋友可以下载到本地玩一玩，当然如果你在使用的过程中遇到了一些问题，欢迎在GitHub上给我提交Issues或者在文章评论区里留言，有空的话我肯定会及时回复的。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_1.jpg" alt="巡线解迷宫机器人图1"></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><ul>
+<li><h4 id="电机电源层"><a href="#电机电源层" class="headerlink" title="电机电源层"></a>电机电源层</h4><p>电机电源层是整个机器人硬件架构中<strong>最底层且最基础的单元</strong>，它主要包含直流减速电机、电机驱动模块以及电源管理模块共三大部分，其中关于直流减速电机这块儿，我本次采用的是目前市场上应用广泛且体积较小的N20减速电机，考虑到机器人总装之后的负载情况以及自己对机器人巡线速度的需求，我最终购买的N20电机减速比为30:1，且额定电压为6V时，其空载转速为300RPM（即每分钟300转），这样就能保证动力系统在大负载情况下也能提供较为稳定的扭矩和速度输出，从而使得机器人的巡线过程变得更加高效。</p>
+<p>电机驱动模块我选用的是智能小车里面最常用的TB6612FNG，它相较于其他模块的最大优点在于其在驱动两路大电流电机的同时还能保持自身体积非常小巧，因为我这次做的巡线解迷宫机器人的尺寸非常小，为了节省宝贵的内部空间，TB6612FNG模块几乎可以说是我的唯一选择。至于该模块具体该如何使用，网上有很多教程可供参考，这里我就不展开讲解了，不过有两点大家需要注意一下：<strong>一是TB6612FNG的3个GND引脚是互通的；二是其STBY引脚必须接高电平才能正常驱动电机。</strong></p>
+<p>最后，电源管理部分我使用的是TB上的一款低成本的锂电池充放电一体模块，这个模块最厉害的地方在于它不仅能够通过外置USB接口给锂电池充电，还能在锂电池放电的时候将其电压从3.7V升到5V，功能相当于原先的充电模块+升压模块，这对于寸土寸金的机器人内部空间来说简直就是一个梦幻般的存在。此外，该模块还带有智能省电功能，即当外接负载所需电流小于50mA达到30秒时会自动关闭电源输出，从而有效降低电池电量的损耗。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/elec/elec_1.jpg" alt="电机电源层正面"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/elec/elec_2.jpg" alt="电机电源层背面"></p>
+</li>
+<li><h4 id="主控处理层"><a href="#主控处理层" class="headerlink" title="主控处理层"></a>主控处理层</h4><p>主控处理层作为上层决策单元，<strong>是整个机器人硬件架构中的核心</strong>。在本次的巡线解迷宫机器人中，它主要用于采样红外反射传感器回传的模拟数据并根据PID算法进行数学运算，最后将计算结果以逻辑电平信号的形式反馈给电机控制板，从而实现对直流电机转向与转速的精确控制。当然除了最核心的功能之外，主控处理层这块儿将来还会涉及到与带有IIC接口的OLED显示屏以及基于ESP8266的Wi-Fi模块间的数据交互等内容，也许到时候主控的性能才能被完全地发挥出来。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/elec/elec_3.jpg" alt="RV-STAR开发板示意图（引用自官方论坛）"></p>
+<p>接下来为了让大家对主控有一个基本的认识，这里先简要介绍一下芯来主推的这款RV-STAR开发板（以下内容引用自官网论坛）：</p>
+<blockquote>
+<p>RV-STAR是一款基于GD32VF103 MCU的RISC-V评估开发板，提供了板载调试器、Reset和Wakeup用户按键、RGB LED、USB OTG，以及EXMC、Arduino和PMOD扩展接口等资源。</p>
+</blockquote>
+<p>相较于开发板本身的不俗性能以及所搭载的丰富外设资源，其实我更看重的是它在硬件上完全兼容Arduino这一点。玩过Arduino的同学们都知道，Arduino之所以一经推出便火遍全世界，就是在于它在软硬件层面上的易用性，而RV-STAR在硬件上支持Arduino扩展，这无疑可以让其复用很多现有的Arduino扩展板，如果后期能打通软件语法方面的壁垒（感兴趣的可以关注一下我写的RVStarArduino库），<strong>就可以真正实现将RV-STAR无缝接入到庞大且成熟的Arduino生态中</strong>，我想这也许是未来国产处理器生态环境建设可以走的捷径之一吧。</p>
+</li>
+<li><h4 id="外设模块层"><a href="#外设模块层" class="headerlink" title="外设模块层"></a>外设模块层</h4><p>外设模块层位于机器人硬件架构的最顶层，<strong>主要用于与外部环境进行数据交互</strong>，在本项目最早的规划中这部分应该是由红外反射传感器、OLED显示屏与Wi-Fi透传模块等三个核心外设组成，不过由于时间缘故后两个我并没有添加到机器人上，所以这次我就先详细介绍一下红外反射传感器的原理与使用，而OLED和Wi-Fi模块我打算留到下篇的时候再讲。</p>
+<p>如下图所示，机器人底盘前端布置的一排黑色物体便是红外反射传感器，考虑到机器人的体积以及主控的运算能力，在器件选型方面我采用的是DIP封装的红外反射管TCRT5000，为了尽可能提高机器人巡线的精度，我总共使用了4个红外反射传感器，后期实际测试效果相当不错。在数据采集方面，我参考了稚晖君文章里所提到的方法，即直接使用主控的ADC功能来读取传感器的模拟数据，这样做的好处是<strong>不仅可以在代码中动态调整传感器的阈值，更重要的是它还能够让我们获得额外的道路信息</strong>，这对于提高机器人巡线的鲁棒性是非常有益的，具体内容我会在后文的算法部分进行讲解。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/elec/elec_4.jpg" alt="电机电源层背面的四路红外反射传感器"></p>
+</li>
+</ul>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><ul>
+<li><h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><p>古人曾经说过：<strong>工欲善其事，必先利其器</strong>，广大开发者们想要高效地开发嵌入式应用，简单易用且性能强大的开发工具肯定是必不可少的。根据论坛<strong>快速入门</strong>板块的介绍，RV-STAR开发板支持芯来的Nuclei Studio、Segger的Embedded Studio以及基于VSCode的PlatformIO等多种开发平台，当然如果你追求极致的开发效率，直接在命令行中用Make来编译、调试与上传代码也是没有问题的，不过这里我还是推荐小白用户首选IDE，这样后期在配置环境的过程中遇到的问题会少一些。</p>
+<p>有关具体如何配置IDE以及设备驱动的方法，官方手册和论坛里都介绍得很详细了，这里就不再赘述了，接下来我主要想讲讲<strong>自己是如何在Ubuntu 16.04等这类依赖低版本Python 3的GNU/Linux系统中安装最新版本的PlatformIO扩展插件，以及如何在PlatformIO中安装和使用我编写的RVStarArduino库进行二次开发。</strong></p>
+<p>由于新版的PlatformIO最低仅支持Python 3.6，所以对于像我一样使用旧版GNU/Linux系统的人来说是无法使用PlatformIO的，唯一的解决办法就是通过第三方软件源来安装新版本的Python 3，具体操作如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo add-apt-repository ppa:deadsnakes/ppa</span><br><span class="line">$&gt; sudo apt update</span><br><span class="line">$&gt; sudo apt install python3.8 python3.8-distutils</span><br></pre></td></tr></table></figure>
+<p>安装完成后需要手动将系统的Python 3环境变量指向最新安装的这个版本（下面命令中的python3.5请根据自己系统的实际情况进行修改）：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1</span><br><span class="line">$&gt; sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2</span><br><span class="line">$&gt; sudo update-alternatives --config python3</span><br></pre></td></tr></table></figure>
+<p>配置成功后即可按照正常流程在VSCode中安装PlatformIO扩展插件，但是<strong>注意如果你的系统使用的是类GNOME桌面环境的话，那切换到高版本Python 3很有可能会导致GNOME命令行终端软件无法使用</strong>，所以在装完PlatformIO后需要再次使用下面这个命令将Python 3的版本切换回去：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo update-alternatives --config python3</span><br></pre></td></tr></table></figure>
+<p>至此，如果你能在重启VSCode后看到如下界面即表明PlatformIO扩展插件已成功安装。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/soft/soft_1.png" alt="PlatformIO的主界面"></p>
+<p>接下来我介绍一下如何在PlatformIO中安装RVStarArduino库，其实这个步骤非常简单，如下图所示，各位只需要在PlatformIO的库管理器中搜索RVStarArduino关键词，并在其介绍界面中点击【Add to Project】即可将库文件添加到自己的项目中。除此之外，你也可以直接在platformio.ini配置文件中添加库依赖参数，这样PlatformIO在编译项目代码的时候会自动下载对应版本的库文件。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/soft/soft_2.png" alt="RVStarArduino库的主界面1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/soft/soft_3.png" alt="RVStarArduino库的主界面2"></p>
+</li>
+<li><h4 id="核心算法"><a href="#核心算法" class="headerlink" title="核心算法"></a>核心算法</h4><p>巡线解迷宫机器人的软件部分主要涉及传感器读取以及PID控制等核心算法，其中传感器读取部分我采用的是模拟式输入，即通过主控的ADC功能直接获取红外反射传感器的模拟电压值，数值范围为0~1023，估计看到这儿很多人都会问为什么我不使用更简单的数字式输入，其实这主要是因为现实场景中的很多事物并不是只有0和1两种状态，在本项目中红外反射传感器相对于黑线的位置是实时变化的，如果采用模拟量的话，系统可以表示两个边界之间的所有位置信息，精度相较于数字量的0和1会有比较大的提升。除此之外，得益于精度的显著提升，模拟量所表示的信息还能通过加权求和的方式更好地表征系统误差的大小，这对于后面的PID运算过程至关重要。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取每个红外反射传感器的模拟值</span></span><br><span class="line"><span class="comment">// Get the analog value of each infrared reflection sensor</span></span><br><span class="line"><span class="keyword">uint16_t</span> a0 = <span class="built_in">analogRead</span>(A0);</span><br><span class="line"><span class="keyword">uint16_t</span> a1 = <span class="built_in">analogRead</span>(A1);</span><br><span class="line"><span class="keyword">uint16_t</span> a2 = <span class="built_in">analogRead</span>(A2);</span><br><span class="line"><span class="keyword">uint16_t</span> a3 = <span class="built_in">analogRead</span>(A3);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用加权求和的方式来表示系统误差</span></span><br><span class="line"><span class="comment">// Use weighted summation to represent systematic errors</span></span><br><span class="line"><span class="keyword">float</span> turn_error = <span class="number">0.0</span>;</span><br><span class="line">turn_error = turn_error + g_turn_error_k0 * a0;</span><br><span class="line">turn_error = turn_error + g_turn_error_k1 * a1;</span><br><span class="line">turn_error = turn_error - g_turn_error_k1 * a2;</span><br><span class="line">turn_error = turn_error - g_turn_error_k0 * a3;</span><br></pre></td></tr></table></figure>
+<p>接下来就到了最经典的PID部分了，所谓PID就是比例、积分和微分的英文缩写，主要应用于各种闭环控制系统中。根据反馈器件的类型，PID中常见的控制环有：速度环、角度环和转向环，那大家可以猜猜本项目中使用的是哪种控制环吗？没错，因为我选择的是可以返回<strong>位置信息</strong>的红外反射传感器，所以机器人实际应用的是转向环PID算法。关于PID算法的原理网上有很多详细的资料可供参考，这里我就不再过多介绍了，大家可以尝试直接阅读下面的代码来理解其中的精髓。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算转向环PID</span></span><br><span class="line"><span class="comment">// Calculate turn PID</span></span><br><span class="line">g_turn_p = g_turn_kp * turn_error;</span><br><span class="line">g_turn_i = g_turn_ki * (g_turn_i + turn_error);</span><br><span class="line">g_turn_d = g_turn_kd * (turn_error - g_turn_error_last);</span><br><span class="line"><span class="keyword">float</span> turn_sum = (g_turn_p + g_turn_i + g_turn_d) / <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据计算结果与当前所处状态控制电机的转速或转向</span></span><br><span class="line"><span class="comment">// Control the speed or direction of the motor according to the</span></span><br><span class="line"><span class="comment">// calculation result and the current state</span></span><br><span class="line"><span class="keyword">int16_t</span> motor_speed_a = MOTOR_SPEED_REF;</span><br><span class="line"><span class="keyword">int16_t</span> motor_speed_b = MOTOR_SPEED_REF;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 规定机器人水平向左为负向右为正，此时如果PID计算结果为正，则机器人需要向右偏移，</span></span><br><span class="line"><span class="comment">// 右侧电机应降低一定的速度，速度变化值由PID计算结果的绝对值表示，反方向同理</span></span><br><span class="line"><span class="comment">// It is stipulated that the horizontal left of the robot is negative</span></span><br><span class="line"><span class="comment">// and the right is positive. At this time, if the PID calculation</span></span><br><span class="line"><span class="comment">// result is positive, the robot needs to shift to the right, and the</span></span><br><span class="line"><span class="comment">// right motor should reduce a certain speed. The speed change value is</span></span><br><span class="line"><span class="comment">// represented by the absolute value of the PID calculation result.</span></span><br><span class="line"><span class="comment">// The same goes in the opposite direction</span></span><br><span class="line"><span class="keyword">if</span> (turn_sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    motor_speed_b = motor_speed_b - turn_sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    motor_speed_a = motor_speed_a - <span class="built_in">abs</span>(turn_sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setMotorSpeed</span>(MOTOR_A, motor_speed_a);</span><br><span class="line"><span class="built_in">setMotorSpeed</span>(MOTOR_B, motor_speed_b);</span><br></pre></td></tr></table></figure>
+<p>核心算法完整代码如下所示：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> g_turn_kp = <span class="number">20.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_ki = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_kd = <span class="number">5.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_p  = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_i  = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_d  = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> g_turn_error_k0   = <span class="number">2.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_error_k1   = <span class="number">1.0</span>;</span><br><span class="line"><span class="keyword">float</span> g_turn_error_last = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint32_t</span> g_timer_turn_pid = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cacluteTurnPID</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> ms = <span class="built_in">millis</span>();</span><br><span class="line">    <span class="keyword">if</span> (ms - g_timer_turn_pid &gt;= <span class="number">50</span>) &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG_PID_CYCLE</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Time turn: %lums\n&quot;</span>, ms);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">        <span class="comment">// 获取每个红外反射传感器的模拟值</span></span><br><span class="line">        <span class="comment">// Get the analog value of each infrared reflection sensor</span></span><br><span class="line">        <span class="keyword">uint16_t</span> a0 = <span class="built_in">analogRead</span>(A0);</span><br><span class="line">        <span class="keyword">uint16_t</span> a1 = <span class="built_in">analogRead</span>(A1);</span><br><span class="line">        <span class="keyword">uint16_t</span> a2 = <span class="built_in">analogRead</span>(A2);</span><br><span class="line">        <span class="keyword">uint16_t</span> a3 = <span class="built_in">analogRead</span>(A3);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG_ADC_VALUE</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;A0: %u, A1: %u, A2: %u, A3: %u\n&quot;</span>, a0, a1, a2, a3);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">        <span class="comment">// 使用加权求和的方式来表示系统误差</span></span><br><span class="line">        <span class="comment">// Use weighted summation to represent systematic errors</span></span><br><span class="line">        <span class="keyword">float</span> turn_error = <span class="number">0.0</span>;</span><br><span class="line">        turn_error = turn_error + g_turn_error_k0 * a0;</span><br><span class="line">        turn_error = turn_error + g_turn_error_k1 * a1;</span><br><span class="line">        turn_error = turn_error - g_turn_error_k1 * a2;</span><br><span class="line">        turn_error = turn_error - g_turn_error_k0 * a3;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算转向环PID</span></span><br><span class="line">        <span class="comment">// Calculate turn PID</span></span><br><span class="line">        g_turn_p = g_turn_kp * turn_error;</span><br><span class="line">        g_turn_i = g_turn_ki * (g_turn_i + turn_error);</span><br><span class="line">        g_turn_d = g_turn_kd * (turn_error - g_turn_error_last);</span><br><span class="line">        <span class="keyword">float</span> turn_sum = (g_turn_p + g_turn_i + g_turn_d) / <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG_PID_VALUE</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Turn E: %.2f, Turn P: %.2f, Turn I: %.2f, Turn D: %.2f, &quot;</span></span><br><span class="line">               <span class="string">&quot;Turn Sum: %.2f\n&quot;</span>,</span><br><span class="line">                turn_error, g_turn_p, g_turn_i, g_turn_d, turn_sum);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 根据计算结果与当前所处状态控制电机的转速或转向</span></span><br><span class="line">        <span class="comment">// Control the speed or direction of the motor according to the</span></span><br><span class="line">        <span class="comment">// calculation result and the current state</span></span><br><span class="line">        <span class="keyword">int16_t</span> motor_speed_a = MOTOR_SPEED_REF;</span><br><span class="line">        <span class="keyword">int16_t</span> motor_speed_b = MOTOR_SPEED_REF;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 规定机器人水平向左为负向右为正，此时如果PID计算结果为正，则机器人需要向右偏移，</span></span><br><span class="line">        <span class="comment">// 右侧电机应降低一定的速度，速度变化值由PID计算结果的绝对值表示，反方向同理</span></span><br><span class="line">        <span class="comment">// It is stipulated that the horizontal left of the robot is negative</span></span><br><span class="line">        <span class="comment">// and the right is positive. At this time, if the PID calculation</span></span><br><span class="line">        <span class="comment">// result is positive, the robot needs to shift to the right, and the</span></span><br><span class="line">        <span class="comment">// right motor should reduce a certain speed. The speed change value is</span></span><br><span class="line">        <span class="comment">// represented by the absolute value of the PID calculation result.</span></span><br><span class="line">        <span class="comment">// The same goes in the opposite direction</span></span><br><span class="line">        <span class="keyword">if</span> (turn_sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            motor_speed_b = motor_speed_b - turn_sum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            motor_speed_a = motor_speed_a - <span class="built_in">abs</span>(turn_sum);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG_MTR_VALUE</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Motor A: %d, Motor B: %d\n\n&quot;</span>, motor_speed_a, motor_speed_b);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">setMotorSpeed</span>(MOTOR_A, motor_speed_a);</span><br><span class="line">        <span class="built_in">setMotorSpeed</span>(MOTOR_B, motor_speed_b);</span><br><span class="line"></span><br><span class="line">        g_turn_error_last = turn_error;</span><br><span class="line">        g_timer_turn_pid = ms;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p>我在测试TB6612FNG驱动板的时候，发现无论自己怎么设置电机始终不转，在排查硬件问题的过程中，我先后用万用表测试了电源管理模块输出和TB6612FNG驱动板的逻辑输入引脚，发现电源供电电压与信号高低电平均正常，所以首先可以排除电源供电不足和逻辑信号错误所导致电机不转的可能，之后我对驱动板的相邻引脚做了短路测试，偶然发现其BIN0、BIN1和GND引脚短接了，而短接出现的原因比较特殊：<strong>因为我是将两个电机直接固定在双面敷铜的洞洞板上，此时电机的外壳与正面的焊盘紧密接触，而背面的BIN和GND信号正好走在电机外壳的区域内，焊接时焊锡过孔导致两个信号与电机外壳联通，从而出现短接</strong>。但神奇的是解决短路问题后电机依旧不转，最后我是在面包板上复现TB6612FNG驱动电路的时候才发现自己竟然犯了一个非常低级的错误——忘记在代码中设置电机的PWM信号，我当初下意识认为PWM只用于调速，只要AIN或BIN信号设置对就能让电机转起来，可惜事与愿违。这个经历给我的启示在于<strong>做项目时要以官方提供的芯片或模块手册为准，不要想当然地按照自己的想法去做，否则后期出现问题的概率会比较高。</strong></p>
+</li>
+<li><p>在测试四路红外反射传感器的时候，我发现板子串口输出的数值竟然全部一样，经过单步调试后最终确定是自己编写的RVStarArduino库里的analogRead函数存在Bug，使得函数每次只能返回第一次设置的ADC通道的数值。解决方法是根据网上STM32 ADC多通道数据采集范例，将<strong>通道配置库函数</strong>从初始化阶段移动到analogRead函数中，这样系统就能根据不同的引脚编号来读取相对应的ADC通道数值了。</p>
+</li>
+<li><p>转向环PID算法中存在浮点变量和与之相关的运算过程，但是令人费解的是，程序在执行过程中始终无法在串口里打印出浮点数值，后来经过仔细排查发现系统自带的newlib为了优化编译后的体积，默认并没有开启浮点数运算功能，所以程序一遇到浮点变量就直接跳过执行了。解决方法其实很简单，只需要在编译器的链接参数中指定【-u _printf_float】即可。</p>
+</li>
+</ul>
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_2.jpg" alt="巡线解迷宫机器人图2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_3.jpg" alt="巡线解迷宫机器人图3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_4.jpg" alt="巡线解迷宫机器人图4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_5.jpg" alt="巡线解迷宫机器人图5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/4_line_tracking_robot/robot_6.jpg" alt="巡线解迷宫机器人图6"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>巡线解迷宫机器人是我基于国产处理器来开发嵌入式应用的首次尝试，通过一个月左右的理论学习与动手实践，我学会了如何在项目正式开始前做需求分析，如何根据机器人所要实现的功能来做软硬件方案的选型，如何在遇到Bug的时候通过调试机制来定位并解决问题，如何规划机器人内部空间使硬件布局更加合理与美观等等。虽然最后因为其他项目节点的缘故，我并没有给机器人添加OLED显示和Wi-Fi传输模块，同时也没有实现解迷宫功能，但是我至少验证了<strong>采用RISC-V架构的国产嵌入式处理器无论是在运行时性能还是在开发便捷性等方面均不输于目前主流的STM32</strong>，所以本项目成果从原理验证的角度上来看还是达到了自己的预期。</p>
+<p>最后我一直坚信<strong>学习某个理论知识最好的办法就是将其应用到某个具体的项目中</strong>，特别是对于嵌入式开发来说，在开始上手前应该先给自己选择一个比较有挑战性的小项目，然后在后期学习的过程中通过不断地搜集资料与解决问题，尽自己最大的努力将其实现出来，这样到时候你就会发现很多原本晦涩难懂的理论知识都是那么的合理与自然。本次巡线解迷宫机器人项目就是一个最好的范本，对此感兴趣的同学也可以自己尝试做一个，然后去实现一些文中提到却没实现的功能，当然相比最后的成果，享受过程才是最重要的，预祝大家玩得开心。</p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun Oct 29 2023 22:12:31 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="自制机器人系列（四）：巡线解迷宫机器人">https://myyerrol.xyz/zh-cn/2021/04/14/diy_robots_4_line_tracking_robot/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2021/09/05/team_cpu_3_treecore_ide_design/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2021/02/06/team_cpu_2_treecore_design/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2021-04-14
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/自制机器人系列/">自制机器人系列<span>5</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/Robot/">Robot<span>7</span></a></li> <li><a href="/tags/RISC-V/">RISC-V<span>4</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-article-text">概述</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-article-text">原理</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%A1%AC%E4%BB%B6"><span class="toc-article-text">硬件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%94%B5%E6%9C%BA%E7%94%B5%E6%BA%90%E5%B1%82"><span class="toc-article-text">电机电源层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E4%B8%BB%E6%8E%A7%E5%A4%84%E7%90%86%E5%B1%82"><span class="toc-article-text">主控处理层</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%A4%96%E8%AE%BE%E6%A8%A1%E5%9D%97%E5%B1%82"><span class="toc-article-text">外设模块层</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E8%BD%AF%E4%BB%B6"><span class="toc-article-text">软件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-article-text">环境配置</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95"><span class="toc-article-text">核心算法</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-article-text">问题</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%88%90%E6%9E%9C"><span class="toc-article-text">成果</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+<script type="text/javascript">
+    var imageLabel = "true";
+    var images = document.getElementsByTagName("img");
+    (function() {
+        for (var i = 0; i < images.length; i++) {
+            var image = images[i];
+            var label = image.alt;
+            var dom = image.parentNode;
+            var domLabel = document.createElement("span");
+            domLabel.setAttribute(
+                "style",
+                "display:block; text-align:center; color:gray");
+            domLabel.innerText = label;
+            dom.appendChild(domLabel);
+        }
+    }());
+</script>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">170.7k</span>字
+
+    <br>
+
+    
+        &copy; 2023 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>
