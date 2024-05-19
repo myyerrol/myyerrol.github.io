@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>团队处理器系列（二）：木心处理器核-需求设计 | myyerrol的个人网站</title>
+    <title>团队处理器系列（0x02）：木心处理器核-需求设计 | myyerrol的个人网站</title>
 
     
     <meta name="author" content="myyerrol">
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     
-    <meta property="og:title" content="团队处理器系列（二）：木心处理器核-需求设计">
+    <meta property="og:title" content="团队处理器系列（0x02）：木心处理器核-需求设计">
     
     <meta property="og:site_name" content="myyerrol的个人网站">
 
@@ -129,7 +129,7 @@
             
     
         <div class="page-header page-header-inverse ">
-            <h1 class="title title-inverse "> 团队处理器系列（二）：木心处理器核-需求设计</h1>
+            <h1 class="title title-inverse "> 团队处理器系列（0x02）：木心处理器核-需求设计</h1>
         </div>
     
 
@@ -196,7 +196,7 @@
 </li>
 </ul>
 <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
-<li><h4 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h4><p>在上一篇<strong>《团队处理器系列（一）：软件安装与配置》</strong>文章中，我曾经详细地介绍了如何在Ubuntu系统上安装ModelSim这款CPU仿真利器，不过由于它本身是付费软件，配置过程（大家都懂的）对于新手来说比较复杂，再加上本项目对波形仿真的功能与性能没有太高的要求，所以这次我决定采用免费、开源的<strong>iverilog+gtkwave</strong>组合来替代之前的ModelSim。在类Debian系统（如Ubuntu）上的安装方法如下：</p>
+<li><h4 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h4><p>在上一篇<strong>《团队处理器系列（0x01）：软件安装与配置》</strong>文章中，我曾经详细地介绍了如何在Ubuntu系统上安装ModelSim这款CPU仿真利器，不过由于它本身是付费软件，配置过程（大家都懂的）对于新手来说比较复杂，再加上本项目对波形仿真的功能与性能没有太高的要求，所以这次我决定采用免费、开源的<strong>iverilog+gtkwave</strong>组合来替代之前的ModelSim。在类Debian系统（如Ubuntu）上的安装方法如下：</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo apt update</span><br><span class="line">$&gt; sudo apt install iverilog</span><br><span class="line">$&gt; sudo apt install gtkware</span><br></pre></td></tr></table></figure>
 </li>
 <li><h4 id="例程测试"><a href="#例程测试" class="headerlink" title="例程测试"></a>例程测试</h4><p>在打开的命令行终端中依次输入以下命令：</p>
@@ -240,7 +240,7 @@
                         function addDatePrefix(num) {
                             return num < 10 ? "0" + num : num
                         }
-                        var dateStand = "Sun Oct 29 2023 21:56:48 GMT+0800";
+                        var dateStand = "Sun May 19 2024 11:28:59 GMT+0800";
                         var dateTemp  = new Date(dateStand);
                         var date = dateTemp.getFullYear() + "年" +
                                     addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
@@ -253,7 +253,7 @@
                 </p>
                 <p>
                     <span>原始链接：</span>
-                    <a href="./" title="团队处理器系列（二）：木心处理器核-需求设计">https://myyerrol.xyz/zh-cn/2021/02/06/team_cpu_2_treecore_design/</a>
+                    <a href="./" title="团队处理器系列（0x02）：木心处理器核-需求设计">https://myyerrol.xyz/zh-cn/2021/02/06/team_cpu_2_treecore_design/</a>
                 </p>
                 <p>
                     <span>版权说明：</span>
@@ -460,7 +460,7 @@
     <br>
 
     
-        &copy; 2023 myyerrol
+        &copy; 2024 myyerrol
     
 
     with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
