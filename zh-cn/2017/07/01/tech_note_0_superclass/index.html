@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>技术杂记系列（0x00）：总纲 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="前言我记得自己大二刚来基地的时候，狗哥（西工大一小学生）就曾告诉我们这一届新队员：
+
+我们参加机器人比赛重要的是经历和交流，而不是结果。最后获得的奖只能代表你参加过此次比赛，它无法全部证明你的能力。
+
+当时听完学长的话，我心里面也是非常认同的，直到后来我参加过三次机器人比赛之后，我才算是真正地体会到学长这番话的含义：对于需要好成绩才能从学校那里拿到足够资金的基地来说，结果是重要的。但对于个人来说，我们从比赛中所获得经验教训以及与其他的队伍进行的技术交流才是最重要的，而不是所谓的加分。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="技术杂记系列（0x00）：总纲">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 技术杂记系列（0x00）：总纲</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">2.5k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">10</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我记得自己大二刚来基地的时候，狗哥（<strong>西工大一小学生</strong>）就曾告诉我们这一届新队员：</p>
+<blockquote>
+<p>我们参加机器人比赛重要的是经历和交流，而不是结果。最后获得的奖只能代表你参加过此次比赛，它无法全部证明你的能力。</p>
+</blockquote>
+<p>当时听完学长的话，我心里面也是非常认同的，直到后来我参加过三次机器人比赛之后，我才算是真正地体会到学长这番话的含义：对于需要好成绩才能从学校那里拿到足够资金的基地来说，结果是重要的。但对于个人来说，我们从比赛中所获得经验教训以及与其他的队伍进行的技术交流才是最重要的，而不是所谓的加分。</p>
+<span id="more"></span>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>我们团队参加的比赛类别为RoboCup@Home，即RoboCup服务机器人项目组。关于具体什么是<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.robocup.org">RoboCup</a>和<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.robocupathome.org">RoboCup@Home</a>，接下来我会对它们进行详细的介绍。</p>
+<h3 id="RoboCup"><a href="#RoboCup" class="headerlink" title="RoboCup"></a>RoboCup</h3><p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/features/robocup.png" alt="robocup"></p>
+<ul>
+<li><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots. When established in 1997, the original mission was to field a team of robots capable of winning against the human soccer World Cup champions by 2050.</p>
+<p>RoboCup是一项旨在推进智能机器人技术水平的国际科学计划。在1997年成立的时候，其最初的任务是要在2050年之前组建一支能够赢得人类足球世界杯冠军的机器人队。</p>
+</li>
+<li><h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><p>It is our intention to use RoboCup as a vehicle to promote robotics and AI research, by offering a publicly appealing, but formidable challenge. One of the effective ways to promote science and engineering research is to set a challenging long term goal. When the accomplishment of such a goal has significant social impact, it is called a grand challenge project. Building a robot that plays soccer will not by itself generate significant social and economic impact, but the accomplishment will certainly be considered a major achievement for the field. We call this kind of project a landmark project. RoboCup is a landmark project as well as a standard problem.</p>
+<p>我们打算通过提供一个公开吸引人但艰巨的挑战，来把RoboCup作为推动机器人和AI研究的工具。促进科学和工程研究的有效途径之一是制定具有挑战性的长期目标。当这样一个目标的实现具有重大的社会影响时，它就被称为是一个伟大的挑战项目。建立踢足球的机器人本身不会产生重大的社会和经济影响，但成果肯定会被认为是该领域的重大成就。我们称这种项目是一个里程碑式的项目。RoboCup既是一个里程碑式的项目，也是一个标准的问题。</p>
+</li>
+<li><h4 id="梦想"><a href="#梦想" class="headerlink" title="梦想"></a>梦想</h4><p>We proposed that the ultimate goal of the RoboCup Initiative to be stated as follows:</p>
+<blockquote>
+<p>By the middle of the 21st century, a team of fully autonomous humanoid robot soccer players shall win a soccer game, complying with the official rules of FIFA, against the winner of the most recent World Cup.</p>
+</blockquote>
+<p>We propose that this goal will be one of the grand challenges shared by the robotics and AI communities for the next 50 years. This goal may sound overly ambitious given the state of the art of technology today.</p>
+<p>Nevertheless, we believe it is important that such a long-range goal should be set and pursued. It took only 50 years from the Wright Brothers’ first aircraft to the Apollo mission, to send a man to the moon and safely return him to the earth. It also took only 50 years, from the invention of the digital computer to Deep Blue, which beat the human world champion in chess. Building a humanoid soccer player requires an equally long period and extensive efforts of a broad range of researchers, and the goal will not be met in the near future.</p>
+<p>我们提出，RoboCup计划的终极目标如下：</p>
+<blockquote>
+<p>到二十一世纪中叶，一个完全自主的类人机器人足球运动员队伍在遵守国际足联的官方规则下与人类世界杯冠军队伍进行对抗，并取得最终的胜利。</p>
+</blockquote>
+<p>我们提议这个目标将是未来五十年机器人和AI社区所共同面临的巨大挑战之一。鉴于当今的技术水平，这个目标可能听起来过于雄心勃勃。</p>
+<p>不过，我们相信如此长远的目标得到确定和追求是很重要的。从莱特兄弟的第一架飞机到派人登上月球上并将其安全送回地球的阿波罗任务仅花了五十年。从数字计算机的发明到在国际象棋比赛中击败人类世界冠军的深蓝也仅花了五十年的时间。构建类人足球运动员需要相当长的时间以及大量研究人员的广泛努力，所以短期内这一目标不会实现。</p>
+</li>
+<li><h4 id="里程碑"><a href="#里程碑" class="headerlink" title="里程碑"></a>里程碑</h4><p>In the case of RoboCup, the ultimate goal is to “develop a robot soccer team which beats the human world champion team.” (A more modest goal is “to develop a robot soccer team which plays like human players.”)</p>
+<p>Needless to say, the accomplishment of the ultimate goal will take decades of effort. It is not feasible, with current technologies to accomplish this goal in the near future. However, this goal can easily lead to a series of well-directed subgoals. Such an approach is common in any ambitious, or overly ambitious project. In the case of the American space program, the Mercury project and the Gemini project, which manned an orbital mission, were two precursors to the Apollo mission. The first subgoal to be accomplished in RoboCup is “to build real and software robot soccer teams which play reasonably well with modified rules.” Even to accomplish this goal will undoubtedly generate technologies, which will impact a broad range of industries.</p>
+<p>对于RoboCup来说，其终极目标是“开发一个击败人类世界冠军队伍的机器人足球队”（一个更为谦虚的目标是“开发一个表现与人类运动员类似的机器人足球队”）。</p>
+<p>毫无疑问，完成这个终极目标需要几十年的努力，短期内使用当前技术实现该目标是不可行的。然而，该目标很容易催生一系列具有针对性的子目标，这种方法在任何有雄心或过于雄心勃勃的项目中都是常见的。在美国太空计划中，水星项目和配备轨道任务的双子星座项目是阿波罗任务的两个前身。在RoboCup中，第一个将要完成的子目标是“建立真实和基于软件的机器人足球队，它们能根据修改过的规则在比赛中表现得很合理”。即使实现这一目标，毫无疑问也会产生影响广泛行业的新技术。</p>
+</li>
+<li><h4 id="标准问题"><a href="#标准问题" class="headerlink" title="标准问题"></a>标准问题</h4><p>One other aspect of RoboCup is a view that RoboCup is a standard problem so that various theories, algorithms, and architectures can be evaluated. Computer chess is a typical example of such a standard problem. Various search algorithms were evaluated and developed using this domain. With the accomplishment by Deep Blue team, which beat Garry Kasparov, a human grand master, using the official rules, the computer chess challenge came close to its aim. One of the major reasons for the success of computer chess as a standard problem is that the evaluation of progress was clearly defined. The progress of the research can be evaluated as the strength of the system, which was indicated by its rating. However, as computer chess approached its goal, we needed a new challenge. The challenge needed to foster a set of technologies for the next generation of industries. We think that RoboCup will fulfill such a demand.</p>
+<p>RoboCup的另一面可以被看做是一个标准问题，它可以评估各种理论、算法和架构。计算机象棋是这样一个标准问题的典型案例，各种搜索算法都可以使用该模式进行了评估和开发。随着深蓝团队使用官方规则打败人类象棋大师加里·卡斯帕罗夫的成就，计算机象棋挑战接近了它的目标。计算机象棋作为标准问题成功的主要原因之一是对其进度的评估是确定的。研究进展可以通过评估来表现系统的能力。然而，随着计算机象棋接近其目标，我们需要一个新的挑战，它需要为下一代产业培育出一系列新技术，我们认为RoboCup将会满足这样的需求。</p>
+</li>
+</ul>
+<h3 id="RoboCup-Home"><a href="#RoboCup-Home" class="headerlink" title="RoboCup@Home"></a>RoboCup@Home</h3><p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/features/robocup@home.jpg" alt="robocup@home"></p>
+<ul>
+<li><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><p>The RoboCup@Home league aims to develop service and assistive robot technology with high relevance for future personal domestic applications. It is the largest international annual competition for autonomous service robots and is part of the RoboCup initiative. A set of benchmark tests is used to evaluate the robots’ abilities and performance in a realistic non-standardized home environment setting. Focus lies on the following domains but is not limited to: Human-Robot-Interaction and Cooperation, Navigation and Mapping in dynamic environments, Computer Vision and Object Recognition under natural light conditions, Object Manipulation, Adaptive Behaviors, Behavior Integration, Ambient Intelligence, Standardization and System Integration. It is colocated with the RoboCup symposium.</p>
+<p>RoboCup@Home联盟旨在开发服务和辅助机器人技术，与未来个人家庭应用高度相关。它是自主服务机器人最大的国际年度大赛，是RoboCup计划的一部分。一套基准测试用于评估机器人在现实非标准化家庭环境中的能力和性能。研究的重点在于以下领域但不限于：人机交互与合作、动态环境中的导航和建图、自然光条件下的计算机视觉和物体识别、物体操作、自适应行为、行为集成、环境智能、标准化和系统集成。它与RoboCup研讨会共同进行。</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>时至今日，那些过往比赛的经历依然历历在目：我们一起装箱运送机器人、在宾馆里熬夜调试代码、在比赛会场紧张地敲击着命令行。我们既有为失败而留的泪水，也有因努力付出所获得的阶段性成功，无论最终的比赛结果如何，它们已经成为我大学最美好的回忆，同时也是我人生中最不可缺少的宝贵财富。</p>
+<p>接下来，我会以系列文章的形式记录我大学所经历过的三次RoboCup比赛，其中重点突出比赛经历，而非技术开发要点。总之，希望自己从比赛中所获得的教训和经验都能始终铭记在心中，并为之后所用。</p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun May 04 2025 12:46:40 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="技术杂记系列（0x00）：总纲">https://myyerrol.xyz/zh-cn/2017/07/01/tech_note_0_superclass/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2017/06/07/blog_tutorial_2_hexo_theme_config/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2017-07-01
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/技术杂记系列/">技术杂记系列<span>7</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/RoboCup/">RoboCup<span>4</span></a></li> <li><a href="/tags/RoboCup-Home/">RoboCup@Home<span>3</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-article-text">简介</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#RoboCup"><span class="toc-article-text">RoboCup</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-article-text">概述</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-article-text">目标</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A2%A6%E6%83%B3"><span class="toc-article-text">梦想</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E9%87%8C%E7%A8%8B%E7%A2%91"><span class="toc-article-text">里程碑</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A0%87%E5%87%86%E9%97%AE%E9%A2%98"><span class="toc-article-text">标准问题</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#RoboCup-Home"><span class="toc-article-text">RoboCup@Home</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-article-text">概述</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">169.3k</span>字
+
+    <br>
+
+    
+        &copy; 2025 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>

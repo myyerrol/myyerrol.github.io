@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>团队机器人系列（0x07）：微风四轴飞行器-软件开发总结 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="前言一款出色的四轴飞行器除了要有设计严谨的硬件、稳定可靠的飞控之外，还需要具有图形界面的上位机以及可扩展通信协议才行。毕竟对于那些基于四轴飞行器平台进行深入研究（比如视觉SLAM、视觉避障、室内自主悬停等）的学者来说，带有各种参数仪表盘和数据曲线显示功能的地面控制站可直观地显示出当前四轴飞行器在空中的运动姿态和相关传感器数据等信息，便于算法调试。此外，四轴飞控所集成的通信协议API也能够加快上层应用的开发速度，提高其与其他开源框架（ROS、OpenCV、PCL、TensorFlow等）的集成和交互能力。
+因此，本篇文章会以Breeze微型四轴飞行器为例来简要介绍目前国内外几个比较成熟的四轴飞行器地面控制站（GCS）软件以及通信协议协议，欢迎各位前来阅读。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="团队机器人系列（0x07）：微风四轴飞行器-软件开发总结">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 团队机器人系列（0x07）：微风四轴飞行器-软件开发总结</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">3.8k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">13</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一款出色的四轴飞行器除了要有设计严谨的硬件、稳定可靠的飞控之外，还需要具有图形界面的上位机以及可扩展通信协议才行。毕竟对于那些基于四轴飞行器平台进行深入研究（比如视觉SLAM、视觉避障、室内自主悬停等）的学者来说，带有各种参数仪表盘和数据曲线显示功能的地面控制站可直观地显示出当前四轴飞行器在空中的运动姿态和相关传感器数据等信息，便于算法调试。此外，四轴飞控所集成的通信协议API也能够加快上层应用的开发速度，提高其与其他开源框架（ROS、OpenCV、PCL、TensorFlow等）的集成和交互能力。</p>
+<p>因此，本篇文章会以Breeze微型四轴飞行器为例来简要介绍目前国内外几个比较成熟的四轴飞行器地面控制站（GCS）软件以及通信协议协议，欢迎各位前来阅读。</p>
+<span id="more"></span>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="地面控制站"><a href="#地面控制站" class="headerlink" title="地面控制站"></a>地面控制站</h3><ul>
+<li><h4 id="Breeze远程控制站"><a href="#Breeze远程控制站" class="headerlink" title="Breeze远程控制站"></a>Breeze远程控制站</h4><p>如下图所示，Breeze远程控制站是我在Windows操作系统下使用Qt5进行编写的，代码里面主要调用了Qt官方的串口库和摄像头驱动库。它实现的功能比较简单，主要包含以下两个功能，其中第一个功能是该远程控制站软件可通过我们自定义的串口通信协议实时获取Breeze微型四轴飞行器当前的飞行姿态数据并显示在接收窗口内，另一个功能则是能够根据当前键盘上被按下的按键来发送对应的控制命令给四轴飞行器，从而完成操作者对Breeze微型四轴飞行器的远程控制。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_remote_control_1.png" alt="breeze_remote_control_1"></p>
+<p>以下图片展示了Breeze远程控制站所集成的实时视频流采集功能。摄像头安装在四轴飞行器的顶部，可通过2.4GHz无线图传与PC相连完成实时图像的传输，不过由于时间的缘故，我们目前只实现了图像数据的采集，而图像检测和识别等有关机器视觉方面的高级功能暂时还未完成。最后，Breeze远程控制站的代码可以点击<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/microdynamics-quadcopter/breeze_remote_control">这里</a>获得。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_remote_control_2.png" alt="breeze_remote_control_2"></p>
+</li>
+<li><h4 id="Breeze飞行控制站"><a href="#Breeze飞行控制站" class="headerlink" title="Breeze飞行控制站"></a>Breeze飞行控制站</h4><p>Breeze飞行控制站是我根据西工大布树辉老师在GitHub上开源的<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/bushuhui/qFlightInstruments">Qt飞行仪表盘插件</a>和西工大舞蹈机器人基地马文科学长所创立<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HANDS-FREE">HandsFree项目</a>中HFLink代码的基础上进行重构开发而来。该软件外部的图形界面使用了目前Ubuntu下最流行和强大的Qt5框架，而内部则采用自定义的CommLink通信协议库实现Breeze和PC之间双向的数据传输。当然，依然受限于时间等客观因素，Breeze飞行控制站和上面介绍过的远程控制站一样目前只是一个Demo，很多功能还未实现，还需未来继续改进。</p>
+<p>如下图所示，Breeze飞行控制站的界面主要分为<strong>飞行指示器</strong>、<strong>飞行状态</strong>和<strong>飞行数据</strong>共三个区域，其中<strong>飞行指示器</strong>区域通过三个仪表盘分别显示Breeze微型四轴飞行器实时的飞行姿态、海拔高度和磁场方向等数据，左下角的<strong>飞行状态</strong>区域用于显示四轴飞行器当前的推力值、四个电机的转速值以及电池电量值等，而右下角的<strong>飞行数据</strong>区域则以浮点数的形式展现<strong>飞行指示器</strong>和<strong>飞行状态</strong>中的数值，使数据大小的显示更为直观。最后，Breeze飞行控制站的代码可以点击<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/microdynamics-quadcopter/breeze_flight_control_station">这里</a>获得。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_flight_control_station.png" alt="breeze_flight_control_station"></p>
+<p><strong>注意：由于后期自己对Breeze飞行控制站进行了重构，所以请以下方新版软件界面为准！</strong></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_fcs_1_flight_status.png" alt="breeze_fcs_1_flight_status"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_fcs_2_serial_console.png" alt="breeze_fcs_2_serial_console"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_fcs_3_data_plotter.png" alt="breeze_fcs_3_data_plotter"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_fcs_7_program_settings.png" alt="breeze_fcs_7_program_settings"></p>
+</li>
+<li><h4 id="匿名科创地面站"><a href="#匿名科创地面站" class="headerlink" title="匿名科创地面站"></a>匿名科创地面站</h4><p>匿名地面站就是针对飞控学习者、开发者设计开发的一个专用软件，由匿名科创团队（ANO TC）独立编写，软件性能优异，界面友好。通过多年的改进，已经成为调试飞控必不可少的软件之一。软件主要功能有：</p>
+<ul>
+<li><p><strong>用户自定义数据分析功能</strong>：既然是面对开发者设计的上位机，飞控那些固定的数据肯定是不够用的，开发者可能需要观察各种数据的波形，进行分析，匿名地面站可以让用户自定义一帧数据的格式，并对该帧数据进行解析，获得用户设置好的各种数据，并可以分别绘制波形。</p>
+</li>
+<li><p><strong>高速波形绘制功能</strong>：可以将飞控的各种参数，实时发送至上位机（地面站），并且实时绘制多达20个数据的波形，数据更新频率可达1000hz以上，这将大大方便对例如滤波算法的调试，可以实时将传感器原始数据、滤波后数据发送至上位机，绘制各自的波形，进行比较，以便对滤波算法进行调整。</p>
+</li>
+<li><p><strong>飞控状态显示功能</strong>：可以通过3D模型、地平仪、各项参数通道值等方式，实时显示飞控的状态。</p>
+</li>
+<li><p><strong>飞控参数设置功能</strong>：上位机提供多达18组PID数据的读取与写入功能，开发者都可以自由使用，方便进行各项参数的设置、调节，并且通信采用返回验证逻辑，保证飞控接收到的参数是准确的。</p>
+</li>
+<li><p><strong>数据的EXCEL写入功能</strong>：上位机支持将多种数据，实时写入到Excel文件，方便开发者使用Matlab等软件进行数据分析。</p>
+<p>。。。</p>
+</li>
+</ul>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_1.png" alt="anotc_gcs_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_2.png" alt="anotc_gcs_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_3.png" alt="anotc_gcs_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_4.png" alt="anotc_gcs_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_5.png" alt="anotc_gcs_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_6.png" alt="anotc_gcs_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_7.png" alt="anotc_gcs_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/anotc_gcs_8.png" alt="anotc_gcs_8"></p>
+</li>
+<li><h4 id="Mission-Planner"><a href="#Mission-Planner" class="headerlink" title="Mission Planner"></a>Mission Planner</h4><p>Mission Planner是ArduPilot开源项目的全功能地面站软件，它支持固定翼飞行器、旋翼飞行器和地面车，由于软件基于C#和.Net环境进行开发，所以仅支持Windows操作系统。Mission Planner可以给全自主移动机器提供强大的配置工具和动力学控制能力。</p>
+<p>Mission Planner软件的主要功能有：为控制板提供固件加载；设定、配置及调整机器到最优性能；通过在地图上用鼠标点击相应位置来规划，保存及加载自动任务给控制板；下载及分析由控制板创建的任务记录；与PC飞行模拟器连接，提供完整硬件闭环的UAV模拟器；通过合适的遥控器来监控飞行器状态、记录遥控数据、分析遥控记录以及可在FPV（第一人称视角）模式下控制你的机器。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/mission_planner_1.jpg" alt="mission_planner_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/mission_planner_2.jpg" alt="mission_planner_2"></p>
+</li>
+<li><h4 id="Crazyfile地面站"><a href="#Crazyfile地面站" class="headerlink" title="Crazyfile地面站"></a>Crazyfile地面站</h4><p>Crazyflie地面站是BitCraze团队专门为Crazyflie微型四轴飞行器所打造的桌面PC客户端 ，它支持Windows、GNU/Linux和Mac系统（具体安装方法请点击<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/bitcraze/crazyflie-clients-python/blob/develop/README.md">这里</a>查看），可实现四轴飞行器的远程控制、烧写固件、设置参数并记录数据等功能。Crazyflie地面站与四轴飞行器之间的数据通信以及用于控制四轴飞行器的CRTP协议的实现均基于<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/bitcraze/crazyflie-lib-python">Crazyflie Lib Python</a>项目所完成。最后，有关于更多内容请访问Crazyflie地面站的<a target="_blank" rel="external nofollow noopener noreferrer" href="https://wiki.bitcraze.io/doc:crazyflie:client:pycfclient:index">官方Wiki</a>。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/crazyflie_gcs_1.png" alt="crazyflie_gcs_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/crazyflie_gcs_2.png" alt="crazyflie_gcs_2"></p>
+</li>
+</ul>
+<h3 id="通信协议栈"><a href="#通信协议栈" class="headerlink" title="通信协议栈"></a>通信协议栈</h3><p>通信协议是指双方实体完成通信或服务所必须遵循的规则和约定。通过通信信道和设备互连起来的多个不同地理位置的数据通信系统，要使其能协同工作实现信息交换和资源共享，它们之间必须具有共同的语言。交流什么、怎样交流及何时交流，都必须遵循某种互相都能接受的规则。这个规则就是通信协议。</p>
+<p>通信协议本身是不依赖硬件接口本身的，它只是一个串行化和解串行化的规则,即根据某个通信协议可以实现很多不同的通信方式。</p>
+<ul>
+<li><h4 id="CommLink"><a href="#CommLink" class="headerlink" title="CommLink"></a>CommLink</h4><p>CommLink是Breeze微型四轴飞行器所采用的数据通信协议栈，此协议栈内有采用USART（基于 CP2102 转串口芯片）和SPI（基于NRF24L01射频模块）两套接口实现的通信协议。如下图所示，其中USART通信协议主要负责将四轴飞行器自身的实时飞行姿态数据发送给远程PC端的地面站，而SPI通信协议则负责解析远程遥控端发送的控制指令。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/breeze_communication_link.png" alt="breeze_communication_link"></p>
+</li>
+<li><h4 id="MAVLink"><a href="#MAVLink" class="headerlink" title="MAVLink"></a>MAVLink</h4><p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/team_robots/7_breeze_quadcopter_software_summary/mavlink_protocal.png" alt="mavlink_protocal"></p>
+<p>MAVLink协议最早由苏黎世联邦理工学院计算机视觉与几何实验组的Lorenz Meier于2009年创建，并以LGPL开源协议形式进行发布。MAVLink协议是在串口通讯基础上的一种更高层的开源通讯协议，广泛应用于地面站软件与小型无人载具之间的通讯，同时也应用在载具内部子系统的通信中。MAVLink协议是以消息库的形式来定义参数传输的规则，具体协议的内容可点击<a target="_blank" rel="external nofollow noopener noreferrer" href="http://mavlink.org/messages/common">这里</a>查看。</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><ul>
+<li><h4 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h4><p>本次项目开发从软硬件两方面共同完成了第一代Breeze微型四轴飞行器系统的搭建工作，初步实现了四轴飞行器的简单受控飞行。在整个系统开发的过程中主要完成了Breeze微型四轴飞行器的硬件电路设计、嵌入式程序开发以及上层软件编写和调试等工作内容。</p>
+</li>
+<li><h4 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h4><p>由于四轴飞行器所涉及的技术面较广、本人水平有限以及受到研究经费、试验条件等客观因素的影响，本次项目开发对四轴飞行器飞控系统的研究还不够深入，仍存在以下问题，需要在今后的研究中不断学习和优化：</p>
+<ol>
+<li><p>由于时间和经费的原因，目前Breeze微型四轴飞行器的硬件电路设计还不够封装化和模块化，而且一些电路设计得比较复杂，不利于后期的进一步维护和改进。</p>
+</li>
+<li><p>本次项目开发使用C语言来编写嵌入式代码，但由于C语言是面向过程的高级语言，它对源码的封装性远不如基于面向对象思想的C++。此外，目前Breeze微型四轴飞行器的通信协议设计得比较冗余，而且功能也比较有限。</p>
+</li>
+<li><p>本次项目开发对飞控算法的研究并未深入，只是研究了目前比较流行的Mahony互补滤波算法并在Breeze微型四轴飞行器上测试了其效果。</p>
+</li>
+<li><p>本次项目开发未涉及ROS（Robot Operating System，即机器人操作系统）方面的内容。不过由于ROS目前已经成为机器人软件开发的事实标准，将来我们也会尝试基于ROS来搭建整个四轴飞行器的上层软件架构。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h3><ul>
+<li><h4 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h4><p>在本次项目开发的过程中，困扰我比较大的就是硬件电路的设计工作。因为我之前没有系统地学习过如何绘制PCB板，所以在开发的前期阶段，我不得不花很多时间来学习如何使用Altium Designer软件，而且由于缺乏硬件设计的相关经验，我的前几次元器件布局很不合理，这直接导致了后来在进行布线的时候，PCB板出现过孔数量的过多和乃至无法布通的情况。后来在经历了痛苦的重新布局、布线并解决了很多违反规则的问题之后，硬件电路终于被我成功地设计了出来，不过最后令人遗憾的是我没能完成对PCB板的焊接。因为本项目的硬件设计中使用了几个QFN封装形式的IC芯片，而IC芯片普遍对焊接时的温度要求比较高，而且最关键的是这些芯片的焊盘全都被放置在了黑色塑料壳体的下面而没有伸出来，这就导致了在焊接IC的过程中很容易发生短焊或虚焊的情况。虽然我尽可能地提高自己的焊接水平，但依然还是有很多块PCB板和价格不菲的IC芯片被我焊坏了，最后迫于开发进度的安排，我只能放弃焊接而使用我之前学习飞控时用到的成品四轴飞行器。尽管本次我没能完成硬件的制作，但我却收获了别人没有的宝贵经验，我相信学习总要有一个交学费的过程，希望这次经历可以让我在未来的开发过程中做得更好。</p>
+<p>总之，经历了本次项目开发，我对四轴飞行器的整体系统构成以及各模块之间的相互关系有了一个更加深刻的理解，同时在开发的过程中，我学到了很多专业领域的知识，也认识到了自身的不足之处。最后，我通过GitHub开源了目前的所有设计成果，希望能让更多的人能有机会亲身参与到四轴飞行器的开发过程中来，并能乐享其中。</p>
+</li>
+<li><h4 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h4><p>感谢与我一同创立了MicroDynamics团队以及Breeze微型四轴飞行器项目的队友maksyuki，这个项目的想法是他最先提出来的。感谢他前期对嵌入式开发以及飞控算法的基础性研究，让我可以有充裕的时间来设计并焊接四轴飞行器的硬件电路部分。</p>
+<p>感谢西北工业大学舞蹈机器人基地为我创造了一个良好的开发环境，让我可以自由地使用元器件和工具来完成四轴飞行器的焊接、安装和调试工作。感谢马文科学长在硬件电路设计和飞控算法上给我提供的帮助，同时也要感谢他所创立的HandsFree开源机器人软硬件项目为本次项目开发提供的技术支持。</p>
+<p>感谢Crazepony和Crazyflie这两个开源四轴飞行器项目，感谢它们无私提供的硬件电路设计和嵌入式代码对本次项目开发的帮助。</p>
+<p>感谢本次项目开发中所使用的一切开源软硬件工具以及它们的创造者，没有这些工具的存在，我的这个项目也就不能实现。</p>
+<p>再次感谢西北工业大学舞蹈机器人基地及其全体成员，感谢他们创造了一个自由且充满激情的世界，让我可以在有限的基地时光中学到很多不同领域的知识，并为我之后的研究学习打下了坚实的基础。</p>
+</li>
+</ul>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun May 04 2025 17:11:17 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="团队机器人系列（0x07）：微风四轴飞行器-软件开发总结">https://myyerrol.xyz/zh-cn/2018/02/01/team_robot_7_breeze_quadcopter_software_summary/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2018/05/13/diy_robot_0_superclass/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2018/01/15/team_robot_6_breeze_quadcopter_stm32_flight_control/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2018-02-01
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/团队机器人系列/">团队机器人系列<span>7</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/Micro-Quadcopter/">Micro Quadcopter<span>7</span></a></li> <li><a href="/tags/STM32/">STM32<span>5</span></a></li> <li><a href="/tags/GCS/">GCS<span>1</span></a></li> <li><a href="/tags/Qt/">Qt<span>1</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%86%85%E5%AE%B9"><span class="toc-article-text">内容</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%9C%B0%E9%9D%A2%E6%8E%A7%E5%88%B6%E7%AB%99"><span class="toc-article-text">地面控制站</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Breeze%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E7%AB%99"><span class="toc-article-text">Breeze远程控制站</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Breeze%E9%A3%9E%E8%A1%8C%E6%8E%A7%E5%88%B6%E7%AB%99"><span class="toc-article-text">Breeze飞行控制站</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%8C%BF%E5%90%8D%E7%A7%91%E5%88%9B%E5%9C%B0%E9%9D%A2%E7%AB%99"><span class="toc-article-text">匿名科创地面站</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Mission-Planner"><span class="toc-article-text">Mission Planner</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Crazyfile%E5%9C%B0%E9%9D%A2%E7%AB%99"><span class="toc-article-text">Crazyfile地面站</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E6%A0%88"><span class="toc-article-text">通信协议栈</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#CommLink"><span class="toc-article-text">CommLink</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#MAVLink"><span class="toc-article-text">MAVLink</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-article-text">项目</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-article-text">完成</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%94%B9%E8%BF%9B"><span class="toc-article-text">改进</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%B8%AA%E4%BA%BA"><span class="toc-article-text">个人</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%84%9F%E5%8F%97"><span class="toc-article-text">感受</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-article-text">致谢</span></a></li></ol></li></ol></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">169.3k</span>字
+
+    <br>
+
+    
+        &copy; 2025 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>

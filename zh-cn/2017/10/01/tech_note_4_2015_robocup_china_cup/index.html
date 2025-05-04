@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>技术杂记系列（0x04）：2015 RoboCup中国杯 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="前言随着RoboCup合肥国际赛的结束，我们晓萌队又开始紧锣密鼓地着手准备10月份的RoboCup中国赛。由于之前5月份我们在中国服务机器人大赛上发挥得不理想，再加上即将到来RoboCup中国赛是我们这一届晓萌队成员的最后一战，所以这一次我们根据比赛规则提前制定好了开发计划，每个队员也都尽全力来完成各自的任务，当然我们目标很明确：把握机会，不留遗憾。
+2015年10月份的RobCup中国赛将会在贵阳举办，由于是一年一度的全国赛，所以国内研究服务机器人的高校队伍基本上都会参加，而最令我们感到意外的是刚刚参加完RoboCup合肥国际赛的中科大蓝鹰队也会携可佳机器人参赛，届时我们的晓萌可以和中科大的可佳同台较量，这绝对是我们向强队学习的绝佳机会。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="技术杂记系列（0x04）：2015 RoboCup中国杯">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 技术杂记系列（0x04）：2015 RoboCup中国杯</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">3.5k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">11</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着RoboCup合肥国际赛的结束，我们晓萌队又开始紧锣密鼓地着手准备10月份的RoboCup中国赛。由于之前5月份我们在中国服务机器人大赛上发挥得不理想，再加上即将到来RoboCup中国赛是我们这一届晓萌队成员的最后一战，所以这一次我们根据比赛规则提前制定好了开发计划，每个队员也都尽全力来完成各自的任务，当然我们目标很明确：<strong>把握机会，不留遗憾</strong>。</p>
+<p>2015年10月份的RobCup中国赛将会在贵阳举办，由于是一年一度的全国赛，所以国内研究服务机器人的高校队伍基本上都会参加，而最令我们感到意外的是刚刚参加完RoboCup合肥国际赛的中科大蓝鹰队也会携可佳机器人参赛，届时我们的晓萌可以和中科大的可佳同台较量，这绝对是我们向强队学习的绝佳机会。</p>
+<span id="more"></span>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p>由于之前本人电脑中存储的照片全部丢失，因此该博客中所显示的照片数量比较有限，希望读者可以理解。</p>
+</div>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>我们吸取了之前比赛失利的教训，提高了赛前调试的次数和强度。由于9月份开学之后，我们的课业都比较繁重，所以那时我们基本上是白天学习专业课，晚上加班加点来舞蹈机器人基地调试机器人。晚上调试机器人最大的好处就是行动比较自由且不会受到外界的干扰，我们可以在楼道走廊里临时搭建好调试场地，并根据比赛内容进行专项联合调试，在联合调试过程中，各个机器人模块（这里的模块主要指的是软件方面，如机器人底盘、机械臂、语音、图像和策略）的负责人需要留在现场，以便出现问题可以大家一起讨论解决。</p>
+<ul>
+<li><h4 id="自主导航进门"><a href="#自主导航进门" class="headerlink" title="自主导航进门"></a>自主导航进门</h4><p>以下图片展示的是我们晓萌机器人在自主导航调试中有关进门环节的情况，由于门刚开始是处于关闭的状态，所以机器人需要通过激光传感器不断地检测门的开启或关闭状态来判断是否让自己进门。除此之外，门的宽度较窄，为了保证晓萌在进门的时候不会撞到两边的门框，我们在原有SLAM算法的基础之上进行了定制，融合了地图中的边缘信息，使得机器人能够顺利地过门。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_navigation.jpg" alt="debug_navigation"></p>
+</li>
+<li><h4 id="自主识别抓取物体"><a href="#自主识别抓取物体" class="headerlink" title="自主识别抓取物体"></a>自主识别抓取物体</h4><p>自主识别和抓取物体项目是我们这一次赛前调试的重点内容。早在暑假的时候，我就已经完成了大部分机械臂控制和规划算法的编写工作，不过为了追求整个抓取项目的鲁棒性，我和其他几名队友商量之后还是决定简化机械臂的控制，即只让机械臂负责末端夹持器Z轴高度的变化，而对于末端夹持器其余两个维度的位置调整则交给了更加成熟的底盘模块（使用底盘的前进、后退以及旋转功能来实现）。如下几个图所示，经过大量的调试，简化版的机械臂抓取策略还是相当稳定的，基本上只要图像模块能够识别到物体，机械臂就能将其抓取并放到柜子（由于当时经费紧张，所以我们用桌子和纸箱搭了一个简易的两层“柜子”）的下面一层中，不过缺点也很明显，那就是晓萌完成一次完整的抓取流程需要花费很多时间（主要浪费在底盘多次前进、后退以及缓慢的旋转上），这个问题我们会在比赛之后赛进行改进，以提高晓萌机械臂的抓取效率。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_object_manipulation_1.jpg" alt="debug_object_manipulation_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_object_manipulation_2.jpg" alt="debug_object_manipulation_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_object_manipulation_3.jpg" alt="debug_object_manipulation_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_object_manipulation_4.jpg" alt="debug_object_manipulation_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//debug/debug_object_manipulation_5.jpg" alt="debug_object_manipulation_5"></p>
+</li>
+</ul>
+<h3 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h3><ul>
+<li><h4 id="RoboZoo"><a href="#RoboZoo" class="headerlink" title="RoboZoo"></a>RoboZoo</h4><p>由于RoboZoo仅是一个展示项目，没有太多涉及技术方面的内容，而且其它几个重要的比赛项目占据了我们大部分的调试时间，所以我们算是在比赛开始前几天才想出一个比较有创意的比赛方案出来。如下图所示，晓萌机器人做静态展示，而其前面的大红机器人（我们基地的上古舞蹈机器人）则在海报上进行动态的舞蹈展示，可惜的是我们本来的设计方案是让晓萌机器人通过语音来命令大红来开始跳舞，但由于现场噪音太大，几次尝试都没有成果，所以我们索性直接通过人的语音来启动大红，不过最后结果还是不错的，我们在这个项目上拿了第一名。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/robozoo/robozoo.jpg" alt="robozoo"></p>
+</li>
+<li><h4 id="Speech-Recognition"><a href="#Speech-Recognition" class="headerlink" title="Speech Recognition"></a>Speech Recognition</h4><p>在语音识别这个项目上，技术裁判会根据电脑上安装有的<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/kyordhel/GPSRCmdGen">GPSRCmdGen</a>软件所随机生成的问题序列来询问机器人，机器人需要通过语音重复识别到的问题然后再进行回答，问题总共有15个，每答对一个就加一定的分数，最后哪个队得分高则排在前面。我们晓萌队在语音识别这个单项上依然发挥得非常出色，我记得最后的成绩是正确答对13个问题，效果拔群。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/speech_recognition/speech_recognition.jpg" alt="speech_recognition"></p>
+</li>
+<li><h4 id="Face-Recognition"><a href="#Face-Recognition" class="headerlink" title="Face Recognition"></a>Face Recognition</h4><p>人脸识别项目考察机器人如何在人群中找到特定的目标人物。机器人首先需要在比赛开始之后向人群前进一段距离，到达指定的识别地点之后，机器人要通过摄像头来捕捉前排坐在椅子上和后排站立的人的脸部信息，等到机器人成功识别出目标之后，只需走向目标人物并用语音向裁判说明即可。不过由于该项难度较大，除了中科大的可佳能够轻松完成之外，没有队伍可以成功地执行完整个任务流程，当然我们晓萌队在这个项目上得分也不高，看来之后还要继续努力。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/face_recognition/face_recognition_1.jpg" alt="face_recognition_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/face_recognition/face_recognition_2.jpg" alt="face_recognition_2"></p>
+</li>
+<li><h4 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h4><p>自主导航项目要求机器人在室内能够准确到达几个目标位置点，并在整个移动过程中避开桌椅、墙壁等障碍物。那天的比赛中，我们晓萌机器人在前两轮表现不佳，机器人在裁判下令比赛开始之后并没有移动（当时我们都焦急得满头大汗），我们分析问题主要出在晓萌机器人在进门阶段时没有正常地检测到房门已被打开，所以底盘模块负责人壕神在第三轮比赛前的短暂准备时间内对代码进行了一些调整，还好最后一轮比赛我们的晓萌机器人能够正常地运行，并且完成了一部分比赛任务，总算之前的努力没有白费。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_1.jpg" alt="navigation_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_2.jpg" alt="navigation_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_3.jpg" alt="navigation_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_4.jpg" alt="navigation_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_5.jpg" alt="navigation_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/navigation/navigation_6.jpg" alt="navigation_6"></p>
+</li>
+<li><h4 id="Object-Recognition-amp-Manipulation"><a href="#Object-Recognition-amp-Manipulation" class="headerlink" title="Object Recognition &amp; Manipulation"></a>Object Recognition &amp; Manipulation</h4><p>由于物体识别和抓取项目是最后一个比赛项目，所以留给我们在现场进行调试的时间比较少，我的两个队友也在抓紧时间对裁判公布的每件物品进行拍照和训练。在本次比赛中，只有四个参赛队伍的机器人具有机械臂，它们分别是：中科大、上交大、上应技和西工大，我们在四个队伍中排在最后一个出场，在已经完赛的前三个队伍中，上应技没有实现抓取，上交大在第二轮中成功识别并抓取一个物品，而中科大则是在首轮就相当轻松地识别并抓取了两三个物品。</p>
+<p>最后轮到我们出场了，我们在把晓萌机器人摆放在白线（比赛开始位置）上之后，由我来启动晓萌机器人的比赛程序（因为我是机械臂模块的负责人），虽然要启动的7条命令我早已烂熟于心，但是当全场所有人的目光都投向你的时候，未免还是有些紧张。在成功启动所有程序之后，比赛正式开始，第一轮比赛我们识别错了物体，问题可能出在策略模块对所抓物体的选择上，所以在第二轮前的准备时间里，耀神和芳姐讨论之后决定将要抓取的物体名称直接固化在状态机程序中，也就是说我们提前要在两个物品中选一个去抓。最后的事实证明，我们赌赢了但是非常遗憾的是我们离晓萌机器人在正式比赛中成功自主识别和抓取物品这一里程碑事件就差了几个厘米的距离。因为底盘从白线处前进到识别位置时差了几个厘米，导致Kinect没能识别到物体，后来在比赛结束之后，我们把晓萌机器人往前移动了几个厘米，果然程序都一切正常地执行下去了……。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_1.jpg" alt="object_manipulation_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_2.jpg" alt="object_manipulation_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_3.jpg" alt="object_manipulation_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_4.jpg" alt="object_manipulation_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_5.jpg" alt="object_manipulation_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//competition/object_manipulation/object_manipulation_6.jpg" alt="object_manipulation_6"></p>
+</li>
+</ul>
+<h3 id="团队"><a href="#团队" class="headerlink" title="团队"></a>团队</h3><p>我们这一届晓萌团队在之前学长开发的基础上对机器人的整体架构进行全新的变革。机械部分：忧神设计了新的机械手爪并为晓萌机器人的显示屏、麦克风和摄像头等设备提供了结实的固定支架；电子部分：东神和派大星为嵌入式系统编写了新的机械臂位置控制算法；软件部分：壕神提高了底盘模块的自主导航能力，耀神根据比赛规则编写了基于状态机跳转的新策略模块，张凡让语音识别的准确度得到进一步的提高，芳姐和刘琪则实现了基于OpenCV和PCL等图像技术的物体和人脸识别算法，朋为我们翻译了英文的比赛规则并为复杂算法提供数学支持，而我负责编写了机械臂的控制和规划算法。总之，团队的阶段性成功离不开每一位成员的辛苦努力和付出，也希望之后的晓萌团队可以发展得越来越好。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//team/team_cloth_and_logo.jpg" alt="team_cloth_and_logo"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//team/team_group_photo.jpg" alt="team_group_photo"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们晓萌团队在本次RoboCup贵阳公开赛上的表现相较之前5月份的那次有了很大的提升，但是从过程来看依然暴露了一些问题：比如在物体识别和抓取项目中，我们离成功就差个很小的距离，表面来看问题出现的原因是我们晓萌的底盘离柜子的距离不够，导致Kinect没能识别到物体，而深层次的原因则在于我们在调试的时候没有把所有可能出现的情况都考虑在内，即测试用例理想化，极端或边界情况都没有被进行测试。因此，我们在做一个复杂的机器人系统时，不光要会写代码，还要会用开发规范来提高代码质量，会用Git等软件来做代码版本控制，会用所有可能出现的情况来全方面测试代码，最后要会用文档来记录开发或调试过程中出现的问题、解决方法、经验总结等。个人认为，只要未来的晓萌团队能用上述软件工程的方法来对自己进行严格管理，那我们就会在追逐终极目标——参加RoboCup@Home国际赛的道路上不断前进！</p>
+<p>当然，本篇博客的结束也意味着我的RoboCup比赛之旅正式完结。回想短短一年之内的3次比赛，我们既经历过在基地熬夜调试到凌晨，用椅子拼床用书做枕头的艰苦（由于比赛前住基地的人比较多，行军床不够用了，所以只好简单凑活一下），也在紧张激烈的比赛之余体验过各座城市的风土人情，不过最重要的是我们能够像《速度与激情》系列里的赛车家族一样，可以共同面对未知的困难，并在解决困难的途中各尽所长，甚至在关键时刻能有所牺牲，我想哪怕最后比赛结果不理想，但这份曲折且宝贵的经历也足以配得上最终的胜利！</p>
+<p>在基地的时候，我每次跟别的同学或老师讲我们基地或我们家政组所正在研究的内容时，内心就会自然而然地产生一种成就感，我们正在做的是可以在不久的将来能引领人工智能发展的服务机器人领域，虽然我们的研究还处于早期阶段，但有一点可以肯定：目前西工大还没有一支由本科生组成的团队可以达到我们的高度，光这一点就让我发自内心的自豪！</p>
+<p>最后，以《速度与激情7》中的片尾经典台词和晓萌的照片来结束这篇文章，以纪念我们大学生活中这段最为宝贵的经历：</p>
+<p>No matter where you are, whether it’s a quarter mile away or half way across the world. The most important thing in life will always be the people in this room, right here, right now. You’ll always be with me. And you’ll always be my brother.</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/9_guiyang//team/team_xmbot.jpg" alt="team_xmbot"></p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun May 04 2025 13:12:50 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="技术杂记系列（0x04）：2015 RoboCup中国杯">https://myyerrol.xyz/zh-cn/2017/10/01/tech_note_4_2015_robocup_china_cup/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2017/10/06/team_robot_1_breeze_quadcopter_superclass/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2017-10-01
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/技术杂记系列/">技术杂记系列<span>7</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/Robot/">Robot<span>13</span></a></li> <li><a href="/tags/RoboCup/">RoboCup<span>4</span></a></li> <li><a href="/tags/RoboCup-Home/">RoboCup@Home<span>3</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%BB%8F%E5%8E%86"><span class="toc-article-text">经历</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-article-text">调试</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%87%AA%E4%B8%BB%E5%AF%BC%E8%88%AA%E8%BF%9B%E9%97%A8"><span class="toc-article-text">自主导航进门</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%87%AA%E4%B8%BB%E8%AF%86%E5%88%AB%E6%8A%93%E5%8F%96%E7%89%A9%E4%BD%93"><span class="toc-article-text">自主识别抓取物体</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E6%AF%94%E8%B5%9B"><span class="toc-article-text">比赛</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#RoboZoo"><span class="toc-article-text">RoboZoo</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Speech-Recognition"><span class="toc-article-text">Speech Recognition</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Face-Recognition"><span class="toc-article-text">Face Recognition</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Navigation"><span class="toc-article-text">Navigation</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Object-Recognition-amp-Manipulation"><span class="toc-article-text">Object Recognition &amp; Manipulation</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%9B%A2%E9%98%9F"><span class="toc-article-text">团队</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">169.3k</span>字
+
+    <br>
+
+    
+        &copy; 2025 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>

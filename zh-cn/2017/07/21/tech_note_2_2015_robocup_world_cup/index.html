@@ -1,0 +1,746 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>技术杂记系列（0x02）：2015 RoboCup世界杯 | myyerrol的个人网站</title>
+
+    
+    <meta name="author" content="myyerrol">
+    
+
+    
+    <meta name="description" content="前言RoboCup即机器人世界杯，是目前世界上级别规格最高、影响力最广的机器人赛事（当然，DARPA机器人挑战赛除外）。中国曾经在2008年的时候举办过一次RoboCup国际赛，地点是在苏州，而七年之后，RoboCup国际赛又一次降临中国，这次则是在拥有多年举办机器人赛事经验的合肥。非常幸运的是我们晓萌机器人团队能够被邀请参与本次比赛新增的BSR项目，并获得免费近距离观摩比赛的机会。
+这篇文章主要讲述我们在RoboCup合肥国际赛所发生的一些事情，内容主要以亲身经历为主，其中也会涉及技术方面，但不是重点。">
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <meta property="og:title" content="技术杂记系列（0x02）：2015 RoboCup世界杯">
+    
+    <meta property="og:site_name" content="myyerrol的个人网站">
+
+    
+    <meta property="og:image" content>
+    
+
+    
+    <meta name="baidu-site-verification" content="code-0Clkv7uHUy">
+    
+    
+    <meta name="msvalidate.01" content="DBA9CE921B74D9D73F0C965146BCFD06">
+    
+    
+    <meta name="google-site-verification" content="j1TsWc6c-yXw_JOB8mj6D3oluqEs2cGqkukKQxxuIHM">
+    
+
+    
+    <link href="/favicon.ico" rel="icon">
+    
+
+    <link rel="stylesheet" href="/css/other/themes/bootstrap.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="/css/blog/comments.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/copyright.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/page.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/post.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/blog/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/fonts/google-fonts.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/other/highlight/highlight-default.min.css" media="screen" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/other/jquery-2.0.3.min.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("[data-spy='affix']").each(function() {
+                var $spy = $(this)
+                , data = $spy.data()
+                data.offset = data.offset || {}
+                data.offsetBottom && (data.offset.bottom = data.offsetBottom)
+                data.offsetTop && (data.offset.top = data.offsetTop)
+                $spy.affix(data)
+            });
+        });
+    </script>
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">myyerrol的个人网站</a>
+        <div class="collapse navbar-collapse nav-menu">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/archives/" title="所有的文章">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="所有的分类">
+                        <i class="fa fa-folder"></i>分类
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags/" title="所有的标签">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于">
+                        <i class="fa fa-user"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+    <div class="container">
+        <div class="content">
+            
+    
+        <div class="page-header page-header-inverse ">
+            <h1 class="title title-inverse "> 技术杂记系列（0x02）：2015 RoboCup世界杯</h1>
+        </div>
+    
+
+
+
+
+
+<div class="row post">
+    
+    <div id="top_meta"></div>
+    <div class="col-md-9">
+    
+
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-user"></i>
+            <span>阅读量:</span>
+            <span id="busuanzi_value_page_pv">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>次&nbsp;
+        </span>
+
+        <i class="fa fa-file-word-o"></i>
+        <span>文章字数:</span>
+        <span class="post-count">9.3k</span>字&nbsp;
+
+        <i class="fa fa-clock-o"></i>
+        <span>阅读时长:</span>
+        <span class="post-count">31</span>分钟
+
+        <p></p>
+
+        <div class="mypage">
+            
+
+            
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RoboCup即机器人世界杯，是目前世界上级别规格最高、影响力最广的机器人赛事（当然，DARPA机器人挑战赛除外）。中国曾经在2008年的时候举办过一次RoboCup国际赛，地点是在苏州，而七年之后，RoboCup国际赛又一次降临中国，这次则是在拥有多年举办机器人赛事经验的合肥。非常幸运的是我们晓萌机器人团队能够被邀请参与本次比赛新增的BSR项目，并获得免费近距离观摩比赛的机会。</p>
+<p>这篇文章主要讲述我们在RoboCup合肥国际赛所发生的一些事情，内容主要以亲身经历为主，其中也会涉及技术方面，但不是重点。</p>
+<span id="more"></span>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="前一天"><a href="#前一天" class="headerlink" title="前一天"></a>前一天</h3><p>我们在开始报到注册的前一天坐火车到达了合肥，之后又乘坐公交车来到了国际会展中心附近。因为长途奔波，大家都比较劳累了，所以在下午办理完入住宾馆的手续之后，大部分队员就在宾馆里休息或为接下来的比赛进行调试，而我则在晚饭之后决定先到比赛场馆附近转一转，一是可以熟悉周围的环境，二是能够满足自己内心对未知新事物的向往。</p>
+<h4 id="比赛场馆"><a href="#比赛场馆" class="headerlink" title="比赛场馆"></a>比赛场馆</h4><p>我记得自己从宾馆出来之后，在路上走了一段时间，刚开始路边都是一些居民住宅区和自营小餐馆，可是随着道路一转，一个庞大且点缀有光点的建筑物突然映入我的眼帘，原来那就是胖胖学长所说的国际会展中心（因为之前学长们曾经在这个场馆参加过比赛，所以对场馆及其周围很熟悉）。我走近一看，感觉整个国际会展中心建的还是相当现代化，虽然我不是学建筑出身的，但是会展中心所呈现出来的那种庄严气势还是给我留下了非常深刻的印象。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/competition_venue_1.jpg" alt="competition_venue_1"></p>
+<p>从上图中可以看到，国际会展中心的工作人员为了迎接RoboCup这一世界顶级的机器人赛事，正在紧锣密鼓地准备参赛队伍的调试区域、比赛的场地以及各大参展商的展台。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/competition_venue_2.jpg" alt="competition_venue_2"></p>
+<p>国际会展中心的周围也是高楼林立，可以看到这个区域周边经济发展得应该还算不错。而且会展中心的外围也早就拉上条幅，升起气球，为赛事的成功举办烘托气氛。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/competition_venue_3.jpg" alt="competition_venue_3"></p>
+<p>这张照片是我从会展中心旁边的玻璃环形人行天桥上所拍下来的，从图中可以看到，远处的会展中心坐落在茫茫的夜色之中，似乎预示着即将有重大的事情发生。</p>
+<h4 id="宣传海报"><a href="#宣传海报" class="headerlink" title="宣传海报"></a>宣传海报</h4><p>以下照片均是我在会展中心周围所拍，内容以庆祝RoboCup机器人比赛举办和欢迎来自世界各地的参赛队伍为主要主题。虽然当时夜色已经很晚了，但是你依然能从这些宣传海报中感受到合肥这个城市对机器人的喜爱。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_1.jpg" alt="display_board_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_2.jpg" alt="display_board_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_3.jpg" alt="display_board_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_4.jpg" alt="display_board_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_5.jpg" alt="display_board_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_6.jpg" alt="display_board_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/display_board_7.jpg" alt="display_board_7"></p>
+<h4 id="赛前调试"><a href="#赛前调试" class="headerlink" title="赛前调试"></a>赛前调试</h4><p>当我从外面超市买了一些零食回来的时候，发现下图中的两个大神正在探讨如何将ROS下的自主导航框架与刚从学长那里借来的Robopeak RPLIDAR低成本激光传感器（即图中发绿色光的物体，因为根据BSR项目的要求，价格昂贵的传感器一律不允许使用）进行融合。虽然RPLIDAR官方提供有ROS驱动包，但在实际调试过程还需对其源码进行一定的修改才能获得比较好的使用效果。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/2_hefei/competition_debug.jpg" alt="competition_debug"></p>
+<p>在RoboCup合肥国际赛的前一天里，我感受到了合肥这座城市的风土人情，比如我们一起去吃了味道正宗的徽州黄焖鸡，领略到了大部分合肥商人在找钱时用硬币的特殊习惯，而最重要的是我们可以怀揣着对机器人的热爱，在接下来的几天中，亲身参与到RoboCup这一世界最高级别的机器人比赛之中。毫无疑问，我们内心的自豪和激动之情难以言表！</p>
+<h3 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h3><h4 id="报到注册"><a href="#报到注册" class="headerlink" title="报到注册"></a>报到注册</h4><p>RoboCup国际赛的第一天，我们都起得很早。在宾馆的餐厅里吃完早饭之后，我们立即携带机器人和相关设备直奔国际会展中心，可是等到达场馆之后，我们才发现那里已经有很多参赛队伍在排队等待报到注册（原来老外比我们起得还要早）。在等待的过程中，我发现很多国外的队伍都有自己的队服，而且运输机器人等装备的铝制箱子非常专业，所以就单在硬件这个方面上，个人感觉老外就已经甩我们好几条街了。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/registration/registration_1.jpg" alt="registration_1"></p>
+<p>从上图中可以看到，当前排队等待报到注册的队伍已经有不少了，其中大部分队伍来自欧美机器人强国。除此之外，大部分国外队员们都显得很轻松，有说有笑，感觉他们是真的来享受这一年一度的机器人盛会，而不是带着某些硬性指标来的。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/registration/registration_2.jpg" alt="registration_2"></p>
+<p>上图的证件和手册是我们报到注册完之后，从工作人员那里领的。纸袋里面装有一本介绍合肥的中英手册、一本介绍中国科学技术大学USTC研究成果的全英文小册子、一本很薄的全英文参赛指南、一本介绍科大讯飞的中英手册以及最重要的参赛证件。</p>
+<p>其中参赛证件比较特殊，我这里详细地讲解一下：因为RoboCup比赛本身参赛费较贵，我记得好像是一个队员100美元，一个领队300美元，一个机器人500美元，所以很多缺少经费的高校就没有办法参与。而此次RoboCup在中国举办，作为东道主，USTC希望能有更多的中国高校参与到比赛中来，所以特别创立了BSR项目，并在原有参赛队员数量的基础上增加了很多观摩团席位，而我现在手里拿着的就是观摩证（可能只限于新增的BSR项目）。不过观摩证和参赛证相比还是有一些限制的，比如除了在比赛之前两天的调试期间可以自由进出会展中心以及比赛区域之外，在正式比赛期间观摩证便无法发挥作用，即既不能进入会展中心，也不能进入参赛队伍的调试区域。不过，我们可以使用参赛证将没有或只持有观摩证的队员换进来，这样一来，证件的问题就解决了。</p>
+<h4 id="参赛组别"><a href="#参赛组别" class="headerlink" title="参赛组别"></a>参赛组别</h4><ul>
+<li><p><strong>RoboCup Soccer</strong><br><strong>Small Size</strong><br>RoboCup小型组是RoboCup足球比赛中历史最悠久的一个，它主要解决在混合集中/分布式系统的高动态环境下的智能多机器人/智能体协同和控制问题。每个参赛队伍需要派出六个机器人，每个机器人都必须符合规则中设定的尺寸：即机器人的大小要在180毫米直径的圆圈内，且不能高于15厘米。机器人将会在一个9米长6米宽的绿色地毯场上用橙色高尔夫球来进行比赛，场上所有物体均由位于比赛场地上方的视觉系统来进行跟踪，通过应用特定的视觉算法，便可以实现每个机器人的实时精准定位。除此之外，每个队伍与机器人之间是依靠无线通信来进行协调和控制的，为了保证通信的效果，比赛所使用的是专用商业无线电发射/接收单元。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/small_size/small_size_1.jpg" alt="small_size_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/small_size/small_size_2.jpg" alt="small_size_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/small_size/small_size_3.jpg" alt="small_size_3"></p>
+<p><strong>Middle Size</strong><br>RoboCup中型组采用全自主机器人，其所使用的足球大小与FIFA的相同。该项组别主要考察各个队伍在机电一体化设计、控制和基于规划和感知层面的多智能体协同能力。虽然每个中型组队伍都可以自由设计自己的机器人，但所有的传感器必须全部是机载的。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/middle_size/middle_size_1.jpg" alt="middle_size_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/middle_size/middle_size_2.jpg" alt="middle_size_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/middle_size/middle_size_3.jpg" alt="middle_size_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/middle_size/middle_size_4.jpg" alt="middle_size_4"></p>
+<p><strong>Standard Platform</strong><br>RoboCup标准平台组采用软银机器人公司的NAO机器人，NAO机器人目前是在学术领域世界范围内运用最广泛的类人机器人，它配备有多种传感器，而且支持跨平台操作系统编程，功能非常强大。如果追溯历史的话，NAO机器人是于2007年7月被RoboCup组委会选定为标准平台，用来替换索尼机器狗AIBO。关于标准平台组比赛，由于各队使用统一的机器人进行比赛，所以参赛队伍只需比拼软件算法水平，虽然每个NAO机器人都必须完全自主地发挥作用，但是本方的几个NAO机器人之间可以联合在一起来共同完成踢球的任务。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_1.jpg" alt="standard_platform_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_2.jpg" alt="standard_platform_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_3.jpg" alt="standard_platform_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_4.jpg" alt="standard_platform_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_5.jpg" alt="standard_platform_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/standard_platform/standard_platform_6.jpg" alt="standard_platform_6"></p>
+<p><strong>Humanoid</strong><br>RoboCup类人组的机器人是拥有类似人体规划和感知能力的全自主机器人，与类人组之外的人形机器人不同，RoboCup类人组机器人通过使用距离传感器并不会简化感知和建模任务。除了足球比赛之外，技术挑战也在发生，如动态行走和跑步、保持平衡的踢球、视觉感知足球、自我定位以及团队合作目前都是类人组的研究课题之一。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_1.jpg" alt="humanoid_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_2.jpg" alt="humanoid_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_3.jpg" alt="humanoid_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_4.jpg" alt="humanoid_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_5.jpg" alt="humanoid_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_6.jpg" alt="humanoid_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_soccer/humanoid/humanoid_7.jpg" alt="humanoid_7"></p>
+</li>
+<li><p><strong>RoboCup@Home</strong><br><strong>Open Platform</strong><br>RoboCup@Home开放平台组用于评估各个队伍在现实非标准化家庭环境中的能力和性能，重点考察人机交互与合作、动态环境中的导航和建图、自然光下的计算机视觉和物体识别、物体操作、自适应行为、行为整合、环境智能、标准化和系统集成。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_1.jpg" alt="open_platform_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_2.jpg" alt="open_platform_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_3.jpg" alt="open_platform_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_4.jpg" alt="open_platform_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_5.jpg" alt="open_platform_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_6.jpg" alt="open_platform_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_7.jpg" alt="open_platform_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_8.jpg" alt="open_platform_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_9.jpg" alt="open_platform_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_10.jpg" alt="open_platform_10"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_11.jpg" alt="open_platform_11"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_12.jpg" alt="open_platform_12"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_13.jpg" alt="open_platform_13"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/open_platform/open_platform_14.jpg" alt="open_platform_14"></p>
+<p><strong>BSR</strong><br>RoboCup@Home服务机器人标准测试（Benchmark Service Robot）组并不是官方设立的正式比赛项目，它是由RoboCup合肥国际赛主办方中科大临时发起并创办的，旨在降低机器人平台的成本，让更多的中国高校队伍能够参与其中。由于对机器人的成本进行了限制，所以各个队伍的机器人大小都必须要在规则中所指定的范围之内，而且不允许使用价格昂贵的传感器（这也是为什么很多队伍使用Robopeak RPLIDAR的原因）。BSR项目主要以定量的方式考察机器人底盘移动的精准程度、自主导航以及避障和越障能力。</p>
+<ul>
+<li><p><strong>精准测试</strong><br>精准测试主要依靠基于摄像机的自动裁判系统来进行评判。具体比赛项目是让机器人在不负重以及负重不同重量的情况下直线前进一段距离和旋转一定的角度，并根据机器人实际完成值与给定目标值之间的偏差来计算出各队的分数，负重越重（不同的负重有不同的权重系数），偏差越小，得分越多。</p>
+</li>
+<li><p><strong>自主导航</strong><br>自主导航需要机器人事先根据激光或视觉传感器建立好比赛场地的地图，在比赛开始之前，由裁判在场地中随机指定机器人的启动和停止位置，机器人必须要从启动位置启动，并在途中避开障碍物之后才能到达终点。因为自主导航是服务机器人的基本能力，所以大部分队伍都做得不错。</p>
+</li>
+<li><p><strong>避障和越障</strong><br>因为比赛场地的特殊设置，机器人在自主导航的过程中肯定需要避开障碍物并至少穿过一次宽度较窄的金属小门。其中让机器人穿门而过是比较难的，因为金属门较窄，只比机器人底盘的宽度大一些，如果机器人在自主导航的时候移动得不够精确，就会很容易撞到门柱上；另外一点是比赛的金属小门带有一个门槛，这对使用普通轮的机器人来说可能不算什么，最多过门槛的时候颠簸几下，但是对于使用麦克纳姆轮的队伍来说（包括我们晓萌队），门槛就是一个致命的打击，原因很明显，麦轮因其特殊的构造本身就不适合翻越障碍物。不过还好，大部分队伍的机器人还没到门槛就由于各种问题被抬下场了，这也算是一种心理安慰吧。</p>
+</li>
+</ul>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/bsr/bsr_1.jpg" alt="bsr_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/bsr/bsr_2.jpg" alt="bsr_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/bsr/bsr_3.jpg" alt="bsr_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup@home/bsr/bsr_4.jpg" alt="bsr_4"></p>
+</li>
+<li><p><strong>RoboCup Secure</strong><br><strong>Robot</strong><br>RoboCup救援组的目标是促进在恶劣环境下灾难救援领域机器人的研究和开发工作，在非结构化环境中搜索模拟的受害者时，需要机器人展示其在移动性、环境感知、规划、建图以及实际操作方面的能力。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_1.jpg" alt="robocup_secure_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_2.jpg" alt="robocup_secure_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_3.jpg" alt="robocup_secure_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_4.jpg" alt="robocup_secure_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_5.jpg" alt="robocup_secure_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_6.jpg" alt="robocup_secure_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_7.jpg" alt="robocup_secure_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_8.jpg" alt="robocup_secure_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_9.jpg" alt="robocup_secure_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_10.jpg" alt="robocup_secure_10"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_11.jpg" alt="robocup_secure_11"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_12.jpg" alt="robocup_secure_12"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_secure/robocup_secure_13.jpg" alt="robocup_secure_13"></p>
+</li>
+<li><p><strong>RoboCup Industrial</strong><br><strong>RoboCup@Work</strong><br>RoboCup@Work是RoboCup的最新比赛项目，其目标是在借鉴其他已有RoboCup比赛项目经验证的想法和概念基础之上，解决自主移动工业机器人对零件的识别、抓取和放置操作等任务难题。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_industrial/robocup@work/robocup@work_1.jpg" alt="robocup@work_1"></p>
+<p><strong>RoboCup Logistics</strong><br>RoboCup物流组创办的想法来源于智能工厂中的工业场景，因为未来的智能工厂需要更灵活的物流运输能力，而机器人则是最佳的选择。本次RoboCup比赛物流组项目的机器人全部由FESTO公司提供，虽然我没太看懂那些机器人具体是如何运作的，但从外部蓝色的细管还是可以判断出FESTO的物流机器人应该采用的是气动原理。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_industrial/robocup_logistics/robocup_logistics_1.jpg" alt="robocup_logistics_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/robocup_industrial/robocup_logistics/robocup_logistics_2.jpg" alt="robocup_logistics_2"></p>
+</li>
+</ul>
+<h4 id="参展企业"><a href="#参展企业" class="headerlink" title="参展企业"></a>参展企业</h4><ul>
+<li><p><strong>KUKA</strong><br>KUKA公司来源于德国，是世界领先的四大工业机器人制造商之一。KUKA机器人种类齐全，几乎涵盖了所有负载范围和类型，并确立了人机协作领域的标准。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/kuka/kuka_1.jpg" alt="kuka_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/kuka/kuka_2.jpg" alt="kuka_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/kuka/kuka_3.jpg" alt="kuka_3"></p>
+</li>
+<li><p><strong>ROBOTIS</strong><br>ROBOTIS公司来自于韩国，是世界最为著名的机器人公司之一，该公司的标志性产品为Dynamixel系列舵机和ROBOTIS OP小型人型机器人。ROBOTIS公司的发展理念是：既为孩子们提供教具，让孩子们提升创新能力，也为专家们提供解决方案，让他们把富有创意的想法实现为实际机器人。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/robotis/robotis_1.jpg" alt="robotis_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/robotis/robotis_2.jpg" alt="robotis_2"></p>
+</li>
+<li><p><strong>IAMT</strong><br>中国科学院合肥物质科学研究院先进制造技术研究所（以下简称先进制造所）是中国科学院合肥物质科学研究院（以下简称合肥研究院）下属的研究单位之一，主要研究方向包括：机器人技术（仿生机器人、服务机器人、工业机器人等）和智能装备技术（创新设计、精密制造、智能材料、系统集成等）。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/iamt/iamt_1.jpg" alt="iamt_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/iamt/iamt_2.jpg" alt="iamt_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/iamt/iamt_3.jpg" alt="iamt_3"></p>
+</li>
+<li><p><strong>GaiTech</strong><br>硅步科技是专业提供机器人整体解决方案的创新型公司，其主要业务是基于ROS的智能机器人集成、生产、销售和技术支持服务。目前，随着人工智能技术的不断发展，硅步科技也开始逐步致力于机器人电机控制系统、无人机飞行稳定系统、智能相机和高性能传感器等技术和产品的研究和开发工作。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/3_hefei/exhibitor/gaitech/gaitech_1.jpg" alt="gaitech_1"></p>
+</li>
+</ul>
+<p>RoboCup合肥国际赛第一天的亲身经历让我们能近距离地且亲眼看到很多国内外顶尖参赛队伍的机器人以及相关调试过程，在开拓了视野的同时也让我们对RoboCup比赛有了进一步的认识。除此之外，给我留下印象最深的便是老外对于技术的那种严谨执着的态度。比如，在调试期间，你经常可以看到几个队员三五成群地在一起讨论解决问题的方法，并将每个解决方法记录下来并一一进行测试，而且甚至还有一些队伍在闭馆通知播报完之后依然不愿意离开。我们常常羡慕国外先进的机器人技术，但殊不知在排除资金投入等客观因素的影响之外，我们自己又做的如何呢？我们热爱机器人的人很多，但能以严谨认真的态度来将这份热爱付诸实现的人太少。未来如果我们能全身心地投入到机器人研究和开发工作中去，那总有一天我们能够到达成功的彼岸，我想这就是本次RoboCup国际赛在技术之外所教会给我的东西。</p>
+<h3 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h3><p>由于我们晓萌队要准备接下来的BSR(Benchmark Service Robot)预赛，所以这一天我基本上都待在BSR比赛场地附近的调试区域。当然因为我们自己本身就是做RoboCup@Home项目的，所以每隔一段时间，我还是会来到旁边的RoboCup@Home场地，用自己的手机来记录现场所发生的一些事情。</p>
+<h4 id="RoboCup-Home"><a href="#RoboCup-Home" class="headerlink" title="RoboCup@Home"></a>RoboCup@Home</h4><ul>
+<li><p><strong>赛程</strong><br>RoboCup@Home裁判组终于公布了赛程安排。如下图所示，各队每天要进行的比赛项目多且时间安排紧凑，比如今天就要进行三个测试科目，时间从上午9点一直持续到晚上8点左右。虽然它们不属于正式比赛项目，不计得分和名次，但是却为之后的正赛提供了技术和安全方面的保障。</p>
+<p><strong>Mapping Slots</strong><br>每个参赛队伍的机器人都可以使用自身携带的激光传感器来建立比赛场地的地图，这为之后机器人在比赛中的自主导航提供基本保障。</p>
+<p><strong>Robot Inspection &amp; Introduction</strong><br>裁判组会对每个参赛的机器人进行详细的检查，以确保机器人的机械、电路等设计满足规则中的要求（比如急停开关的位置是否合适、机器人外部是否有裸露的电线等），防止因机器人在比赛中失控所导致危险情况的发生。</p>
+<p><strong>Poster Session &amp; Reception</strong><br>该环节是RoboCup@Home项目的传统组成部分，它规定每个参赛队伍都必须事先准备好有关自己机器人的技术海报，并在现场向裁判和各队领队进行简要的讲解，其目的主要是为了加强各队之间的技术交流，以便促进RoboCup@Home项目的不断发展。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/schedule/schedule.jpg" alt="schedule"></p>
+</li>
+<li><p><strong>机器人</strong><br>从下图可以看到，每个队伍都在积极准备明天各自的比赛项目，其中有一部分队伍的队员正在用视觉传感器对物体进行训练，以便为之后的物体识别和抓取项目做好充足的准备。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_1.jpg" alt="robot_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_2.jpg" alt="robot_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_3.jpg" alt="robot_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_4.jpg" alt="robot_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_5.jpg" alt="robot_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_6.jpg" alt="robot_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_7.jpg" alt="robot_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/robot/robot_8.jpg" alt="robot_8"></p>
+</li>
+<li><p><strong>技术海报</strong><br>以下海报是参赛队伍对各自机器人所用技术的概述。通过观察可以看到大部分队伍都将ROS(Robot Operating System)作为机器人的核心框架，并在其基础之上进行了更深入的研究工作。</p>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o  float-left"></i>  <p>因为当初我是竖着用手机对海报进行拍照的，所以照片显示在博客里也就横过来了。如果你用的是手机或平板电脑浏览本文章的话，请直接将屏幕顺时针旋转90度即可，但是如果你用的是电脑的话，那就只能请你向左歪脑袋或者直接下载照片进行查看了。</p>
+</div>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_1.jpg" alt="poster_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_2.jpg" alt="poster_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_3.jpg" alt="poster_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_4.jpg" alt="poster_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_5.jpg" alt="poster_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_6.jpg" alt="poster_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_7.jpg" alt="poster_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_8.jpg" alt="poster_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_9.jpg" alt="poster_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_10.jpg" alt="poster_10"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_11.jpg" alt="poster_11"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_12.jpg" alt="poster_12"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_13.jpg" alt="poster_13"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_14.jpg" alt="poster_14"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_15.jpg" alt="poster_15"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/4_hefei/robocup@home/poster/poster_16.jpg" alt="poster_16"></p>
+</li>
+</ul>
+<p>伴随着RoboCup合肥国际赛第二天的结束，所有参赛队伍的调试工作都接近了尾声。在这两天的现场调试过程当中，我们虽然遇到过一些问题（比如传感器安装位置的不合适所导致机器人避障不准、建立好的地图中存在杂点等），但是经过团队的一起努力，以上问题还是得到了比较好的解决。明天RoboCup合肥国际赛就要正式开幕了，希望所有参赛的队伍都能在正式比赛中竭尽全力，发挥出自己的应有水平，在争取名次的同时也能从互相的技术交流讨论之中受益匪浅！</p>
+<h3 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h3><h4 id="开幕仪式"><a href="#开幕仪式" class="headerlink" title="开幕仪式"></a>开幕仪式</h4><p>在开幕式的整个过程中，除了RoboCup主席和相关领导的精彩发言之外，最吸引人的就是那个站在演讲台旁边的Alpha 2人形机器人（深圳<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.ubtrobot.com/cn/">优必选</a>公司的产品），因其搭载了<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.iflytek.com/">科大讯飞</a>最新的语音识别引擎，所以它能够实时且准确地进行同步翻译，这既方便了国内外与会者理解发言者的意图，也体现出科大讯飞在语音合成和识别领域的强大实力。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/ceremony/ceremony.jpg" alt="ceremony"></p>
+<h4 id="比赛项目"><a href="#比赛项目" class="headerlink" title="比赛项目"></a>比赛项目</h4><ul>
+<li><p><strong>RoboCup@Home</strong><br><strong>RoboZoo</strong><br>根据RoboCup@Home裁判委员会所制定的赛程安排，第一个要比的是RoboZoo项目，其规则比较简单，每支参赛队伍需要尽可能地表现自己机器人的能力，来吸引观众进行投票，成绩按照投票数进行排序，队伍的得票数越多，排名越靠前。通过实际观察，我发现该项目更看重各队的创意，而不是技术水平的高低。举个例子，比如像上交的服务机器人，它在现场表演了如何使用机械臂来对水杯进行抓取。尽管从技术层面上来讲上交的水平相当厉害，但是对于不懂技术的观众来说，机械臂不断重复执行抓取与放下的单调动作肯定比不上外表装饰得Kawaii，能与观众进行互动的机器人更讨人喜欢。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_1.jpg" alt="robocup@home_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_2.jpg" alt="robocup@home_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_3.jpg" alt="robocup@home_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_4.jpg" alt="robocup@home_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_5.jpg" alt="robocup@home_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_6.jpg" alt="robocup@home_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_7.jpg" alt="robocup@home_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_8.jpg" alt="robocup@home_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_9.jpg" alt="robocup@home_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_10.jpg" alt="robocup@home_10"></p>
+<p><strong>Navigation</strong><br>以下是服务机器人在室内进行自主导航时的一些画面，因为自主导航是RoboCup@Home项目的基本能力，所以绝大部分参赛队伍都能够达到该项测试的基本要求，只是在如何让机器人避开突如其来的障碍物（突然被裁判扔到机器人行进路线上的杂志）这种技术细节方面上，强队与弱队之间的确存在一些差距。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_11.jpg" alt="robocup@home_11"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_12.jpg" alt="robocup@home_12"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_13.jpg" alt="robocup@home_13"></p>
+<p><strong>Person Recognition</strong><br>以下是中科大的可佳机器人在进行人脸识别测试，从图中可以看到识别的精度还是相当不错的，基本上摄像头里出现的人物都被识别并用方框标了出来。说实话能够在现场环境如此恶劣的情况下，还能够较为精准地识别出多个目标人物，可见可佳的图像识别算法有多鲁棒。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_14.jpg" alt="robocup@home_14"></p>
+<p><strong>Object Recognition &amp; Manipulation</strong><br>从以下的图片中可以看到，只有前四个参赛队伍的机器人能够成功地至少抓取一个物体，其它的机器人基本上在开始位置没有移动，我估计问题是出在了物体识别上。在四个已完成抓取任务的机器人中，中科大的可佳表现得最为出色，它在有限的比赛时间内总共连续成功地完成了两次自主抓取（本来是三次，很可惜可佳的机器爪在放置第三个物体的时候不小心把它碰到了地面上），毫无悬念地获得了该项测试的第一名。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_15.jpg" alt="robocup@home_15"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_16.jpg" alt="robocup@home_16"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_17.jpg" alt="robocup@home_17"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_18.jpg" alt="robocup@home_18"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_19.jpg" alt="robocup@home_19"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_20.jpg" alt="robocup@home_20"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_21.jpg" alt="robocup@home_21"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/robocup@home_22.jpg" alt="robocup@home_22"></p>
+<p><strong>Paper</strong><br>以下是贴在比赛场地外围墙壁上的一些文件，主要是向各参赛队伍公示比赛场地中一些物品的摆放位置，机器人所要识别的物体种类和大小等参数信息，以及各队比赛的顺序安排，便于各队提前做好比赛准备。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/paper_1.jpg" alt="paper_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/paper_2.jpg" alt="paper_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/paper_3.jpg" alt="paper_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup@home/paper_4.jpg" alt="paper_4"></p>
+</li>
+<li><p><strong>RoboCup Secure</strong><br><strong>场地</strong><br>下图是RoboCup救援组的比赛场地，由于整个场地设计得非常复杂，所以在调试期间，赛事举办方曾邀请一些有经验的国外参赛队员与其一起进行搭建场地的工作。从图中可以看到，场地内部的不同障碍区域是根据颜色进行划分的，除此之外，配备有小型二氧化碳装置的几个仿真人偶也被裁判委员会分散布置到比赛场地的不同区域之中（有的被在墙壁之后的破洞里，有的被放到较高的平台上，还有的被放到图中的车辆中），为之后救援机器人寻找幸存者的比赛项目做好准备。最后，由于比赛中还有空中救援机器人的部分，所以场地四周全部拉上了白色的防撞网，防止四轴飞行器失控伤人。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_secure/robocup_secure_1.jpg" alt="robocup_secure_1"></p>
+<p><strong>自主建图</strong><br>自主建图应该是RoboCup救援组的第一个比赛项目，大部分参赛队伍都选择下图中这样的小车来完成该项任务。原因也很明显，机器人需要在充满各种障碍物的狭小空间中自由移动，而且对于自主建图项目来说，机器人本身不需要承担搜索幸存者（用仿真人偶代替）的任务，即机器人不用携带机械臂等搜救设备，所以带有激光和视觉传感器的小型四驱车是最好的选择。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_secure/robocup_secure_2.jpg" alt="robocup_secure_2"></p>
+<p>以下两个图片展示的是救援机器人的远程控制站，铝制箱中上面的两个电脑负责可视化机器人实时建图的整个过程，左下角的电脑负责对相关代码进行调试，而右下角的那台电脑则主要负责远程控制机器人的移动以及监视其自身的各种传感器的实时状态（不得不承认，老外真是有钱，连远程控制站也能做得如此专业，说实话这场面跟欧美大片里的某些桥段没什么两样）。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_secure/robocup_secure_3.jpg" alt="robocup_secure_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_secure/robocup_secure_4.jpg" alt="robocup_secure_4"></p>
+</li>
+<li><p><strong>RoboCup Soccer</strong><br><strong>仿真组</strong><br>以下是RoboCup仿真2D和3D组的比赛画面，从图中可以看到仿真组的软件平台和裁判系统都是统一的，它们由RoboCup官方提供，而不同的地方在于各个参赛队伍需要根据比赛规则编写各自的程序算法来控制己方的机器人完成带球、传球、射门以及防守等操作。当然，除了基本的控制之外，整场比赛的策略也是非常重要的，因为足球毕竟不是单独个体的运动，它需要团队之间的协作配合。总之，个人感觉在多智能体协同算法方面，仿真组还是相当厉害的。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_soccer/robocup_soccer_1.jpg" alt="robocup_soccer_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_soccer/robocup_soccer_2.jpg" alt="robocup_soccer_2"></p>
+<p><strong>实物组</strong><br>RoboCup足球实物组在仿真组软件算法的基础之上，加入了物理实体机器人之间的对抗，这使得足球比赛看起来更加真实，当然这也对各个队伍的技术水平提出了更高的要求（以下是小型组和标准组的比赛）。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_soccer/robocup_soccer_3.jpg" alt="robocup_soccer_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_soccer/robocup_soccer_4.jpg" alt="robocup_soccer_4"></p>
+</li>
+<li><p><strong>RoboCup Logistics</strong><br><strong>概述</strong><br>RoboCup物流组是国际机器人竞赛RoboCup的一个组成部分，它专注于工厂物流应用。RoboCup物流组的目标是通过使用自主机器人来解决工业生产过程中物质和信息的灵活交换问题，并提供标准、成熟的软硬件平台来促进物流方面的科学研究力度。</p>
+<p><strong>规则</strong><br>机器人需要先从存储箱中获取原材料，接着以动态的顺序在机器之间进行运输，然后在这些机器中处理生产，最后将它们运送到目标位置。一个参赛队伍由三台机器人组成，每个机器人都基于标准化的<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.festo-didactic.com/de-de/service/robotino">Festo Robotino</a>开发平台，并且在其基础之上可以扩展一些传感器和计算设备。</p>
+<p><strong>改革</strong><br>RoboCup物流组从2015合肥国际赛开始进行改革，引入了全新的挑战——机器人不再像前几届那样需要在地板上移动冰球，而是根据<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.festo.com/">Festo</a>提供的模块化生产系统（MPS）来操作工作站。如下图所示，MPS是用于处理圆筒的小型生产机器，而圆筒代表工件，它由彩色的底座，零个或最多三个彩色的圆环组成。在实际的比赛中，产品顺序是随机确定并且动态发布的，因此由机器人车队所驱动的生产过程中的规划和调度是关键因素，同时各个参赛队伍也会面临一些典型的技术难题，比如具有碰撞检测的导航、自我定位、物体检测以及（受限的）操作等。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_logistics/robocup_logistics_1.jpg" alt="robocup_logistics_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_logistics/robocup_logistics_2.jpg" alt="robocup_logistics_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_logistics/robocup_logistics_3.jpg" alt="robocup_logistics_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/robocup_logistics/robocup_logistics_4.jpg" alt="robocup_logistics_4"></p>
+</li>
+<li><p><strong>BSR</strong><br>随着RoboCup的正式开幕，我们的BSR项目也开始了第一天的比赛。如下图所示，比赛科目主要是测试在无载荷和有载荷这两种情况下，机器人走直线和旋转的误差，误差越小，负重载荷越大，分数越高。虽然我们的底盘看起来比较Low（由于经费紧张，我们直接拆掉晓萌机器人的底盘拿来用的），不过预赛的成绩我记得好像还不错，也算是有了一些心理安慰吧。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_1.jpg" alt="bsr_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_2.jpg" alt="bsr_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_3.jpg" alt="bsr_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_4.jpg" alt="bsr_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_5.jpg" alt="bsr_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_6.jpg" alt="bsr_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_7.jpg" alt="bsr_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/5_hefei/bsr/bsr_8.jpg" alt="bsr_8"></p>
+</li>
+</ul>
+<p>RoboCup合肥国际赛正式开幕了，每个项目组的比赛都进行得非常激烈，而我们自己作为参赛的队伍之一，也算是真正意义上体会到了赛前准备以及等待结果的那种紧张之情。总之，比赛虽然会有胜负之分，但是我们从失利和其它队伍中所学到的宝贵知识和经验则显得更为重要，希望每个参赛队伍都能在接下来的赛程当中有所收获，并享受其中！</p>
+<h3 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h3><h4 id="Workshop"><a href="#Workshop" class="headerlink" title="Workshop"></a>Workshop</h4><p>作为BSR项目的参赛队伍，我们有幸参加了在会议室举办的专题研讨会。从下面的会议日程上可以看到很多在国内外从事机器人研究的专家、学者会来到研讨会现场，与大家一起分享他们的最新成果，当然，我们在Team Spotlight环节也会登上演讲台去介绍我们自己现有所使用的一些成熟技术（演讲内容要全英文）。总之，我们在研讨会中收获很多。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop.jpg" alt="workshop"></p>
+<ul>
+<li><p><strong>Team Xmbot</strong><br>以下是我们晓萌队的技术展示部分，演讲者是我们的前任队长狗哥，即<strong>西工大一小学生</strong>（佩服狗哥登台演讲的勇气和英语口语能力！）。PPT中首先介绍了项目发展情况和团队人员组成，接着按照从底到高的架构顺序，依次介绍了晓萌机器人的硬件和所使用的传感器、嵌入式控制系统以及基于ROS的导航软件框架等。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_xmbot_1.jpg" alt="workshop_xmbot_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_xmbot_2.jpg" alt="workshop_xmbot_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_xmbot_3.jpg" alt="workshop_xmbot_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_xmbot_4.jpg" alt="workshop_xmbot_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_xmbot_5.jpg" alt="workshop_xmbot_5"></p>
+</li>
+<li><p><strong>Team Kejia</strong></p>
+<p>以下是可佳低成本移动平台团队的演讲内容，其中主要涉及了硬件设计、软件架构以及建图、定位和导航所使用的算法介绍。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_1.jpg" alt="workshop_kejia_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_2.jpg" alt="workshop_kejia_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_3.jpg" alt="workshop_kejia_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_4.jpg" alt="workshop_kejia_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_5.jpg" alt="workshop_kejia_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/workshop/workshop_kejia_6.jpg" alt="workshop_kejia_6"></p>
+</li>
+</ul>
+<h4 id="RoboCup-Home-1"><a href="#RoboCup-Home-1" class="headerlink" title="RoboCup@Home"></a>RoboCup@Home</h4><p>RoboCup@Home项目组进行到第二天的争夺，尽管赛事紧凑、挑战性高、各支参赛队伍的水平有高有低，但就像下图所展示的那样，这些因素都妨碍不了RoboCup@Home这个大家庭各成员之间建立起牢固的友谊。在赛场上我们要为捍卫自己队伍的荣誉而战，而在场下我们则是愿意互相分享开发经验、共同为梦想而努力的好朋友，我想这就是RoboCup@Home以及RoboCup本身在赛事之外所教会给我的东西。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/robocup@home/robocup@home.jpg" alt="robocup@home"></p>
+<h4 id="BSR"><a href="#BSR" class="headerlink" title="BSR"></a>BSR</h4><p>BSR项目预赛的第一阶段（测试机器人移动的精准程度）已经比完，接下的第二阶段比赛也会在明天拉开战幕。明天的比赛主要考查机器人的自主导航能力，即让机器人自主地从比赛场地的起始位置移动到目标位置，而且在移动的途中机器人不能碰到围墙和障碍物。为了完成比赛任务，如下图所示，我们使用了Robopeak RPLIDAR激光传感器和Kinect深度摄像机，并基于ROS平台进行二次开发。最后总体测试效果还不错，只是需要对算法中的某些参数进行进一步的调整。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_1.jpg" alt="bsr_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_2.jpg" alt="bsr_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_3.jpg" alt="bsr_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_4.jpg" alt="bsr_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_5.jpg" alt="bsr_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_6.jpg" alt="bsr_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_7.jpg" alt="bsr_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_8.jpg" alt="bsr_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_9.jpg" alt="bsr_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/6_hefei/bsr/bsr_10.jpg" alt="bsr_10"></p>
+<p>RoboCup第二个正式比赛日结束。在一天的时间中，我们既听了来自卡内基梅隆大学、东京大学、上海交通大学、中国科学技术大学等国内外顶尖研究机构专家学者的报告会，也观看了几场精彩机器人比赛。总之，这一天过得很充实，收获也很多，希望接下来我们团队可以在最后的比赛中取得好成绩！</p>
+<h3 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h3><h4 id="BSR-1"><a href="#BSR-1" class="headerlink" title="BSR"></a>BSR</h4><p>BSR项目预赛进行到了第二阶段的争夺当中，我们团队的每个人也是竭尽所能来帮助晓萌机器人走得更远，还好功夫不负有心人，我们最后以预赛第四名的成绩进入到之后BSR项目的决赛阶段（第一名是中科大的可佳低成本移动平台，第二名是上交大的蛟龙机器人，第三名是来自洛阳理工的低成本机器人），算是惊险晋级。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_1.jpg" alt="bsr_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_2.jpg" alt="bsr_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_3.jpg" alt="bsr_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_4.jpg" alt="bsr_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_5.jpg" alt="bsr_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_6.jpg" alt="bsr_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_7.jpg" alt="bsr_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_8.jpg" alt="bsr_8"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_9.jpg" alt="bsr_9"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/7_hefei/bsr/bsr_10.jpg" alt="bsr_10"></p>
+<p>RoboCup合肥国际赛也即将进行到尾声阶段，而我们晓萌队也顺利地进入到明天的BSR决赛当中，不管<br>明天会遇到什么样的困难，我们都已经做好了充分的准备，力争取得优异的成绩！</p>
+<h3 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h3><h4 id="BSR-2"><a href="#BSR-2" class="headerlink" title="BSR"></a>BSR</h4><p>BSR项目的决赛日终于到来，而我们晓萌队也是非常早地进入到了国际会展中心来进行赛前调试。关于决赛，每个参赛队伍共有两次机会，我们在第一轮的比赛过程中表现出色，如下图所示，晓萌机器人有惊无险地避开了放置在道路中间的垃圾桶，并成功地到达了几个由裁判所随机指定的位置点，而第二轮比赛我们的机器人出现了一些问题，基本上只能在原地或附近地方打转，没能继续完成比赛。总的来说，我们的决赛成绩还是相当不错的，但是很可惜，由于最终的成绩是由预赛和决赛两个阶段共同决定，即预赛成绩带入到决赛当中，所以受到预赛得分的影响，我们最后排名第四，没能实现奖项上的突破，不过我们还是对自己的付出和努力十分满意。</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_1.jpg" alt="bsr_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_2.jpg" alt="bsr_2"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_3.jpg" alt="bsr_3"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_4.jpg" alt="bsr_4"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_5.jpg" alt="bsr_5"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_6.jpg" alt="bsr_6"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_7.jpg" alt="bsr_7"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/bsr/bsr_8.jpg" alt="bsr_8"></p>
+<p>我们的比赛结束了，也是时候该与RoboCup合肥国际赛说再见了。在临走之前，我们晓萌团队在一起进行了合影留念，希望我们有朝一日可以真正地站在RoboCup国际赛的舞台上，并继续在追逐梦想的道路上不断前进！</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/group_photo/group_photo_1.jpg" alt="group_photo_1"></p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/group_photo/group_photo_2.jpg" alt="group_photo_2"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在为期七天的RoboCup合肥国际赛当中，我们从其他国内外参赛队伍那里学习到了很多宝贵的经验，其中涉及机器人机械结构、软件架构设计以及团队管理方面的内容，除此之外更重要的是经过前期不懈的努力，我们取得了BSR项目第四的好成绩（虽然只有中国高校参加），当然通过比赛我们也认识到了自己和强队之间的实力差距，我们会在接下来的比赛准备期内对晓萌机器人的软硬件进行优化，提高系统整体的鲁棒性。</p>
+<p>最后，我还是要非常感谢中科大能够给予我们这次机会，让我们在2015年7月的这个夏天能够亲身领略到世界级机器人大赛的魅力，并从中感受到无比的幸福与快乐！再见RoboCup，再见合肥，希望我们下次参赛的时候可以变得比现在更加强大！</p>
+<p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/robocup_competitions/8_hefei/group_photo/group_photo_3.jpg" alt="group_photo_3"></p>
+
+            
+
+            
+            <div class="copyright">
+                <p>
+                    <span>文章作者：</span>
+                    <a href="/" title="myyerrol的个人网站">myyerrol</a>
+                </p>
+                <p>
+                    <span>最后更新：</span>
+                    <span id="date"></span>
+                    <script type="text/javascript">
+                        function addDatePrefix(num) {
+                            return num < 10 ? "0" + num : num
+                        }
+                        var dateStand = "Sun May 04 2025 15:19:54 GMT+0800";
+                        var dateTemp  = new Date(dateStand);
+                        var date = dateTemp.getFullYear() + "年" +
+                                    addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
+                                    addDatePrefix(dateTemp.getDate()) + "日 " +
+                                    addDatePrefix(dateTemp.getHours()) + ":" +
+                                    addDatePrefix(dateTemp.getMinutes()) + ":" +
+                                    addDatePrefix(dateTemp.getSeconds());
+                        $("#date").text(date);
+                    </script>
+                </p>
+                <p>
+                    <span>原始链接：</span>
+                    <a href="./" title="技术杂记系列（0x02）：2015 RoboCup世界杯">https://myyerrol.xyz/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/</a>
+                </p>
+                <p>
+                    <span>版权说明：</span>
+                    本博客所有文章除特别声明外，均采用
+                    <i class="fa fa-creative-commons"></i>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" title="BY-NC-SA 4.0许可协议" rel="external nofollow noopener noreferrer">BY-NC-SA 4.0许可协议</a>
+                    。获得许可后，要求转载时注明文章出处和网站链接，谢谢！
+                </p>
+            </div>
+            
+        </div>
+
+        <div>
+            <center>
+                <div class="pagination">
+    <ul class="pagination">
+        
+            
+                <li class="prev">
+                    <a href="/zh-cn/2017/10/01/tech_note_4_2015_robocup_china_cup/" class="alignleft prev">
+                        <i class="fa fa-arrow-circle-o-left"></i>上一页
+                    </a>
+                </li>
+            
+
+            <li>
+                <a href="/archives/">
+                    <i class="fa fa-archive"></i>归档
+                </a>
+            </li>
+
+            
+                <li class="next">
+                    <a href="/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                </li>
+            
+        
+    </ul>
+</div>
+
+            </center>
+        </div>
+
+        
+    <section id="comment">
+        <h2 class="title">留言</h2>
+        
+            <div id="waline"></div>
+            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+            <style type="text/css">
+                div[data-waline] {
+                    font-size: 16px;
+                }
+                .wl-header label,
+                .wl-header input,
+                .wl-editor,
+                .wl-card .wl-nick,
+                .wl-card .wl-content {
+                    font-size: 0.95em;
+                }
+                .wl-info .wl-text-number,
+                .wl-btn,
+                .wl-card .wl-time,
+                .wl-card .wl-meta>span,
+                .wl-sort li,
+                .wl-power {
+                    font-size: 0.85em;
+                }
+                .wl-cards .wl-user img {
+                    width: 3em;
+                    height: 3em;
+                }
+            </style>
+            <script type="text/javascript" src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+            <script type="text/javascript">
+                var config = {"enable":true,"serverURL":"https://myyerrol-website-waline.vercel.app","lang":"zh-CN","dark":false,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"login":"enable","wordLimit":0,"pageSize":10,"copyright":true};
+                config.el = "#waline";
+                Waline.init(config);
+            </script>
+        
+    </section>
+
+
+    </div>
+
+    
+    <div id="side_meta">
+        <div class="col-md-3" id="post_meta">
+    <!-- 时间信息 -->
+    <!-- Date info-->
+    
+        <div class="meta-widget">
+            <i class="fa fa-clock-o"></i>
+            2017-07-21
+        </div>
+    
+    <!-- 分类信息 -->
+    <!-- Categories info -->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#categorys">
+                <i class="fa fa-folder"></i>
+            </a>
+            <ul id="categorys" class="tag_box list-unstyled collapse in">
+                
+<li>
+    </li><li><a href="/categories/技术杂记系列/">技术杂记系列<span>7</span></a></li>
+
+
+            </ul>
+        </div>
+    
+    <!-- 标签信息 -->
+    <!-- Tag info-->
+    
+        <div class="meta-widget">
+            <a data-toggle="collapse" data-target="#tags">
+                <i class="fa fa-tags"></i>
+            </a>
+            <ul id="tags" class="tag_box list-unstyled collapse in">
+                
+<li><a href="/tags/Robot/">Robot<span>13</span></a></li> <li><a href="/tags/RoboCup/">RoboCup<span>4</span></a></li>
+
+            </ul>
+        </div>
+    
+    <!-- 目录信息 -->
+    <!-- TOC info -->
+    <div class="meta-widget meta-toc" data-spy="affix" data-offset-top="400">
+        
+            <a data-toggle="collapse" data-target="#toc">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="toc" class="toc collapse in">
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%BB%8F%E5%8E%86"><span class="toc-article-text">经历</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%89%8D%E4%B8%80%E5%A4%A9"><span class="toc-article-text">前一天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%AF%94%E8%B5%9B%E5%9C%BA%E9%A6%86"><span class="toc-article-text">比赛场馆</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%AE%A3%E4%BC%A0%E6%B5%B7%E6%8A%A5"><span class="toc-article-text">宣传海报</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E8%B5%9B%E5%89%8D%E8%B0%83%E8%AF%95"><span class="toc-article-text">赛前调试</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="toc-article-text">第一天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%8A%A5%E5%88%B0%E6%B3%A8%E5%86%8C"><span class="toc-article-text">报到注册</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%8F%82%E8%B5%9B%E7%BB%84%E5%88%AB"><span class="toc-article-text">参赛组别</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%8F%82%E5%B1%95%E4%BC%81%E4%B8%9A"><span class="toc-article-text">参展企业</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-article-text">第二天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#RoboCup-Home"><span class="toc-article-text">RoboCup@Home</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E4%B8%89%E5%A4%A9"><span class="toc-article-text">第三天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%BC%80%E5%B9%95%E4%BB%AA%E5%BC%8F"><span class="toc-article-text">开幕仪式</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%AF%94%E8%B5%9B%E9%A1%B9%E7%9B%AE"><span class="toc-article-text">比赛项目</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E5%9B%9B%E5%A4%A9"><span class="toc-article-text">第四天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Workshop"><span class="toc-article-text">Workshop</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#RoboCup-Home-1"><span class="toc-article-text">RoboCup@Home</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#BSR"><span class="toc-article-text">BSR</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E4%BA%94%E5%A4%A9"><span class="toc-article-text">第五天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#BSR-1"><span class="toc-article-text">BSR</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%AC%AC%E5%85%AD%E5%A4%A9"><span class="toc-article-text">第六天</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#BSR-2"><span class="toc-article-text">BSR</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+                var tocHeight = $("#toc").height();
+                if (tocHeight >= 500) {
+                    $("#toc").css({
+                        "height": "500px",
+                        "overflow": "scroll"
+                    });
+                }
+            </script>
+        
+    </div>
+    <hr>
+</div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-narrow">
+        <footer><p>
+    <span id="busuanzi_container_site_uv">
+        <i class="fa fa-user"></i>
+        <span>本站总访客数:</span>
+        <span id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>人&nbsp;
+    </span>
+
+    <span id="busuanzi_container_site_pv">
+        <i class="fa fa-flag"></i>
+        <span>本站总访问量:</span>
+        <span id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>次&nbsp;
+    </span>
+
+    <i class="fa fa-file-word-o"></i>
+    <span>文章总字数:</span>
+    <span class="post-count">169.3k</span>字
+
+    <br>
+
+    
+        &copy; 2025 myyerrol
+    
+
+    with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. About by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/PytLab/hexo-theme-freemind/">PytLab</a>.
+</p>
+</footer>
+    </div>
+
+    
+
+    <a id="gotop" href="#">
+    <span>▲</span>
+</a>
+
+<script src="/js/blog/fadetoc.js"></script>
+<script src="/js/blog/gallery.js"></script>
+<script src="/js/blog/main.js"></script>
+<script src="/js/blog/search.js"></script>
+<script src="/js/other/bootstrap.min.js"></script>
+<script src="/js/other/jquery.imagesloaded.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+    var searchPath = "search.xml";
+    if (searchPath.length == 0) {
+        searchPath = "search.xml";
+    }
+    var path = "/" + searchPath;
+    searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(".fancybox").fancybox();
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        }
+        else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</body>
+</html>
