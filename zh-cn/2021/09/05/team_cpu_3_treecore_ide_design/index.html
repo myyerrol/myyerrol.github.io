@@ -10,7 +10,8 @@
     
 
     
-    <meta name="description" content="本篇文章介绍《木心开发环境-概念设计》的相关内容。">
+    <meta name="description" content="前言首先要跟各位喜欢计算机体系结构并且持续关注木心处理器项目的朋友们说声抱歉，由于3月份我参加了芯来科技举办的RISV-C在线培训课程，所以有一个半月的时间完全没有做木心这个项目。之后又赶上第一届RISC-V中国峰会在上海召开，我们作为业余处理器爱好者团队非常幸运的得到了主办方提供的线下演讲机会，为了准备好这次会议，我们前前后后也搭进去不少时间。当然，最重要的原因是还是自己懒，总想着把项目代码完成后再编写文档，所以拖到现在有大半年之久文档还是一字没动……
+上一篇文章里提到的木心处理器，按照原有计划来看，其整体开发进度明显处于滞后状态，这一方面是由于我们的很多业余时间被工作或其他优先级更高的事项所占用，另一方面则在于5月份左右我们对项目的发展方向做出了重大调整，由我的队友 @maksyuki 来负责处理器核的设计和验证工作，而我则转向去主攻一个全新的领域——处理器开发环境，这些新增加的工作量使得原有的计划被完全打乱，所以我们决定将项目第一阶段的最终完成期限修改为年底之前，这里我们向大家保证届时木心处理器项目一定能够以实物的形式展示在大家面前！">
     
 
     
@@ -163,11 +164,6 @@
 
         <div class="mypage">
             
-            <div class="alert alert-success description">
-                <i class="fa fa-info-circle"></i> <p>本篇文章介绍《木心开发环境-概念设计》的相关内容。</p>
-
-            </div>
-            
 
             
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先要跟各位喜欢计算机体系结构并且持续关注木心处理器项目的朋友们说声抱歉，由于3月份我参加了芯来科技举办的RISV-C在线培训课程，所以有一个半月的时间完全没有做木心这个项目。之后又赶上<strong>第一届RISC-V中国峰会</strong>在上海召开，我们作为<strong>业余处理器爱好者团队</strong>非常幸运的得到了主办方提供的线下演讲机会，为了准备好这次会议，我们前前后后也搭进去不少时间。当然，最重要的原因是还是自己懒，总想着把项目代码完成后再编写文档，所以拖到现在有大半年之久文档还是一字没动……</p>
@@ -216,7 +212,7 @@
                         function addDatePrefix(num) {
                             return num < 10 ? "0" + num : num
                         }
-                        var dateStand = "Sun May 19 2024 11:29:08 GMT+0800";
+                        var dateStand = "Mon May 05 2025 11:39:52 GMT+0800";
                         var dateTemp  = new Date(dateStand);
                         var date = dateTemp.getFullYear() + "年" +
                                     addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
@@ -351,7 +347,7 @@
             </a>
             <ul id="tags" class="tag_box list-unstyled collapse in">
                 
-<li><a href="/tags/CPU/">CPU<span>4</span></a></li> <li><a href="/tags/RISC-V/">RISC-V<span>4</span></a></li> <li><a href="/tags/TreeCore/">TreeCore<span>3</span></a></li>
+<li><a href="/tags/RISC-V/">RISC-V<span>4</span></a></li> <li><a href="/tags/CPU/">CPU<span>4</span></a></li> <li><a href="/tags/TreeCore/">TreeCore<span>3</span></a></li>
 
             </ul>
         </div>
