@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/04/18/robot_analysis_1_xmbot_system/</loc>
+    <lastmod>2025-05-11</lastmod>
+  </url>
+  <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/05/15/diy_robot_1_simple_wheeled_robot/</loc>
+    <lastmod>2025-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_1_hexo_install_config/</loc>
+    <lastmod>2025-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/</loc>
+    <lastmod>2025-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/</loc>
+    <lastmod>2025-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2020/09/23/life_note_3_2019_travel_kansai_preparation/</loc>
+    <lastmod>2025-05-06</lastmod>
+  </url>
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2019/07/21/life_note_2_2019_maikuraki_beijing_concert/</loc>
     <lastmod>2025-05-05</lastmod>
   </url>
   <url>
@@ -10,10 +34,6 @@
   </url>
   <url>
     <loc>https://myyerrol.xyz/zh-cn/2019/07/15/life_note_1_me_eop_keyboard_piano/</loc>
-    <lastmod>2025-05-05</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2019/07/21/life_note_2_2019_maikuraki_beijing_concert/</loc>
     <lastmod>2025-05-05</lastmod>
   </url>
   <url>
@@ -38,10 +58,6 @@
   </url>
   <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/02/01/team_robot_7_breeze_quadcopter_software_summary/</loc>
-    <lastmod>2025-05-05</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2020/09/23/life_note_3_2019_travel_kansai_preparation/</loc>
     <lastmod>2025-05-05</lastmod>
   </url>
   <url>
@@ -81,10 +97,6 @@
     <lastmod>2025-05-04</lastmod>
   </url>
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2018/05/13/diy_robot_0_superclass/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/08/18/tech_note_7_2018_world_robot_conf/</loc>
     <lastmod>2025-05-04</lastmod>
   </url>
@@ -93,39 +105,11 @@
     <lastmod>2025-05-04</lastmod>
   </url>
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
     <loc>https://myyerrol.xyz/zh-cn/2017/04/20/robot_analysis_2_xmbot_arm/</loc>
     <lastmod>2025-05-04</lastmod>
   </url>
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/01/tech_note_0_superclass/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
     <loc>https://myyerrol.xyz/zh-cn/2017/06/07/blog_tutorial_2_hexo_theme_config/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_1_hexo_install_config/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/04/15/robot_analysis_0_superclass/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_0_superclass/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/04/18/robot_analysis_1_xmbot_system/</loc>
     <lastmod>2025-05-04</lastmod>
   </url>
 </urlset> 

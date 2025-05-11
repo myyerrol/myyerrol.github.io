@@ -2,7 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/04/18/robot_analysis_1_xmbot_system/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/05/15/diy_robot_1_simple_wheeled_robot/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_1_hexo_install_config/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2020/09/23/life_note_3_2019_travel_kansai_preparation/</loc>
+    
+    <lastmod>2025-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/zh-cn/2019/07/21/life_note_2_2019_maikuraki_beijing_concert/</loc>
     
     <lastmod>2025-05-05</lastmod>
     
@@ -21,15 +75,6 @@
   
   <url>
     <loc>https://myyerrol.xyz/zh-cn/2019/07/15/life_note_1_me_eop_keyboard_piano/</loc>
-    
-    <lastmod>2025-05-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2019/07/21/life_note_2_2019_maikuraki_beijing_concert/</loc>
     
     <lastmod>2025-05-05</lastmod>
     
@@ -84,15 +129,6 @@
   
   <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/02/01/team_robot_7_breeze_quadcopter_software_summary/</loc>
-    
-    <lastmod>2025-05-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2020/09/23/life_note_3_2019_travel_kansai_preparation/</loc>
     
     <lastmod>2025-05-05</lastmod>
     
@@ -182,15 +218,6 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2018/05/13/diy_robot_0_superclass/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://myyerrol.xyz/zh-cn/2018/08/18/tech_note_7_2018_world_robot_conf/</loc>
     
     <lastmod>2025-05-04</lastmod>
@@ -209,34 +236,7 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/21/tech_note_2_2015_robocup_world_cup/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://myyerrol.xyz/zh-cn/2017/04/20/robot_analysis_2_xmbot_arm/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/11/tech_note_1_2015_service_robot_china_cup/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/07/01/tech_note_0_superclass/</loc>
     
     <lastmod>2025-05-04</lastmod>
     
@@ -254,43 +254,7 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_1_hexo_install_config/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/04/15/robot_analysis_0_superclass/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/03/31/blog_tutorial_0_superclass/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/zh-cn/2017/04/18/robot_analysis_1_xmbot_system/</loc>
-    
-    <lastmod>2025-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/categories/index.html</loc>
+    <loc>https://myyerrol.xyz/about/index.html</loc>
     
     <lastmod>2023-10-29</lastmod>
     
@@ -299,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/about/index.html</loc>
+    <loc>https://myyerrol.xyz/categories/index.html</loc>
     
     <lastmod>2023-10-29</lastmod>
     
@@ -319,7 +283,7 @@
 
   <url>
     <loc>https://myyerrol.xyz/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -327,259 +291,259 @@
   
   <url>
     <loc>https://myyerrol.xyz/tags/Blog/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Hexo/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Robot/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/ROS/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/MoveIt/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Gazebo/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/tags/Theme/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/RoboCup/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/RoboCup-Home/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/Theme/</loc>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Micro-Quadcopter/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Altium-Designer/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/STM32/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/GNU-Linux/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/GNU-Make/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Makefile/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/ARM-GCC/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/OpenOCD/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/PID/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/GCS/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Qt/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Arduino/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Raspberry-Pi/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Maker/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/WRC/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/tags/RISC-V/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E9%9F%B3%E4%B9%90/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E9%92%A2%E7%90%B4/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/EOP/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E6%BC%94%E5%94%B1%E4%BC%9A/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Mai-Kuraki/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/CPU/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/ModelSim/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/Quartus-II/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/tags/TreeCore/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E6%97%A5%E6%9C%AC/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E8%87%AA%E7%94%B1%E8%A1%8C/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E6%97%85%E8%A1%8C%E6%94%BB%E7%95%A5/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/RISC-V/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/TreeCore/</loc>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -588,49 +552,49 @@
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%A7%A3%E8%AF%BB%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%AE%B0%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E5%9B%A2%E9%98%9F%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E8%87%AA%E5%88%B6%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myyerrol.xyz/categories/%E5%9B%A2%E9%98%9F%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

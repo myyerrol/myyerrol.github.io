@@ -10,7 +10,7 @@
     
 
     
-    <meta name="description" content="前言制作这个项目的起因是大一下学期那会儿我通过学校图书馆里的《无线电》杂志开始接触Raspberry Pi卡片式计算机和Arduino微控制器，其中Raspberry Pi给当初什么都不懂的我留下了非常深刻的印象：一个信用卡大小的板子竟然可以跑带有图形界面的GNU/Linux操作系统。在强烈探索欲的驱使下，我从网上购买了两块Element14的Raspberry Pi一代Model B（现在早已经绝版了）板子以及其他相关配件，开始在Raspbian系统上自学Python和各种传感器的使用方法，后来为了检验一下自己的学习成果，于是我便花费几周的时间做了这个简单的轮式机器人。虽然它涉及的原理并不复杂，但是对于那会儿刚开始接触嵌入式的我来说，能成功搭建一个完整的机器人系统还是挺有挑战性的。">
+    <meta name="description" content="起源我相信很多男生都非常喜欢机器人，其中很大一部分因素是受动漫或影视内容（比如像《铁臂阿童木》、《机器人总动员》和《终结者》等）的影响，而我对机器人的喜爱却来源于第一次进行DIY电子制作时的难忘经历。我记得那时高考已经考完有一段时间了，有一天我在网上闲逛，无意间发现了一个叫PVCBOT的网站，里面记录了很多有关如何使用PVC材料来制作简单机器人的教程，我越看越入迷于是就买了几个套件回家进行制作，尽管制作的过程因为自己不懂如何焊接（当时的确如此）而走了很多弯路，但是当最后机器人能够移动时，我的内心感受到了前所未有的快乐！也许就是这种对机器人的喜爱让我在之后的大学生活中不断尝试制作更复杂的机器人，甚至有机会加入机器人基地并亲身参与到高级智能机器人的研发工作当中去。">
     
 
     
@@ -153,11 +153,11 @@
 
         <i class="fa fa-file-word-o"></i>
         <span>文章字数:</span>
-        <span class="post-count">4.3k</span>字&nbsp;
+        <span class="post-count">4.8k</span>字&nbsp;
 
         <i class="fa fa-clock-o"></i>
         <span>阅读时长:</span>
-        <span class="post-count">20</span>分钟
+        <span class="post-count">22</span>分钟
 
         <p></p>
 
@@ -165,8 +165,11 @@
             
 
             
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>制作这个项目的起因是大一下学期那会儿我通过学校图书馆里的《无线电》杂志开始接触Raspberry Pi卡片式计算机和Arduino微控制器，其中Raspberry Pi给当初什么都不懂的我留下了非常深刻的印象：<strong>一个信用卡大小的板子竟然可以跑带有图形界面的GNU/Linux操作系统</strong>。在强烈探索欲的驱使下，我从网上购买了两块Element14的Raspberry Pi一代Model B（现在早已经绝版了）板子以及其他相关配件，开始在Raspbian系统上自学Python和各种传感器的使用方法，后来为了检验一下自己的学习成果，于是我便花费几周的时间做了这个简单的轮式机器人。虽然它涉及的原理并不复杂，但是对于那会儿刚开始接触嵌入式的我来说，能成功搭建一个完整的机器人系统还是挺有挑战性的。</p>
+                <h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>我相信很多男生都非常喜欢机器人，其中很大一部分因素是受动漫或影视内容（比如像《铁臂阿童木》、《机器人总动员》和《终结者》等）的影响，而我对机器人的喜爱却来源于第一次进行DIY电子制作时的难忘经历。我记得那时高考已经考完有一段时间了，有一天我在网上闲逛，无意间发现了一个叫<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.diy-bot.net/?project=pvcbot">PVCBOT</a>的网站，里面记录了很多有关如何使用PVC材料来制作简单机器人的教程，我越看越入迷于是就买了几个套件回家进行制作，尽管制作的过程因为自己不懂如何焊接（当时的确如此）而走了很多弯路，但是当最后机器人能够移动时，我的内心感受到了前所未有的快乐！也许就是这种对机器人的喜爱让我在之后的大学生活中不断尝试制作更复杂的机器人，甚至有机会加入机器人基地并亲身参与到高级智能机器人的研发工作当中去。</p>
 <span id="more"></span>
+<p>正因为自己对机器人有一种发自内心无法抗拒的喜爱，所以在业余时间我也做过几款机器人，虽然这几款机器人本身的技术难度不大（毕竟经济基础决定上层建筑），但要把将系统搭建起来也需要花费一些功夫。因此在本系列文章中，我会就机器人搭建的过程以及其中涉及的原理进行详细的讲述，如果有写的不对的地方，也欢迎各路大神指正。有时候不知道为什么，一看到国内外大神在网站或期刊上发表的有关自制机器人的文章，我的内心就会下意识变得无法平静，总想自己也能按照教程DIY一个出来。尽管现在我的业余时间非常有限，但是这个爱好我会一直坚持下去，希望将来的某一天我能够造出属于自己的梦想机器人！</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>制作这个项目的起因是大一下学期那会儿我通过学校图书馆里的《无线电》杂志开始接触Raspberry Pi卡片式计算机和Arduino微控制器，其中Raspberry Pi给当初什么都不懂的我留下了非常深刻的印象：<strong>一个信用卡大小的板子竟然可以跑带有图形界面的GNU/Linux操作系统</strong>。在强烈探索欲的驱使下，我从网上购买了两块Element14的Raspberry Pi一代Model B（现在早已经绝版了）板子以及其他相关配件，开始在Raspbian系统上自学Python和各种传感器的使用方法，后来为了检验一下自己的学习成果，于是我便花费几周的时间做了这个简单的轮式机器人。虽然它涉及的原理并不复杂，但是对于那会儿刚开始接触嵌入式的我来说，能成功搭建一个完整的机器人系统还是挺有挑战性的。</p>
+<!--more-->
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>简单轮式机器人其实是一个比较传统的入门级智能小车，它拥有蓝牙远程遥控、超声波避障、红外边缘检测和红外巡线（未完成）等功能，可以完成一些有趣的小实验。此外，简单轮式机器人的软件是开源的，具体代码可以从我的GitHub<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/myyerrol/simple-wheeled-robot">仓库</a>上获得。</p>
 <p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/diy_robots/1_simple_wheeled_robot/simple_wheeled_robot_1.jpg" alt="simple_wheeled_robot_1"></p>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>以下是该简单轮式机器人的硬件系统连接图：</p>
@@ -252,7 +255,7 @@
                         function addDatePrefix(num) {
                             return num < 10 ? "0" + num : num
                         }
-                        var dateStand = "Mon May 05 2025 17:19:43 GMT+0800";
+                        var dateStand = "Sun May 11 2025 21:02:36 GMT+0800";
                         var dateTemp  = new Date(dateStand);
                         var date = dateTemp.getFullYear() + "年" +
                                     addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
@@ -299,7 +302,7 @@
 
             
                 <li class="next">
-                    <a href="/zh-cn/2018/05/13/diy_robot_0_superclass/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                    <a href="/zh-cn/2018/02/01/team_robot_7_breeze_quadcopter_software_summary/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
                 </li>
             
         
@@ -372,7 +375,7 @@
             <ul id="categorys" class="tag_box list-unstyled collapse in">
                 
 <li>
-    </li><li><a href="/categories/自制机器人系列/">自制机器人系列<span>5</span></a></li>
+    </li><li><a href="/categories/自制机器人系列/">自制机器人系列<span>4</span></a></li>
 
 
             </ul>
@@ -387,7 +390,7 @@
             </a>
             <ul id="tags" class="tag_box list-unstyled collapse in">
                 
-<li><a href="/tags/Robot/">Robot<span>13</span></a></li> <li><a href="/tags/Arduino/">Arduino<span>3</span></a></li> <li><a href="/tags/Raspberry-Pi/">Raspberry Pi<span>1</span></a></li>
+<li><a href="/tags/Robot/">Robot<span>11</span></a></li> <li><a href="/tags/Arduino/">Arduino<span>3</span></a></li> <li><a href="/tags/Raspberry-Pi/">Raspberry Pi<span>1</span></a></li>
 
             </ul>
         </div>
@@ -400,7 +403,7 @@
                 <i class="fa fa-bars"></i>
             </a>
             <div id="toc" class="toc collapse in">
-                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-article-text">概述</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-article-text">原理</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%A1%AC%E4%BB%B6"><span class="toc-article-text">硬件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A0%B8%E5%BF%83%E4%B8%BB%E6%8E%A7"><span class="toc-article-text">核心主控</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%A4%96%E9%83%A8%E7%94%B5%E6%BA%90"><span class="toc-article-text">外部电源</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8"><span class="toc-article-text">电机驱动</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%95%B0%E6%8D%AE%E6%84%9F%E7%9F%A5"><span class="toc-article-text">数据感知</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E8%BD%AF%E4%BB%B6"><span class="toc-article-text">软件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E5%BA%93%E4%BB%A3%E7%A0%81"><span class="toc-article-text">Raspberry Pi库代码</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%811"><span class="toc-article-text">Raspberry Pi测试代码1</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%812"><span class="toc-article-text">Raspberry Pi测试代码2</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%813"><span class="toc-article-text">Raspberry Pi测试代码3</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Arduino%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-article-text">Arduino测试代码</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%88%90%E6%9E%9C"><span class="toc-article-text">成果</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
+                <ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E8%B5%B7%E6%BA%90"><span class="toc-article-text">起源</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-article-text">概述</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-article-text">原理</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%A1%AC%E4%BB%B6"><span class="toc-article-text">硬件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%A0%B8%E5%BF%83%E4%B8%BB%E6%8E%A7"><span class="toc-article-text">核心主控</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%A4%96%E9%83%A8%E7%94%B5%E6%BA%90"><span class="toc-article-text">外部电源</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8"><span class="toc-article-text">电机驱动</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%95%B0%E6%8D%AE%E6%84%9F%E7%9F%A5"><span class="toc-article-text">数据感知</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E8%BD%AF%E4%BB%B6"><span class="toc-article-text">软件</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E5%BA%93%E4%BB%A3%E7%A0%81"><span class="toc-article-text">Raspberry Pi库代码</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%811"><span class="toc-article-text">Raspberry Pi测试代码1</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%812"><span class="toc-article-text">Raspberry Pi测试代码2</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Raspberry-Pi%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%813"><span class="toc-article-text">Raspberry Pi测试代码3</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Arduino%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-article-text">Arduino测试代码</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%88%90%E6%9E%9C"><span class="toc-article-text">成果</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-article-text">总结</span></a></li></ol>
             </div>
             <script type="text/javascript">
                 var tocHeight = $("#toc").height();
@@ -449,7 +452,7 @@
 
     <i class="fa fa-file-word-o"></i>
     <span>文章总字数:</span>
-    <span class="post-count">169.3k</span>字
+    <span class="post-count">168.7k</span>字
 
     <br>
 

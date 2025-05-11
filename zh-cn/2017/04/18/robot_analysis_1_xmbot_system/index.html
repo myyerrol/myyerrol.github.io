@@ -154,11 +154,11 @@
 
         <i class="fa fa-file-word-o"></i>
         <span>文章字数:</span>
-        <span class="post-count">5.4k</span>字&nbsp;
+        <span class="post-count">6.2k</span>字&nbsp;
 
         <i class="fa fa-clock-o"></i>
         <span>阅读时长:</span>
-        <span class="post-count">18</span>分钟
+        <span class="post-count">20</span>分钟
 
         <p></p>
 
@@ -170,7 +170,14 @@
 <p>本篇文章重点介绍晓萌机器人的系统架构，其中主要分为硬件层、嵌入式层、驱动层和软件层。除了技术方面的内容之外，我还会介绍其他有关开发的内容。不过由于这些内容都是来源于自己的个人见解，所以有些地方可能会讲得不够准确，欢迎各位成员在留言处进行指正。</p>
 <span id="more"></span>
 <h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p><img src="https://myyerrol-1257317595.cos.ap-beijing.myqcloud.com/websites/blog/images/ros_experiences/others/xm_system_architecture.png" alt="xm_system_architecture"></p>
-<p>如上图所示，晓萌机器人的架构主要分为四层，分别为硬件层、嵌入式层、驱动层和软件层。</p>
+<p>如上图所示，晓萌机器人的架构主要分为四层，分别为硬件层、嵌入式层、驱动层和软件层。由于ROS在整个服务机器人系统中扮演了极其重要的角色，接下来我会先简单介绍一下自己对ROS的认识和理解。</p>
+<p>我最早开始接触ROS是在大一的下半学期，那时因为自己对电子制作以及机器人等非常感兴趣，所以经常每周跑去图书馆阅读相关方面的杂志（推荐《无线电》）和书籍。有一次，我跟往常一样来到机器人书架前，无意中发现了一本叫《开源机器人操作系统》的红书。当时我心里面有些疑惑：机器人还可以有操作系统？于是抱着好奇的心态，我翻了翻这本书的前几页，其中乌龟外形的标志当时给我留下了非常深刻的印象。后来没过多长时间，我便加入了西工大舞蹈机器人基地，开始正式地学习ROS并逐渐体会到它的强大之处，那ROS具体是什么？为什么它会如此强大？</p>
+<p>近年来，随着人工智能技术的飞速发展，机器人领域也同样取得了举世瞩目的成就。性价比较高的机器人平台，包括地面移动机器人、旋翼无人机和类人机器人等，得到了广泛应用。更令人感到振奋的是，越来越多的高级智能算法让机器人的自主等级逐步提高。</p>
+<p>面对日新月异的技术发展，显然传统的机器人开发框架已不能满足广大机器人软件开发者的需求，因此斯坦福大学联合柳树车库公司（Willow Garage）共同开发了ROS（Robot Operting System），它有效地解决机器人开发中的问题并提高了软件编写的效率，以下是ROS的官方定义：</p>
+<blockquote>
+<p>ROS是面向机器人的开源元操作系统。它能够提供类似传统操作系统的诸多功能，如硬件抽象、底层设备控制、常用功能实现、进程间消息传递和程序包管理等。此外，它还提供相关工具和库，用于获取、编译、编辑代码以及在多个计算机之间运行程序完成分布式计算。</p>
+</blockquote>
+<p>总之，ROS大幅度地降低了开发和应用机器人的难度，方便了全世界的机器人爱好者和研究者分享各自的研究成果，从而为机器人的通用化、模块化、智能化发展提供了良好的基础。也许从我接触ROS的那一刻起，我就与ROS结下了不解之缘，并在学习、开发ROS的过程中受益匪浅。所以，我也希望有更多的机器人爱好者能够参与到ROS的学习之中来，因为它不仅可以教会你机器人的开发方法，而且更重要的是它可以让你掌握更多与之相关的开发知识，让你的能力得到更快的提升。</p>
 <h3 id="硬件层"><a href="#硬件层" class="headerlink" title="硬件层"></a>硬件层</h3><ul>
 <li><h4 id="机械平台"><a href="#机械平台" class="headerlink" title="机械平台"></a>机械平台</h4><p><strong>底盘：</strong>机械平台分为底盘和机械臂两个部分。根据《自主移动机器人导论》书中的相关内容，底盘采用三角布局的全向轮结构，经过一定的运动学解算，可以实现底盘的全向移动。</p>
 <p><strong>机械臂：</strong>机械臂由我们上一届学长设计，整个机械结构由复合的同步轮和与之匹配的同步带组成。由于没有采用传统的舵机关节结构，因此该机械臂可以抓取更重的载荷，并且在末端精度上也表现得很出色。</p>
@@ -282,7 +289,7 @@
                         function addDatePrefix(num) {
                             return num < 10 ? "0" + num : num
                         }
-                        var dateStand = "Sun May 04 2025 12:03:30 GMT+0800";
+                        var dateStand = "Sun May 11 2025 21:17:30 GMT+0800";
                         var dateTemp  = new Date(dateStand);
                         var date = dateTemp.getFullYear() + "年" +
                                     addDatePrefix((dateTemp.getMonth() + 1)) + "月" +
@@ -329,7 +336,7 @@
 
             
                 <li class="next">
-                    <a href="/zh-cn/2017/04/15/robot_analysis_0_superclass/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+                    <a href="/zh-cn/2017/03/31/blog_tutorial_1_hexo_install_config/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
                 </li>
             
         
@@ -402,7 +409,7 @@
             <ul id="categorys" class="tag_box list-unstyled collapse in">
                 
 <li>
-    </li><li><a href="/categories/机器人解读系列/">机器人解读系列<span>3</span></a></li>
+    </li><li><a href="/categories/机器人解读系列/">机器人解读系列<span>2</span></a></li>
 
 
             </ul>
@@ -417,7 +424,7 @@
             </a>
             <ul id="tags" class="tag_box list-unstyled collapse in">
                 
-<li><a href="/tags/Robot/">Robot<span>13</span></a></li> <li><a href="/tags/ROS/">ROS<span>3</span></a></li>
+<li><a href="/tags/Robot/">Robot<span>11</span></a></li> <li><a href="/tags/ROS/">ROS<span>2</span></a></li>
 
             </ul>
         </div>
@@ -479,7 +486,7 @@
 
     <i class="fa fa-file-word-o"></i>
     <span>文章总字数:</span>
-    <span class="post-count">169.3k</span>字
+    <span class="post-count">168.7k</span>字
 
     <br>
 
