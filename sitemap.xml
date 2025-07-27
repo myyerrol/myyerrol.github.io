@@ -318,6 +318,20 @@
   </url>
   
   <url>
+    <loc>https://myyerrol.xyz/tags/MoveIt/</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/Gazebo/</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://myyerrol.xyz/tags/Theme/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -395,20 +409,6 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/tags/MoveIt/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/tags/Gazebo/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://myyerrol.xyz/tags/PID/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -437,14 +437,21 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/tags/WRC/</loc>
+    <loc>https://myyerrol.xyz/tags/Raspberry-Pi/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/tags/Raspberry-Pi/</loc>
+    <loc>https://myyerrol.xyz/tags/Maker/</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/WRC/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -486,13 +493,6 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/tags/Maker/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://myyerrol.xyz/tags/CPU/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -514,20 +514,6 @@
   </url>
   
   <url>
-    <loc>https://myyerrol.xyz/tags/RISC-V/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myyerrol.xyz/tags/TreeCore/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://myyerrol.xyz/tags/%E6%97%A5%E6%9C%AC/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -543,6 +529,20 @@
   
   <url>
     <loc>https://myyerrol.xyz/tags/%E6%97%85%E8%A1%8C%E6%94%BB%E7%95%A5/</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/RISC-V/</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myyerrol.xyz/tags/TreeCore/</loc>
     <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
